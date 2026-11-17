@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Elegant side profile with ponytail -->
+    <path d="M 90,45 C 85,32 105,30 115,40 C 122,48 120,58 115,65 L 122,72 L 112,76 L 115,86 C 105,92 92,90 88,80 Z"/>
+    <path d="M 85,55 Q 60,65 50,95"/>
+    <path d="M 90,88 L 85,115 M 106,90 L 122,120"/>
+    <path d="M 85,115 L 82,235 M 122,120 L 120,235"/>
+    <path d="M 82,235 L 85,350 M 120,235 L 118,350"/>
+
+  </g>
+</svg>

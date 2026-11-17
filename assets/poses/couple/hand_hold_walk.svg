@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Walking side by side holding hands -->
+    <path d="M 85,55 C 80,42 105,40 112,50 C 118,62 114,78 106,88 C 98,96 88,96 85,86 Z"/>
+    <path d="M 75,105 L 70,225 M 115,105 L 115,225"/>
+    <path d="M 70,225 L 65,340 M 115,225 L 110,340"/>
+    <path d="M 165,65 C 160,52 185,50 190,60 C 196,72 192,88 185,98 C 178,106 168,106 165,96 Z"/>
+    <path d="M 155,115 L 155,225 M 195,115 L 195,225"/>
+    <path d="M 155,225 L 160,340 M 195,225 L 198,340"/>
+    <!-- Intertwined hands in center -->
+    <path d="M 115,145 C 128,175 142,175 155,145"/>
+
+  </g>
+</svg>

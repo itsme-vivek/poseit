@@ -1,0 +1,2554 @@
+[
+  {
+    "id": "boy_001",
+    "name": "Hand on Hip Casual",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "A classic approachable standing pose with one hand resting on the hip. Natural, confident, and very easy to map.",
+    "instructions": [
+      "Stand upright facing the camera with relaxed, natural posture.",
+      "Place your right hand firmly on your waist/hip with fingers spread forward.",
+      "Let your left arm hang loosely and naturally down by your side.",
+      "Tilt your head very gently and look at the lens with a friendly smile.",
+      "Pair with a polo shirt, t-shirt, or casual shirt for clean lines."
+    ],
+    "svgAsset": "assets/poses/boy/lean_back.svg",
+    "tips": [
+      "Placing one hand on the waist defines your torso width and prevents awkward arm hanging.",
+      "Keep weight slightly shifted to one leg for a relaxed feel."
+    ],
+    "tags": [
+      "standing",
+      "casual",
+      "polo",
+      "approachable",
+      "classic",
+      "easy"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_002",
+    "name": "Walking Shot",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "A natural mid-stride pose that captures movement and energy. Great for street photography and lifestyle shots.",
+    "instructions": [
+      "Walk slowly toward the camera at a slight diagonal (about 20° off-center) rather than straight on.",
+      "→ Let your right arm swing naturally forward while your left leg steps ahead — opposite arm, opposite leg.",
+      "↑ Keep your head up and eyes looking just above the camera lens for a purposeful expression.",
+      "Take slightly longer strides than normal to create a sense of confident motion.",
+      "Keep your torso upright; avoid leaning forward as you walk."
+    ],
+    "svgAsset": "assets/poses/boy/walking_shot.svg",
+    "tips": [
+      "Ask the photographer to use burst mode to capture the most natural mid-stride frame.",
+      "A longer focal length (85mm+) compresses the background beautifully for this shot.",
+      "Swing your arms gently — exaggerated arm movement looks unnatural."
+    ],
+    "tags": [
+      "walking",
+      "movement",
+      "street",
+      "lifestyle",
+      "dynamic"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_003",
+    "name": "The Thinker",
+    "category": "boy",
+    "difficulty": "medium",
+    "description": "A contemplative pose with hand near the chin or temple, conveying depth and thoughtfulness. Ideal for headshots and portrait work.",
+    "instructions": [
+      "Sit or stand facing the camera at a ¾ angle — turn your body about 30° to the right or left.",
+      "Bring your dominant hand up and rest your chin lightly on your closed fist or loosely curled fingers.",
+      "↓ Let your elbow rest on a surface (table, knee, or railing) for a stable, relaxed position.",
+      "Furrow your brow very slightly — just enough to suggest thought, not a frown.",
+      "Look downward at about a 30° angle past the camera lens.",
+      "Keep your other hand relaxed and out of frame, or resting on your lap."
+    ],
+    "svgAsset": "assets/poses/boy/the_thinker.svg",
+    "tips": [
+      "This pose works exceptionally well in black-and-white processing.",
+      "Soft window light from one side adds dramatic depth to the contemplative mood.",
+      "Don't press your fist hard into your chin — it distorts your face shape."
+    ],
+    "tags": [
+      "thoughtful",
+      "portrait",
+      "seated",
+      "headshot",
+      "moody"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_004",
+    "name": "Arms Crossed in Cap",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "A confident, athletic standing pose with arms crossed high over the chest and a forward baseball cap.",
+    "instructions": [
+      "Stand with feet shoulder-width apart, body angled about 20° to the side.",
+      "Cross your arms firmly across your chest, tucking hands under biceps.",
+      "Wear a baseball cap with the visor forward, shading the upper eyes slightly.",
+      "Turn your head slightly to look past the camera or make strong direct eye contact.",
+      "Shift weight slightly to your back leg for a grounded masculine stance."
+    ],
+    "svgAsset": "assets/poses/boy/arms_crossed.svg",
+    "tips": [
+      "Crossing arms high on the chest broadens your shoulders visually.",
+      "Keep chin slightly raised so the cap visor doesn't cast harsh shadows over your smile."
+    ],
+    "tags": [
+      "arms-crossed",
+      "cap",
+      "confident",
+      "streetwear",
+      "athletic",
+      "casual"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_005",
+    "name": "Sitting Forward Lean",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "A clean, approachable seated pose leaning forward with hands resting on knees. Clear and easy to map.",
+    "instructions": [
+      "Sit on the edge of a bench, chair, or steps facing the camera.",
+      "Lean your torso forward ~15° from the waist toward the lens.",
+      "Rest both hands flat over your knees, fingers cupping your kneecaps.",
+      "Plant your right foot straight down to the floor, and angle your left foot slightly back.",
+      "Smile warmly with head upright and relaxed."
+    ],
+    "svgAsset": "assets/poses/boy/sitting_cool.svg",
+    "tips": [
+      "Leaning toward the camera conveys engagement and friendly confidence.",
+      "Great for casual portraits, cafe benches, or outdoor steps."
+    ],
+    "tags": [
+      "seated",
+      "friendly",
+      "casual",
+      "lean",
+      "bench",
+      "steps"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_006",
+    "name": "Side Profile",
+    "category": "boy",
+    "difficulty": "medium",
+    "description": "A striking profile shot that highlights the jawline, nose, and silhouette. Works beautifully in dramatic or moody lighting.",
+    "instructions": [
+      "Turn 90° so the camera sees your full profile — one ear should be completely hidden.",
+      "↑ Lift your chin slightly to sharpen the jawline and separate it from your neck.",
+      "→ Push your face very slightly forward (jut the chin) to define the jaw further.",
+      "Keep your far shoulder dropped ↓ naturally so it doesn't crowd the neckline.",
+      "Fix your gaze on a point straight ahead at eye level — don't look toward the camera."
+    ],
+    "svgAsset": "assets/poses/boy/side_profile.svg",
+    "tips": [
+      "Backlight or rim light from behind defines the profile edge beautifully.",
+      "A clean, uncluttered background makes the silhouette pop.",
+      "If you have facial hair, profile shots are excellent for showing its shape."
+    ],
+    "tags": [
+      "profile",
+      "jawline",
+      "dramatic",
+      "moody",
+      "silhouette"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "boy_007",
+    "name": "Umbrella & Shoulder Bag",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "Cinematic, moody outdoor pose holding an umbrella over the shoulder with a messenger bag.",
+    "instructions": [
+      "Rest an open umbrella handle over your right shoulder behind you.",
+      "Sling a messenger or tote bag strap diagonally across your chest.",
+      "Tilt your head down contemplatively, looking toward the pavement.",
+      "Tuck your free hand into your coat or jacket pocket.",
+      "Take a slow step forward for a candid walking rhythm."
+    ],
+    "svgAsset": "assets/poses/boy/looking_down.svg",
+    "tips": [
+      "Wet streets or rainfall reflections instantly make this pose look like a movie still.",
+      "Round glasses and a high-collar coat elevate the thoughtful aesthetic."
+    ],
+    "tags": [
+      "umbrella",
+      "cinematic",
+      "rain",
+      "coat",
+      "bag",
+      "walking"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_008",
+    "name": "Back to Camera",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "A mysterious pose facing away from the camera, great for storytelling, travel, and editorial imagery.",
+    "instructions": [
+      "Turn completely away from the camera so your back faces the lens.",
+      "↑ Stand tall with your spine straight and shoulders pulled back.",
+      "Turn your head slightly (about 15-20°) toward one shoulder so a sliver of your profile is visible.",
+      "Place one hand in your pocket or let both arms rest naturally at your sides.",
+      "Focus on a point in the distance — a landscape, building, or horizon — to give the shot context."
+    ],
+    "svgAsset": "assets/poses/boy/back_to_camera.svg",
+    "tips": [
+      "Epic landscapes or urban skylines make perfect backdrops for this pose.",
+      "A jacket draped over the shoulders adds a stylish, editorial touch.",
+      "The slight head turn is optional — fully facing away can be even more dramatic."
+    ],
+    "tags": [
+      "mystery",
+      "travel",
+      "editorial",
+      "back",
+      "storytelling"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_009",
+    "name": "Jacket Grab",
+    "category": "boy",
+    "difficulty": "medium",
+    "description": "A fashion-forward pose holding or adjusting a jacket. Adds motion and texture to the frame.",
+    "instructions": [
+      "Drape your jacket over one shoulder, holding it with one hand at the collar.",
+      "→ Turn your body ¾ to the camera and shift your weight onto your back foot.",
+      "↑ Lift the jacket-holding arm just enough that your elbow is slightly away from your body.",
+      "Look toward the camera over the shoulder that has the jacket, creating a dynamic diagonal line.",
+      "Keep your free hand in your trouser pocket or hooked on a belt loop.",
+      "Relax your face — a slight smirk or neutral expression works best."
+    ],
+    "svgAsset": "assets/poses/boy/jacket_grab.svg",
+    "tips": [
+      "Textured jackets (leather, denim, tweed) photograph more interestingly than plain fabric.",
+      "Wind can add natural motion to a draped jacket — shoot on a breezy day.",
+      "Ensure the jacket doesn't bunch up and hide your silhouette."
+    ],
+    "tags": [
+      "fashion",
+      "jacket",
+      "editorial",
+      "stylish",
+      "dynamic"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "boy_010",
+    "name": "The Squat",
+    "category": "boy",
+    "difficulty": "medium",
+    "description": "A low, grounded pose squatting down close to the ground. Gives an edgy, street-style look.",
+    "instructions": [
+      "↓ Lower yourself into a deep squat with your feet flat on the ground, slightly wider than shoulder-width.",
+      "Rest your forearms on your knees and let your hands hang loosely between your legs.",
+      "← Lean slightly forward from the hips so your weight is centered, not falling backward.",
+      "↑ Keep your head up and your eyes level with the camera — don't look down.",
+      "Angle your body about 20° to one side so the shot isn't perfectly symmetrical."
+    ],
+    "svgAsset": "assets/poses/boy/the_squat.svg",
+    "tips": [
+      "Shooting from ground level or just below eye-height emphasizes the street vibe.",
+      "Sneakers and streetwear elevate this pose's aesthetic.",
+      "If a full flat-foot squat is uncomfortable, go to the balls of your feet."
+    ],
+    "tags": [
+      "street",
+      "edgy",
+      "low",
+      "urban",
+      "grounded"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_011",
+    "name": "Hands Behind Head",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "A relaxed, open pose with both hands clasped behind the head. Conveys ease and confidence.",
+    "instructions": [
+      "Stand upright and interlace your fingers behind your head, resting them at the base of your skull.",
+      "→ Open your elbows wide to the sides, creating a strong triangular frame around your face.",
+      "↑ Push your chest forward slightly and arch your back just a touch.",
+      "Plant your feet shoulder-width apart and shift your weight onto one hip for an asymmetrical stance.",
+      "Look straight into the camera or slightly above it with a relaxed, easy expression."
+    ],
+    "svgAsset": "assets/poses/boy/hands_behind_head.svg",
+    "tips": [
+      "This pose shows off arm definition — roll up sleeves or wear a short-sleeve shirt.",
+      "Avoid tensing your neck; your hands should rest lightly, not pull your head forward.",
+      "Golden-hour backlight creates a beautiful halo effect with the open elbow frame."
+    ],
+    "tags": [
+      "relaxed",
+      "confident",
+      "open",
+      "standing",
+      "casual"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_012",
+    "name": "Phone Scroll & Chin Touch",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "The quintessential modern candid pose: looking down at your smartphone while thoughtfully touching your chin.",
+    "instructions": [
+      "Hold your smartphone at waist-level in your right hand.",
+      "Bring your left hand up to lightly cup your chin or touch your lower lip.",
+      "Tilt your head downward ~25° as if reading an interesting message.",
+      "Wear an open jacket, overshirt, or hoodie to add silhouette depth.",
+      "Keep your feet relaxed in a natural standing stance."
+    ],
+    "svgAsset": "assets/poses/boy/phone_scroll.svg",
+    "tips": [
+      "Looking at a real screen makes your facial expression completely natural and unforced.",
+      "Side lighting creates dramatic contrast along the chin and jawline."
+    ],
+    "tags": [
+      "candid",
+      "phone",
+      "street",
+      "thoughtful",
+      "hoodie",
+      "modern"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_013",
+    "name": "Coffee Hold",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "A warm, inviting pose holding a coffee cup. Ideal for café settings and lifestyle content.",
+    "instructions": [
+      "Hold the coffee cup with both hands wrapped around it at chest level, fingers visible.",
+      "↑ Bring the cup up near your face — just below chin height — so the steam (if any) is visible.",
+      "Look into the cup, past the camera, or directly at the lens depending on the mood you want.",
+      "← Lean one shoulder against a doorframe or café wall for a supported, casual posture.",
+      "Let your expression be soft and warm — think 'first sip on a chilly morning.'"
+    ],
+    "svgAsset": "assets/poses/boy/coffee_hold.svg",
+    "tips": [
+      "Use a photogenic cup — solid colors or minimal branding work best.",
+      "Warm-toned lighting complements this cozy pose perfectly.",
+      "If the cup is empty, hold it like it's full — tilting an empty cup looks odd."
+    ],
+    "tags": [
+      "coffee",
+      "cozy",
+      "lifestyle",
+      "café",
+      "warm"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_014",
+    "name": "The Jump",
+    "category": "boy",
+    "difficulty": "advanced",
+    "description": "A high-energy action pose captured mid-jump. Creates exciting, dynamic imagery full of movement.",
+    "instructions": [
+      "↑ Jump straight up from both feet, pushing off hard from the balls of your feet.",
+      "At the peak, bend one knee up and extend the other leg downward to create an asymmetric shape.",
+      "→ Spread your arms out to the sides and slightly upward for a sense of flying.",
+      "↑ Tilt your head back slightly and let out a genuine laugh or shout for a natural expression.",
+      "Land softly on the balls of your feet — you'll likely need 5-10 takes to get the perfect frame."
+    ],
+    "svgAsset": "assets/poses/boy/the_jump.svg",
+    "tips": [
+      "Use a fast shutter speed (1/1000s or faster) to freeze the motion sharply.",
+      "Shoot from a low angle to maximize the height illusion.",
+      "Loose clothing billows in the air and adds extra energy to the frame."
+    ],
+    "tags": [
+      "action",
+      "jump",
+      "dynamic",
+      "energy",
+      "fun"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "boy_015",
+    "name": "Shadow Play",
+    "category": "boy",
+    "difficulty": "advanced",
+    "description": "An artistic pose using strong directional light to create dramatic shadows on the face and body.",
+    "instructions": [
+      "Find a source of hard light — direct sunlight through blinds, a window frame, or a patterned screen.",
+      "Position yourself so the light hits your face at a 45° angle from one side.",
+      "← Turn your face slowly into the light until the shadow pattern falls across your features interestingly.",
+      "↑ Lift your chin slightly to prevent shadows from pooling under your eyes.",
+      "Keep your expression serious and still — movement blurs the shadow lines.",
+      "Let your body remain in partial shadow while your face catches the light."
+    ],
+    "svgAsset": "assets/poses/boy/shadow_play.svg",
+    "tips": [
+      "Blinds and window shutters create the most iconic parallel shadow lines.",
+      "Black-and-white processing makes shadow play images even more striking.",
+      "Shoot at midday when the sun is strongest for the sharpest shadow edges."
+    ],
+    "tags": [
+      "artistic",
+      "shadow",
+      "dramatic",
+      "light",
+      "creative"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "boy_016",
+    "name": "Lean Forward",
+    "category": "boy",
+    "difficulty": "medium",
+    "description": "An engaged, forward-leaning pose that conveys interest and intensity. Great for environmental and editorial portraits.",
+    "instructions": [
+      "Sit on a chair, stool, or ledge and plant both feet firmly on the ground.",
+      "← Lean your upper body forward from the hips, resting your forearms on your thighs.",
+      "Clasp your hands together loosely between your knees or let them hang.",
+      "↑ Keep your back straight as you lean — it's a hinge at the hips, not a slump.",
+      "Look directly into the camera with a focused, intent expression."
+    ],
+    "svgAsset": "assets/poses/boy/lean_forward.svg",
+    "tips": [
+      "This pose creates a triangle shape with your arms and legs that's very compositionally strong.",
+      "Shooting at the subject's eye level intensifies the connection.",
+      "Roll up your sleeves for a more casual, approachable look."
+    ],
+    "tags": [
+      "engaged",
+      "intense",
+      "seated",
+      "editorial",
+      "portrait"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_017",
+    "name": "The Runner",
+    "category": "boy",
+    "difficulty": "advanced",
+    "description": "A dynamic athletic pose mid-run. Captures speed, determination, and energy.",
+    "instructions": [
+      "Start jogging slowly toward the camera at a 30° diagonal angle.",
+      "→ Drive your right knee up high while your left arm swings forward — opposite arm to leg.",
+      "↑ Keep your chest lifted and your gaze straight ahead, past the camera.",
+      "Lean your torso forward about 15° to suggest forward momentum.",
+      "Land on the balls of your feet — heel strikes look clunky in photos.",
+      "Time your stride so the photographer catches the moment of maximum extension."
+    ],
+    "svgAsset": "assets/poses/boy/the_runner.svg",
+    "tips": [
+      "Athletic wear and running shoes make this pose authentic.",
+      "Early morning light on a track or trail sets the perfect scene.",
+      "Continuous burst shooting at 10+ fps gives the best chance of a sharp frame."
+    ],
+    "tags": [
+      "athletic",
+      "running",
+      "dynamic",
+      "fitness",
+      "action"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_018",
+    "name": "Sitting Cross-Legged",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "A grounded, approachable seated pose on the floor or grass with legs crossed. Perfect for park and nature settings.",
+    "instructions": [
+      "Sit on the ground with your legs crossed comfortably, ankles tucked under each other.",
+      "↑ Straighten your spine and imagine a string pulling the crown of your head toward the sky.",
+      "Rest your hands on your knees, palms down for authority or palms up for openness.",
+      "← Tilt your head slightly to one side and offer a gentle, genuine smile.",
+      "If outdoors, sit in an open patch of grass with trees or foliage visible behind you."
+    ],
+    "svgAsset": "assets/poses/boy/sitting_cross_legged.svg",
+    "tips": [
+      "A blanket or mat underneath prevents grass stains and adds a styled element.",
+      "The photographer should shoot from slightly above — about 30° down — for a flattering angle.",
+      "Props like a book, guitar, or hat in your lap add character."
+    ],
+    "tags": [
+      "seated",
+      "grounded",
+      "nature",
+      "relaxed",
+      "approachable"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_019",
+    "name": "Against Car",
+    "category": "boy",
+    "difficulty": "medium",
+    "description": "A cool, editorial pose leaning against a car. Great for automotive, lifestyle, and fashion content.",
+    "instructions": [
+      "Stand next to the car's front fender or rear quarter panel and lean your hip against it.",
+      "Cross your ankles and fold your arms, or hook one thumb into your belt loop.",
+      "→ Angle your body about 30° away from the car so you're not perfectly parallel to it.",
+      "↑ Lift your chin and look down the road or into the distance for a cinematic feel.",
+      "Keep your weight on the foot closest to the car so the lean looks natural, not forced."
+    ],
+    "svgAsset": "assets/poses/boy/against_car.svg",
+    "tips": [
+      "A clean, polished car surface acts as a reflective fill light on your shadow side.",
+      "Classic and vintage cars add enormous visual interest over modern ones.",
+      "Shoot low to include both the car's lines and your full silhouette."
+    ],
+    "tags": [
+      "car",
+      "editorial",
+      "fashion",
+      "cool",
+      "lifestyle"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "boy_020",
+    "name": "The Stretch",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "A natural, candid pose stretching your arms or body as if just waking up. Conveys freedom and energy.",
+    "instructions": [
+      "↑ Raise both arms above your head and extend them fully, fingers spread wide.",
+      "← Arch your back very slightly and let your chest open up.",
+      "Turn your face toward the light source — sun, window, or sky — with your eyes gently closed.",
+      "Rise up slightly onto the balls of your feet to lengthen your whole body line.",
+      "Let out a real breath as you stretch — it relaxes your face and body naturally."
+    ],
+    "svgAsset": "assets/poses/boy/the_stretch.svg",
+    "tips": [
+      "Sunrise or sunset backlight creates a stunning rim-lit silhouette during the stretch.",
+      "This pose looks most natural outdoors — rooftops, balconies, or open fields.",
+      "Fitted clothing shows the body line better than baggy layers."
+    ],
+    "tags": [
+      "freedom",
+      "candid",
+      "morning",
+      "energy",
+      "natural"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_021",
+    "name": "Book Reader",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "A scholarly, relaxed pose reading a book. Suggests intelligence and calm, perfect for intellectual branding.",
+    "instructions": [
+      "Sit in a comfortable chair, on a park bench, or lean against a tree.",
+      "Hold an open book at about a 45° angle in front of you, both hands supporting it from underneath.",
+      "↓ Look down at the pages with your eyes, keeping your chin only slightly lowered.",
+      "Cross one leg over the other or extend both legs forward for a relaxed posture.",
+      "Let a faint smile form as if you've just read something amusing."
+    ],
+    "svgAsset": "assets/poses/boy/book_reader.svg",
+    "tips": [
+      "Use a real book with a nice cover — digital readers don't photograph as warmly.",
+      "Libraries, bookstores, and old café corners make excellent settings.",
+      "Soft natural light from a nearby window keeps the mood gentle and inviting."
+    ],
+    "tags": [
+      "reading",
+      "intellectual",
+      "calm",
+      "seated",
+      "scholarly"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_022",
+    "name": "Mirror Shot",
+    "category": "boy",
+    "difficulty": "medium",
+    "description": "A self-portrait using a mirror for creative framing. Adds depth and a fashion-forward feel.",
+    "instructions": [
+      "Stand in front of a large mirror, angling your body ¾ so you're not squared-off to the glass.",
+      "Hold the camera or phone at chest height and frame yourself within the mirror's edges.",
+      "↑ Stand tall and pull your shoulders back for a strong posture in the reflection.",
+      "Look at yourself in the mirror, not at the camera, for a more editorial vibe.",
+      "Ensure the background visible in the mirror is clean and uncluttered."
+    ],
+    "svgAsset": "assets/poses/boy/mirror_shot.svg",
+    "tips": [
+      "Clean the mirror thoroughly — smudges are very visible in photos.",
+      "Unique mirrors (vintage, ornate frames, full-length) add artistic value.",
+      "Play with depth by positioning objects between you and the mirror."
+    ],
+    "tags": [
+      "mirror",
+      "selfie",
+      "creative",
+      "fashion",
+      "framing"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_023",
+    "name": "Hair Fix",
+    "category": "boy",
+    "difficulty": "easy",
+    "description": "A candid-looking pose where you run your fingers through your hair. Natural, effortless, and photogenic.",
+    "instructions": [
+      "↑ Raise one hand to the side of your head and slide your fingers into your hair from the temple back.",
+      "Keep the motion gentle and slow — freeze mid-movement for the shot.",
+      "Look slightly away from the camera (about 20° off-axis) with a relaxed expression.",
+      "← Let your other arm hang naturally at your side or rest in your pocket.",
+      "Angle your face toward the light so the raised arm doesn't cast a shadow across your features."
+    ],
+    "svgAsset": "assets/poses/boy/hair_fix.svg",
+    "tips": [
+      "This pose works for all hair lengths — short hair can use a temple-brush motion.",
+      "Burst shooting captures the most natural-looking mid-action frame.",
+      "Avoid pulling your hair — fingers should glide, not grip."
+    ],
+    "tags": [
+      "candid",
+      "hair",
+      "natural",
+      "effortless",
+      "portrait"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_024",
+    "name": "The Point",
+    "category": "boy",
+    "difficulty": "medium",
+    "description": "A fun, engaging pose pointing at the camera or into the distance. Creates connection and adds energy.",
+    "instructions": [
+      "→ Extend your dominant arm toward the camera, pointing with your index finger directly at the lens.",
+      "Bend your elbow slightly — a fully locked arm looks stiff.",
+      "Turn your body ¾ and shift your weight onto your back foot for a dynamic stance.",
+      "↑ Lift your chin, flash a confident smile or a playful wink.",
+      "Keep your other hand on your hip, in your pocket, or gesturing naturally."
+    ],
+    "svgAsset": "assets/poses/boy/the_point.svg",
+    "tips": [
+      "This pose breaks the fourth wall — perfect for social media and personal brand content.",
+      "Pointing off-frame toward a subject or landmark tells a visual story.",
+      "A wide-angle lens up close exaggerates the pointing hand for a fun distortion effect."
+    ],
+    "tags": [
+      "fun",
+      "engaging",
+      "social media",
+      "portrait",
+      "energetic"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "boy_025",
+    "name": "Golden Hour Walk",
+    "category": "boy",
+    "difficulty": "medium",
+    "description": "A cinematic walking pose during golden hour with the sun behind you creating a warm halo of light.",
+    "instructions": [
+      "Walk slowly away from the setting sun so the golden light wraps around your outline from behind.",
+      "← Let one arm swing naturally while the other hangs or holds a light prop (sunglasses, jacket).",
+      "↑ Keep your chin slightly elevated and your face turned about 30° toward the camera (over your shoulder).",
+      "Take relaxed, measured strides — not rushed — to keep the frame clean.",
+      "Let the warm backlight rim your hair and shoulders for a cinematic glow."
+    ],
+    "svgAsset": "assets/poses/boy/golden_hour_walk.svg",
+    "tips": [
+      "Shoot during the last 30 minutes before sunset for the warmest, softest light.",
+      "A slight lens flare from the sun behind you adds atmosphere — don't use a lens hood.",
+      "Earth-toned clothing (browns, tans, olive) harmonizes with golden light."
+    ],
+    "tags": [
+      "golden hour",
+      "cinematic",
+      "walking",
+      "sunset",
+      "warm"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_001",
+    "name": "Hair Flip",
+    "category": "girl",
+    "difficulty": "medium",
+    "description": "A dynamic, glamorous pose capturing hair in motion mid-flip. Creates energy, texture, and a sense of fun.",
+    "instructions": [
+      "Start with your hair draped over one shoulder and your body angled ¾ to the camera.",
+      "↑ In one smooth motion, toss your hair from one side to the other by turning your head quickly.",
+      "Freeze at the peak of the motion — hair should be fanned out and airborne.",
+      "→ Lean your torso slightly in the opposite direction of the flip for counterbalance.",
+      "Keep your expression joyful or fierce — whatever matches the mood.",
+      "Your arms can stay relaxed at your sides or one hand can be near your head."
+    ],
+    "svgAsset": "assets/poses/girl/hair_flip.svg",
+    "tips": [
+      "Use a fast shutter speed (1/1000s+) to freeze individual hair strands.",
+      "A fan or gentle breeze helps control the direction of the flip.",
+      "Multiple takes are normal — expect 10-15 shots to get the perfect hair arc."
+    ],
+    "tags": [
+      "dynamic",
+      "hair",
+      "glamorous",
+      "motion",
+      "fun"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_002",
+    "name": "Over Shoulder",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "A classic, flirtatious look over one shoulder toward the camera. Timeless and flattering for any setting.",
+    "instructions": [
+      "Turn your back to the camera and position your feet slightly apart.",
+      "← Rotate your upper body about 45° back toward the camera, leading with your shoulder.",
+      "↑ Lift the shoulder closest to the camera slightly to create a graceful line.",
+      "Turn your head to look over that shoulder directly into the lens.",
+      "Soften your expression — a gentle smile or a sultry gaze both work beautifully.",
+      "Let your arms relax at your sides or hold a small prop (clutch, flower, hat brim)."
+    ],
+    "svgAsset": "assets/poses/girl/over_shoulder.svg",
+    "tips": [
+      "This is one of the most universally flattering poses — the body twist elongates the waistline.",
+      "Bare or off-shoulder tops make the shoulder line more prominent.",
+      "Shoot from waist level for the most flattering proportions."
+    ],
+    "tags": [
+      "classic",
+      "flirtatious",
+      "portrait",
+      "flattering",
+      "elegant"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_003",
+    "name": "The Twirl",
+    "category": "girl",
+    "difficulty": "advanced",
+    "description": "A spinning pose that captures a dress or skirt in full motion. Magical, joyful, and perfect for flowing outfits.",
+    "instructions": [
+      "Wear a flowy dress, skirt, or outfit that fans out when you spin.",
+      "↑ Stand tall, raise one arm slightly, and begin spinning slowly clockwise on the ball of one foot.",
+      "→ Extend one arm outward and keep the other near your body for an asymmetrical, graceful shape.",
+      "Look slightly up and over one shoulder toward the camera as you spin.",
+      "Time the photo for the moment the fabric reaches maximum spread.",
+      "Keep spinning smoothly — jerky stops show in the fabric's motion."
+    ],
+    "svgAsset": "assets/poses/girl/the_twirl.svg",
+    "tips": [
+      "Lightweight fabrics like chiffon, tulle, and silk twirl the most dramatically.",
+      "Backlight catches the translucent fabric edges beautifully.",
+      "Practice the spin speed before shooting — too fast blurs, too slow doesn't spread the fabric."
+    ],
+    "tags": [
+      "spinning",
+      "dress",
+      "magical",
+      "joyful",
+      "motion"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "girl_004",
+    "name": "Flower Hold",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "A romantic, feminine pose holding a flower or bouquet near the face or body. Adds color and softness to portraits.",
+    "instructions": [
+      "Hold a single flower or small bouquet in one hand at chest or chin height.",
+      "↑ Bring the flower close to your face — just beside your cheek or under your chin — without hiding your features.",
+      "Tilt your head slightly toward the flower (about 10°) as if admiring it.",
+      "↓ Lower your gaze to the flower or look softly past the camera.",
+      "Keep your grip gentle — fingertips, not a fist — to maintain an elegant feel."
+    ],
+    "svgAsset": "assets/poses/girl/flower_hold.svg",
+    "tips": [
+      "Choose flowers that contrast with your outfit color for visual pop.",
+      "Wildflowers give a bohemian feel; roses and peonies feel more classic.",
+      "Soft, diffused light (overcast sky or shade) keeps the mood romantic."
+    ],
+    "tags": [
+      "romantic",
+      "flower",
+      "feminine",
+      "soft",
+      "portrait"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_005",
+    "name": "Stool Chill",
+    "category": "girl",
+    "difficulty": "medium",
+    "description": "Relaxed high-stool seated pose with head tilted and hand supporting jaw. Chic, effortless cafe vibe.",
+    "instructions": [
+      "Sit on a high stool or chair with your knees relaxed.",
+      "Tilt your head ~15° toward your left shoulder.",
+      "Prop your left hand under your jaw or near ear to gently support the head tilt.",
+      "Rest your right hand casually on your thigh or lap.",
+      "Keep shoulders relaxed and gaze calmly into the lens."
+    ],
+    "svgAsset": "assets/poses/girl/sitting_graceful.svg",
+    "tips": [
+      "Tucking an oversized tee into a belted pair of pants accentuates the waistline.",
+      "A watch or bracelet adds a subtle detail near the face."
+    ],
+    "tags": [
+      "stool",
+      "seated",
+      "cafe",
+      "chill",
+      "relaxed",
+      "chic"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_006",
+    "name": "The Lean",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "A relaxed, natural pose leaning against a wall, tree, or doorframe. Versatile and universally flattering.",
+    "instructions": [
+      "Find a clean surface to lean against — wall, pillar, tree trunk, or doorframe.",
+      "→ Place one shoulder against the surface and angle your body about 45° toward the camera.",
+      "Bend the knee closest to the wall and place that foot flat against the surface behind you.",
+      "← Let your arms relax — one hand on your hip and the other hanging naturally or touching the wall.",
+      "↑ Keep your chin slightly raised and look directly at the camera or slightly past it."
+    ],
+    "svgAsset": "assets/poses/girl/the_lean.svg",
+    "tips": [
+      "The bent leg creates a flattering S-curve through the body.",
+      "Textured surfaces (brick, stone, wood) add visual interest to the frame.",
+      "Avoid leaning your head against the wall — it shortens your neck."
+    ],
+    "tags": [
+      "relaxed",
+      "wall",
+      "natural",
+      "versatile",
+      "flattering"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_007",
+    "name": "Wind Blown",
+    "category": "girl",
+    "difficulty": "advanced",
+    "description": "A ethereal pose where wind catches your hair and clothing naturally. Creates a dreamy, editorial quality.",
+    "instructions": [
+      "Stand facing into a gentle breeze or have an assistant hold a fan just out of frame.",
+      "← Turn your body ¾ to the wind so it catches your hair from the side, not directly in your face.",
+      "↑ Lift your chin slightly and close your eyes partway — a dreamy, relaxed expression.",
+      "Let your arms hang softly or hold the edges of your clothing as it flows.",
+      "→ If wearing a scarf, let one end stream out behind you in the breeze.",
+      "Keep your body still and let only the hair and fabric move."
+    ],
+    "svgAsset": "assets/poses/girl/wind_blown.svg",
+    "tips": [
+      "Real wind is unpredictable — a portable fan gives you control over direction and intensity.",
+      "Lightweight layers, scarves, and long hair maximize the wind effect.",
+      "Shooting against the sky or a plain backdrop keeps focus on the wind motion."
+    ],
+    "tags": [
+      "wind",
+      "ethereal",
+      "dreamy",
+      "editorial",
+      "motion"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "girl_008",
+    "name": "Laughing Natural",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "A candid-style pose capturing genuine laughter. The most universally appealing and warm expression.",
+    "instructions": [
+      "Stand or sit naturally — don't worry about perfect body positioning.",
+      "Think of something genuinely funny or have someone make you laugh off-camera.",
+      "↑ As you laugh, let your head tilt back slightly and your eyes crinkle naturally.",
+      "Bring one hand up near your chest or mouth — a natural laughing gesture — but don't cover your face.",
+      "Let your body respond naturally to the laugh — the slight lean, the shoulder shake.",
+      "The photographer should shoot continuously to capture the peak of the genuine expression."
+    ],
+    "svgAsset": "assets/poses/girl/laughing_natural.svg",
+    "tips": [
+      "Forced laughter is obvious — use a real trigger (joke, memory, funny video on a phone).",
+      "The best laughing shots are often the ones between posed shots when you're relaxing.",
+      "Warm, soft lighting complements the joy of the expression."
+    ],
+    "tags": [
+      "candid",
+      "laughter",
+      "natural",
+      "warm",
+      "joyful"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_009",
+    "name": "Walk Away",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "A cinematic pose walking away from the camera. Creates mystery, elegance, and a storytelling quality.",
+    "instructions": [
+      "Turn your back to the camera and begin walking slowly and deliberately away.",
+      "↑ Keep your posture tall — imagine a book balanced on your head.",
+      "Let one arm swing slightly while the other hangs or holds a bag, hat, or jacket.",
+      "← Glance back over one shoulder after a few steps for a dramatic mid-walk look.",
+      "Walk in a slightly curved path rather than a straight line for more visual interest."
+    ],
+    "svgAsset": "assets/poses/girl/walk_away.svg",
+    "tips": [
+      "A long path (hallway, tree-lined avenue, beach) gives depth and perspective.",
+      "Heels create a more defined walk — the slight sway adds elegance.",
+      "Shooting at a wide aperture (f/2.8 or lower) blurs the path ahead and isolates the subject."
+    ],
+    "tags": [
+      "walking",
+      "mystery",
+      "cinematic",
+      "elegant",
+      "storytelling"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_010",
+    "name": "Streetwear Crouch",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "The iconic streetwear deep crouch. Edgy, low-angle sneakerhead pose that frames your full outfit.",
+    "instructions": [
+      "Lower into a deep squat with your knees spread comfortably wide.",
+      "Bring your left hand up to lightly touch your chin or side of jaw.",
+      "Rest your right arm against your right knee with hand pointing down toward your kicks.",
+      "Tilt your head slightly and look directly into the camera.",
+      "Wear an oversized tee and baggy cargo pants for maximum silhouette style."
+    ],
+    "svgAsset": "assets/poses/girl/the_candid.svg",
+    "tips": [
+      "Hold phone at knee-height or ground level for high-impact streetwear perspective.",
+      "Works best against concrete, skateparks, or city walls."
+    ],
+    "tags": [
+      "streetwear",
+      "crouch",
+      "squat",
+      "sneakers",
+      "baggy",
+      "urban"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_011",
+    "name": "Hands on Hat",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "A stylish pose with one or both hands touching or adjusting a hat. Adds a fashion-forward, playful element.",
+    "instructions": [
+      "Wear a wide-brimmed hat, fedora, or any photogenic hat.",
+      "↑ Raise one hand to the brim and tilt the hat slightly — as if adjusting it against the wind.",
+      "Look out from under the brim at the camera or slightly downward for mystery.",
+      "→ Angle your body ¾ so the hat's brim creates interesting shadow patterns on your face.",
+      "Let your other arm rest on your hip or hang naturally at your side."
+    ],
+    "svgAsset": "assets/poses/girl/hands_on_hat.svg",
+    "tips": [
+      "Wide-brimmed hats create the most dramatic shadows and framing around the face.",
+      "Backlight from the sun makes straw hats glow beautifully.",
+      "Tilt the hat at different angles between shots for variety — each creates a different shadow pattern."
+    ],
+    "tags": [
+      "hat",
+      "fashion",
+      "stylish",
+      "playful",
+      "accessory"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_012",
+    "name": "The Frame",
+    "category": "girl",
+    "difficulty": "medium",
+    "description": "A creative pose using your hands or arms to frame your face. Draws attention directly to your features.",
+    "instructions": [
+      "↑ Bring both hands up beside your face, fingers spread softly, framing your cheeks and chin.",
+      "Keep your fingers relaxed and slightly curved — stiff, flat hands look unnatural.",
+      "← Tilt your head about 10° into one hand as if resting on it.",
+      "Make eye contact with the camera through your 'frame' and hold a soft expression.",
+      "Position your elbows away from your body to avoid squishing your arms against your torso."
+    ],
+    "svgAsset": "assets/poses/girl/the_frame.svg",
+    "tips": [
+      "Ensure your nails are camera-ready — they'll be prominently visible.",
+      "This pose works exceptionally well as a tight headshot or beauty shot.",
+      "Ring lighting creates the signature circular catchlight in the eyes for this pose."
+    ],
+    "tags": [
+      "framing",
+      "portrait",
+      "beauty",
+      "creative",
+      "headshot"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_013",
+    "name": "Floor Sit",
+    "category": "girl",
+    "difficulty": "medium",
+    "description": "A relaxed, editorial pose sitting on the floor with legs arranged artfully. Great for studio and indoor settings.",
+    "instructions": [
+      "Sit on the floor with both legs extended to one side, ankles crossed or stacked.",
+      "← Lean slightly onto one hand placed beside your hip for support.",
+      "↑ Keep your spine long and your chest open — don't collapse into the lean.",
+      "Place your free hand on your knee, in your hair, or resting in your lap.",
+      "↓ Look toward the ground or at the camera from this lower angle with a relaxed expression."
+    ],
+    "svgAsset": "assets/poses/girl/floor_sit.svg",
+    "tips": [
+      "Clean, monochrome floors (white, grey, polished concrete) make the best backgrounds.",
+      "Shooting from directly above creates a fashion-editorial flat-lay effect with a person.",
+      "Flowing fabric spread around you on the floor adds texture and visual interest."
+    ],
+    "tags": [
+      "floor",
+      "editorial",
+      "relaxed",
+      "indoor",
+      "studio"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_014",
+    "name": "Aesthetic Head Tilt",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "Close-up bust portrait with chin raised, hoop earring, and confident downward gaze. High fashion editorial energy.",
+    "instructions": [
+      "Frame from the chest-up in the viewfinder.",
+      "Tilt your head back slightly and raise your chin.",
+      "Gaze downward directly into the camera lens with attitude.",
+      "Tuck hair on one side to highlight your jawline and hoop earring.",
+      "Keep shoulders relaxed in a crewneck tee or jacket."
+    ],
+    "svgAsset": "assets/poses/girl/chin_rest.svg",
+    "tips": [
+      "Shooting from slightly below eye-level enhances the powerful editorial look.",
+      "Natural side lighting highlights the cheekbones and jawline."
+    ],
+    "tags": [
+      "portrait",
+      "bust",
+      "aesthetic",
+      "chin-up",
+      "editorial",
+      "jewelry"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_015",
+    "name": "The Dancer",
+    "category": "girl",
+    "difficulty": "advanced",
+    "description": "An artistic, ballet-inspired pose with extended limbs and graceful lines. Shows elegance and movement.",
+    "instructions": [
+      "Stand on one foot (en relevé if comfortable — on the ball of your foot) with the other leg extended behind you.",
+      "→ Extend one arm forward and the other to the side or above, creating long, graceful lines.",
+      "↑ Lengthen your neck and lift your chin, gazing along your extended arm.",
+      "← Arch your back gently to create the classic dancer's curve.",
+      "Point your extended foot — flexed feet break the line.",
+      "Engage your core to hold the position steady for the shot."
+    ],
+    "svgAsset": "assets/poses/girl/the_dancer.svg",
+    "tips": [
+      "You don't need to be a dancer — even a simple arabesque with bent knee looks stunning.",
+      "Open spaces (beaches, fields, rooftops) give the extended limbs room to breathe in the frame.",
+      "Flowing, lightweight outfits enhance the sense of movement."
+    ],
+    "tags": [
+      "dance",
+      "ballet",
+      "graceful",
+      "artistic",
+      "elegant"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "girl_016",
+    "name": "Sunglasses Push",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "A chic, playful pose pushing sunglasses up or pulling them down your nose. Adds attitude and fashion flair.",
+    "instructions": [
+      "Wear sunglasses and raise one hand to the frame, as if pushing them up the bridge of your nose.",
+      "↑ Peek over the top of the lenses at the camera — let your eyes be visible above the frame.",
+      "← Tilt your head slightly to one side and offer a confident smirk or playful expression.",
+      "Position your fingers delicately on the arm or bridge of the sunglasses, not gripping.",
+      "Keep your other hand on your hip or holding a bag strap."
+    ],
+    "svgAsset": "assets/poses/girl/sunglasses_push.svg",
+    "tips": [
+      "Oversized and cat-eye frames photograph especially well for this pose.",
+      "Shoot in bright sunlight so the lens/face contrast is dramatic.",
+      "A slight down-the-nose look adds an editorial, high-fashion feel."
+    ],
+    "tags": [
+      "sunglasses",
+      "chic",
+      "fashion",
+      "playful",
+      "attitude"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_017",
+    "name": "Reading Pose",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "A quiet, intellectual pose engrossed in a book. Suggests depth, calm, and a contemplative nature.",
+    "instructions": [
+      "Sit in a cozy spot — a window seat, armchair, or beneath a tree — and hold an open book.",
+      "↓ Lower your gaze to the pages with a soft, absorbed expression.",
+      "← Lean slightly to one side as if sinking into the moment.",
+      "Tuck one leg under you or cross your legs for a comfortable, lived-in look.",
+      "Use one hand to hold the book open and let the other rest near the pages or on your knee."
+    ],
+    "svgAsset": "assets/poses/girl/reading_pose.svg",
+    "tips": [
+      "Natural window light falling on the pages creates a warm, inviting glow.",
+      "A cup of tea or coffee beside you adds to the cozy narrative.",
+      "Worn, well-loved books look more authentic than brand-new ones."
+    ],
+    "tags": [
+      "reading",
+      "intellectual",
+      "cozy",
+      "calm",
+      "contemplative"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_018",
+    "name": "Staircase",
+    "category": "girl",
+    "difficulty": "medium",
+    "description": "A dramatic pose on a staircase using the architecture for dynamic lines and height variation.",
+    "instructions": [
+      "Stand a few steps up a visually interesting staircase (spiral, grand, outdoor, iron).",
+      "← Place one hand on the railing and turn your body ¾ toward the camera below.",
+      "↑ Stand tall on the step with one foot slightly forward on the edge of the stair.",
+      "Look down toward the camera from above — this creates a powerful, editorial angle.",
+      "Let your free hand rest at your side or brush through your hair for a natural gesture.",
+      "If in a dress, let the fabric trail behind you on the steps."
+    ],
+    "svgAsset": "assets/poses/girl/staircase.svg",
+    "tips": [
+      "Spiral staircases create incredible leading lines when shot from below or above.",
+      "The photographer should shoot from the bottom of the stairs looking up for the most dramatic angle.",
+      "Heels add elegance but make sure you're stable on the step."
+    ],
+    "tags": [
+      "staircase",
+      "architectural",
+      "dramatic",
+      "editorial",
+      "height"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "girl_019",
+    "name": "Coffee Shop",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "A lifestyle pose in a coffee shop or café setting. Warm, relatable, and perfect for social media content.",
+    "instructions": [
+      "Sit at a window-side café table with a drink placed in front of you.",
+      "Hold the cup with one hand and rest the other on the table or under your chin.",
+      "← Turn your body toward the window light for the most flattering, soft illumination.",
+      "↑ Sit upright and angle your knees to one side under the table for an elegant line.",
+      "Look out the window, at your drink, or into the camera — each gives a different mood."
+    ],
+    "svgAsset": "assets/poses/girl/coffee_shop.svg",
+    "tips": [
+      "Window seats provide the best natural light and interesting background reflections.",
+      "Latte art and colorful drinks add a photogenic element to the frame.",
+      "Avoid busy or cluttered table surfaces — minimalist styling looks best."
+    ],
+    "tags": [
+      "café",
+      "lifestyle",
+      "warm",
+      "social media",
+      "cozy"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_020",
+    "name": "The Wave",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "A friendly, playful pose waving at the camera. Light-hearted and perfect for fun, casual portraits.",
+    "instructions": [
+      "→ Raise one hand to head height and open your palm toward the camera in a natural wave.",
+      "Spread your fingers comfortably — not too stiff, not too floppy.",
+      "↑ Tilt your head slightly and flash a big, genuine smile.",
+      "Keep your elbow bent at about 90° — a fully extended wave arm looks awkward.",
+      "Shift your weight to one hip and let your other hand rest at your side."
+    ],
+    "svgAsset": "assets/poses/girl/the_wave.svg",
+    "tips": [
+      "A frozen mid-wave looks more dynamic than a static held wave — burst mode helps.",
+      "This pose is great for Instagram stories, TikTok thumbnails, and casual brand content.",
+      "Bright, colorful backgrounds match the cheerful energy of this pose."
+    ],
+    "tags": [
+      "friendly",
+      "wave",
+      "playful",
+      "casual",
+      "fun"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_021",
+    "name": "Scarf Play",
+    "category": "girl",
+    "difficulty": "medium",
+    "description": "An accessory-focused pose playing with a scarf — wrapping, draping, or flowing. Adds color, texture, and motion.",
+    "instructions": [
+      "Drape a scarf loosely around your neck with one end longer than the other.",
+      "→ Hold the longer end with one hand and extend it slightly outward or upward as if the wind caught it.",
+      "Turn your face into the scarf for a cozy feel, or look away from it for a fashion-forward look.",
+      "← Lean slightly into the wrap of the scarf, letting it frame your face on one side.",
+      "Keep your expression soft and relaxed — let the scarf be the star of the shot."
+    ],
+    "svgAsset": "assets/poses/girl/scarf_play.svg",
+    "tips": [
+      "Silk and chiffon scarves catch light and wind beautifully.",
+      "Choose a scarf color that contrasts with your outfit for visual impact.",
+      "A slight toss of the scarf end creates gorgeous mid-air fabric textures."
+    ],
+    "tags": [
+      "scarf",
+      "accessory",
+      "fashion",
+      "texture",
+      "color"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_022",
+    "name": "Mirror Selfie",
+    "category": "girl",
+    "difficulty": "easy",
+    "description": "A trendy self-portrait style using a mirror for creative composition. Popular for outfit-of-the-day and lifestyle content.",
+    "instructions": [
+      "Stand in front of a full-length or large mirror and position yourself off-center in the reflection.",
+      "Hold your phone or camera at waist or chest height — not in front of your face.",
+      "↑ Stand tall with your weight on one foot and the other crossed in front for a relaxed stance.",
+      "Look at the mirror (your reflection) rather than at the phone screen.",
+      "→ Angle the mirror or your body so interesting background elements appear in the reflection."
+    ],
+    "svgAsset": "assets/poses/girl/mirror_selfie.svg",
+    "tips": [
+      "Clean the mirror until it's spotless — every smudge is amplified.",
+      "Natural light streaming in from behind you creates a beautiful backlit reflection.",
+      "Full-length mirrors capture complete outfits; smaller mirrors create a framed portrait effect."
+    ],
+    "tags": [
+      "mirror",
+      "selfie",
+      "OOTD",
+      "trendy",
+      "lifestyle"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_023",
+    "name": "Jump Joy",
+    "category": "girl",
+    "difficulty": "advanced",
+    "description": "A joyful, energetic jump with arms and legs expressing pure happiness. Perfect for celebrations and fun content.",
+    "instructions": [
+      "↑ Jump straight up with arms raised high above your head, fingers spread wide with joy.",
+      "Kick both feet back or apart for a star-jump silhouette.",
+      "Let your hair fly freely — don't hold it down.",
+      "↑ Throw your head back slightly and let out a genuine laugh or shout of joy.",
+      "→ Spread your arms wide, creating a big, open V-shape above your head.",
+      "Land on the balls of your feet — you'll need multiple takes."
+    ],
+    "svgAsset": "assets/poses/girl/jump_joy.svg",
+    "tips": [
+      "Shooting against the sky (from a low angle) creates the most dramatic jump silhouette.",
+      "Flowing dresses and skirts billow beautifully during jumps.",
+      "Use a shutter speed of at least 1/1000s to freeze the peak moment."
+    ],
+    "tags": [
+      "jump",
+      "joy",
+      "energy",
+      "celebration",
+      "fun"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_024",
+    "name": "Side Profile",
+    "category": "girl",
+    "difficulty": "medium",
+    "description": "A clean profile shot showcasing facial features, earrings, and hairstyle from the side. Elegant and timeless.",
+    "instructions": [
+      "Turn 90° so the camera captures your exact profile — one ear hidden, one visible.",
+      "↑ Lift your chin slightly to define your jawline and elongate your neck.",
+      "→ Push your face gently forward (subtle chin jut) to separate the jaw from the neck.",
+      "Keep your expression calm — closed lips or a very slight smile.",
+      "Let your hair fall naturally or sweep it behind the visible ear to showcase earrings.",
+      "Hold still and let the photographer focus precisely on the nearest eye."
+    ],
+    "svgAsset": "assets/poses/girl/side_profile.svg",
+    "tips": [
+      "Profile shots are excellent for showcasing earrings, hair accessories, and updos.",
+      "Backlight creates a stunning rim of light around the profile edge.",
+      "A plain, contrasting background makes the silhouette pop."
+    ],
+    "tags": [
+      "profile",
+      "elegant",
+      "timeless",
+      "jewelry",
+      "silhouette"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "girl_025",
+    "name": "Golden Light",
+    "category": "girl",
+    "difficulty": "medium",
+    "description": "A luminous pose bathed in golden-hour sunlight, face upturned to catch the warm glow. Dreamy and radiant.",
+    "instructions": [
+      "Position yourself facing the setting sun so the golden light falls directly on your face.",
+      "↑ Lift your chin upward about 20-30° and close your eyes gently, basking in the warmth.",
+      "→ Spread your arms slightly from your sides, palms forward, in an open, receiving gesture.",
+      "Let a soft, content smile form naturally on your lips.",
+      "The photographer should shoot from slightly below, silhouetting you against the glowing sky.",
+      "Take a deep breath and genuinely relax into the warmth for an authentic expression."
+    ],
+    "svgAsset": "assets/poses/girl/golden_light.svg",
+    "tips": [
+      "The last 15-20 minutes before sunset give the warmest, most golden tones.",
+      "Reflective or light-colored clothing glows beautifully in golden light.",
+      "A slight breeze moving hair during golden hour creates pure magic."
+    ],
+    "tags": [
+      "golden hour",
+      "dreamy",
+      "radiant",
+      "sunset",
+      "warm"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "couple_001",
+    "name": "Forehead Touch",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "An intimate pose where both partners press their foreheads together gently. Conveys deep connection, trust, and tenderness.",
+    "instructions": [
+      "Stand face-to-face with your partner, about six inches apart.",
+      "↓ Both partners slowly lean forward until your foreheads touch gently at the center.",
+      "Close your eyes simultaneously and let your expressions soften naturally.",
+      "One partner can cup the other's face with a hand, or both can hold hands between you.",
+      "↓ Tilt your heads slightly in opposite directions so your noses don't collide.",
+      "Breathe naturally and stay in the moment — genuine closeness reads in the photo."
+    ],
+    "svgAsset": "assets/poses/couple/forehead_touch.svg",
+    "tips": [
+      "This pose is about emotion, not posture — let your bodies relax and sway naturally.",
+      "Shoot from the side to capture both profiles and the point of contact.",
+      "Soft, warm light enhances the intimacy of this tender moment."
+    ],
+    "tags": [
+      "intimate",
+      "tender",
+      "connection",
+      "romantic",
+      "close-up"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_002",
+    "name": "Piggyback",
+    "category": "couple",
+    "difficulty": "medium",
+    "description": "A playful, energetic pose with one partner riding on the other's back. Fun, joyful, and dynamic.",
+    "instructions": [
+      "The carrying partner stands with feet shoulder-width apart and bends knees slightly.",
+      "The riding partner hops onto the carrier's back, wrapping legs around the waist and arms loosely around the shoulders.",
+      "↑ Both partners look up or ahead with big, genuine smiles or laughter.",
+      "The carrier can hold the rider's legs securely for stability.",
+      "→ The rider can extend one arm outward or wave for a more dynamic shape.",
+      "Both lean slightly forward — the carrier for balance, the rider for closeness."
+    ],
+    "svgAsset": "assets/poses/couple/piggyback.svg",
+    "tips": [
+      "The riding partner should lean in close rather than sitting upright — it looks more natural and connected.",
+      "Action shots of actually hopping on (burst mode) capture great candid laughter.",
+      "Open spaces like beaches and fields give a sense of freedom."
+    ],
+    "tags": [
+      "playful",
+      "fun",
+      "dynamic",
+      "active",
+      "joyful"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_003",
+    "name": "Hand Hold Walk",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A classic, romantic pose walking hand-in-hand. Natural, timeless, and perfect for any location.",
+    "instructions": [
+      "Hold hands naturally — fingers interlaced or one hand cradling the other's — between you.",
+      "Walk slowly side-by-side, keeping your held hands visible to the camera.",
+      "↑ Both partners walk tall with relaxed shoulders and natural arm swing on the free side.",
+      "← Lean slightly toward each other so your shoulders are close or touching.",
+      "Look at each other, straight ahead, or one looks at the camera while the other looks away.",
+      "Take small, synchronized steps so you stay in rhythm with each other."
+    ],
+    "svgAsset": "assets/poses/couple/hand_hold_walk.svg",
+    "tips": [
+      "The photographer should walk backward ahead of you or shoot from behind for a following shot.",
+      "Tree-lined paths, beaches, and cobblestone streets make gorgeous backdrops.",
+      "Swinging your held hands slightly adds a playful, carefree energy."
+    ],
+    "tags": [
+      "romantic",
+      "walking",
+      "classic",
+      "timeless",
+      "hand-holding"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_004",
+    "name": "The Hug",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A warm, full embrace facing each other. Simple, genuine, and emotionally powerful.",
+    "instructions": [
+      "Stand face-to-face and wrap your arms fully around each other in a genuine hug.",
+      "One partner's head can rest on the other's shoulder or chest, cheek turned toward the camera.",
+      "← The taller partner can rest their chin gently on top of the shorter partner's head.",
+      "Close your eyes and squeeze just a little — real affection shows in the hold.",
+      "↑ Both stand tall rather than hunching — a hug with good posture looks best on camera."
+    ],
+    "svgAsset": "assets/poses/couple/the_hug.svg",
+    "tips": [
+      "Ask the photographer to capture the moment from a slight distance to show the full embrace.",
+      "The warmth of this pose is enhanced by cozy settings — autumn leaves, winter scarves, fireplaces.",
+      "Shoot from slightly above for a more intimate, overhead feel."
+    ],
+    "tags": [
+      "embrace",
+      "warm",
+      "genuine",
+      "emotional",
+      "close"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_005",
+    "name": "Back Hug",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A sweet pose where one partner hugs the other from behind. Protective, romantic, and deeply connected.",
+    "instructions": [
+      "The hugging partner stands behind and wraps both arms around the other's waist or chest.",
+      "The front partner places their hands over the hugger's arms, holding them in place.",
+      "← The front partner leans back slightly into the embrace.",
+      "→ The back partner rests their chin on the front partner's shoulder, cheek touching cheek.",
+      "Both can look in the same direction, at each other, or the front partner looks at the camera."
+    ],
+    "svgAsset": "assets/poses/couple/back_hug.svg",
+    "tips": [
+      "Height differences make this pose especially photogenic — the taller partner typically hugs from behind.",
+      "Sunset or golden-hour light from the side illuminates both faces beautifully.",
+      "Slightly rocking side-to-side creates natural movement for burst shooting."
+    ],
+    "tags": [
+      "back hug",
+      "protective",
+      "sweet",
+      "romantic",
+      "connected"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_006",
+    "name": "Sitting Together",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A relaxed, grounded pose sitting together on steps, a bench, or the ground. Casual and comfortable.",
+    "instructions": [
+      "Sit side-by-side on steps, a park bench, the ground, or a low wall.",
+      "← One partner leans into the other, shoulder-to-shoulder, creating a connected unit.",
+      "Arrange your legs to avoid mirroring — one partner can extend their legs while the other bends at the knee.",
+      "Hold hands between you or let one partner's hand rest on the other's knee.",
+      "↑ Keep your spines tall even while leaning — slouching reads as tiredness, not relaxation."
+    ],
+    "svgAsset": "assets/poses/couple/sitting_together.svg",
+    "tips": [
+      "Steps create natural height variation between you even while sitting.",
+      "Props like a blanket, picnic basket, or guitar add narrative to the scene.",
+      "Shooting from slightly above shows both faces clearly when seated."
+    ],
+    "tags": [
+      "seated",
+      "relaxed",
+      "casual",
+      "together",
+      "comfortable"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_007",
+    "name": "Dancing Pose",
+    "category": "couple",
+    "difficulty": "medium",
+    "description": "A romantic slow-dance pose, hand-in-hand with bodies close. Elegant, timeless, and cinematic.",
+    "instructions": [
+      "One partner places a hand on the other's waist; the other rests their hand on the first's shoulder.",
+      "Hold your other hands together out to one side at shoulder height, like a ballroom frame.",
+      "← Both lean in close, foreheads near or touching, eyes meeting.",
+      "↑ Stand tall with elongated spines — slouching ruins the dance posture.",
+      "Shift your weight gently side-to-side as if swaying to slow music.",
+      "Let genuine smiles and soft laughter emerge naturally."
+    ],
+    "svgAsset": "assets/poses/couple/dancing_pose.svg",
+    "tips": [
+      "Play actual music on a phone speaker — it triggers real swaying and genuine expressions.",
+      "String lights, ballrooms, or outdoor twilight settings amplify the romantic atmosphere.",
+      "Slow shutter speed (1/30s) while they sway creates a dreamy motion blur effect."
+    ],
+    "tags": [
+      "dance",
+      "romantic",
+      "elegant",
+      "cinematic",
+      "sway"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "couple_008",
+    "name": "Cheek Kiss",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A sweet, photogenic moment of one partner kissing the other's cheek. Captures affection without being overly intimate.",
+    "instructions": [
+      "Stand side-by-side or at a slight angle, bodies close together.",
+      "The kissing partner leans in and presses their lips gently to the other's cheek.",
+      "The receiving partner can smile, laugh, close their eyes, or look at the camera with a grin.",
+      "→ The kissing partner places one hand on the receiver's opposite cheek or shoulder.",
+      "↑ Both keep their posture upright — avoid leaning too far or stretching your neck awkwardly."
+    ],
+    "svgAsset": "assets/poses/couple/cheek_kiss.svg",
+    "tips": [
+      "A genuine reaction (real surprise or laughter) from the receiver makes the shot feel alive.",
+      "Shoot from the receiver's side so their facial expression is fully visible.",
+      "Soft, warm lighting enhances the tenderness of this affectionate moment."
+    ],
+    "tags": [
+      "kiss",
+      "cheek",
+      "affection",
+      "sweet",
+      "couple"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_009",
+    "name": "The Lift",
+    "category": "couple",
+    "difficulty": "advanced",
+    "description": "A dramatic, joyful pose where one partner lifts the other off the ground. Iconic, cinematic, and full of energy.",
+    "instructions": [
+      "The lifting partner bends at the knees (not the back!) and wraps arms around the other's waist or hips.",
+      "↑ Lift straight up using your legs, pressing the other partner upward until their feet leave the ground.",
+      "The lifted partner can wrap their legs around the lifter or let them swing freely.",
+      "→ The lifted partner extends their arms out, back, or wraps them around the lifter's neck.",
+      "Both partners should be laughing or smiling — the joy should be palpable.",
+      "The lifter looks up at the lifted partner; the lifted one looks at the camera or down at the lifter."
+    ],
+    "svgAsset": "assets/poses/couple/the_lift.svg",
+    "tips": [
+      "Practice the lift beforehand so both partners are confident and comfortable.",
+      "Shooting from a low angle makes the lift look higher and more dramatic.",
+      "Open locations (beaches, fields, plazas) give the lift room to breathe in the frame."
+    ],
+    "tags": [
+      "lift",
+      "dramatic",
+      "joyful",
+      "iconic",
+      "cinematic"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "couple_010",
+    "name": "Laughing Together",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A candid moment of genuine shared laughter. The most natural, joyful, and relatable couple pose.",
+    "instructions": [
+      "Stand or sit close together, facing each other or both facing the camera.",
+      "One partner says something funny or whispers a joke — genuine reactions are the goal.",
+      "↑ As laughter erupts, let your bodies respond naturally — leaning in, shoulder shaking, head tilting back.",
+      "One partner might bury their face in the other's shoulder from laughing.",
+      "The photographer should shoot continuously through the entire laugh — the best frame is rarely the first.",
+      "Don't try to control the pose — just let the laughter happen."
+    ],
+    "svgAsset": "assets/poses/couple/laughing_together.svg",
+    "tips": [
+      "The photographer should encourage real humor — inside jokes, funny memories, or tickling.",
+      "Candid laughter photos are universally the most-loved images from any couple session.",
+      "Bright, cheerful settings match the joyful energy of genuine laughter."
+    ],
+    "tags": [
+      "laughter",
+      "candid",
+      "joyful",
+      "natural",
+      "happy"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_011",
+    "name": "Heart Hands",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A cute pose where both partners form a heart shape with their hands together. Playful, social-media-friendly, and sweet.",
+    "instructions": [
+      "Stand side-by-side, each partner extending their inside hand (the one closest to each other).",
+      "← Curl your fingers into a half-heart shape — one partner makes the left half, the other the right.",
+      "Bring your hands together to form a complete heart between you.",
+      "↑ Hold the heart up at chest or face height where the camera can frame it clearly.",
+      "Both look through the heart at the camera, at each other, or at the heart itself.",
+      "Keep the rest of your bodies close and connected — leaning together."
+    ],
+    "svgAsset": "assets/poses/couple/heart_hands.svg",
+    "tips": [
+      "Frame a sunset or scenic background inside the heart for a creative shot.",
+      "This pose works well as a silhouette against a bright sky.",
+      "Keep the heart shape clean — practice so the curves are symmetrical."
+    ],
+    "tags": [
+      "heart",
+      "cute",
+      "playful",
+      "sweet",
+      "social media"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_012",
+    "name": "The Dip",
+    "category": "couple",
+    "difficulty": "advanced",
+    "description": "A dramatic dance dip where one partner leans back supported by the other. Theatrical, romantic, and stunning.",
+    "instructions": [
+      "The leading partner stands firm with feet wide for balance, one foot slightly forward.",
+      "The dipping partner leans backward, supported by the leader's arm around their mid-back.",
+      "→ The dipping partner can extend one arm back gracefully or let it drape.",
+      "← The leader holds firmly with one arm and can cup the other's face with the free hand.",
+      "The dipping partner arches their back gently and lets their head tilt back.",
+      "Both should look at each other or the dipping partner looks at the camera."
+    ],
+    "svgAsset": "assets/poses/couple/the_dip.svg",
+    "tips": [
+      "The leader must be confident in their hold — practice on soft ground first.",
+      "The deeper the dip, the more dramatic the photo, but safety comes first.",
+      "Flowing dresses or hair create beautiful cascading lines during a dip."
+    ],
+    "tags": [
+      "dip",
+      "dramatic",
+      "dance",
+      "theatrical",
+      "romantic"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "couple_013",
+    "name": "Sunset Silhouette",
+    "category": "couple",
+    "difficulty": "medium",
+    "description": "A silhouette pose against a sunset where only the outlines of the couple are visible. Dramatic, artistic, and deeply romantic.",
+    "instructions": [
+      "Position yourselves between the camera and the setting sun so you're backlit completely.",
+      "Stand in profile facing each other, close enough to almost touch or actually touching foreheads.",
+      "↑ Both stand tall so your silhouettes are clearly defined and separated from each other.",
+      "Create recognizable shapes — hold hands, lean in for a kiss, or frame a heart with your hands.",
+      "Keep about 2-3 inches of space between your bodies so your individual shapes remain distinct.",
+      "The photographer underexposes for the sky to make your forms pure black silhouettes."
+    ],
+    "svgAsset": "assets/poses/couple/sunset_silhouette.svg",
+    "tips": [
+      "Clean horizon lines (ocean, flat plains) make the best silhouette backdrops.",
+      "Props with recognizable shapes (umbrellas, hats) make silhouettes more interesting.",
+      "Shoot in the last 10 minutes of sunset when the sky colors are most intense."
+    ],
+    "tags": [
+      "silhouette",
+      "sunset",
+      "artistic",
+      "dramatic",
+      "romantic"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_014",
+    "name": "Coffee Date",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A cozy café pose capturing a casual coffee date. Relatable, warm, and perfect for lifestyle content.",
+    "instructions": [
+      "Sit across from each other at a small café table, each holding a drink.",
+      "← One partner reaches across the table to hold the other's free hand.",
+      "Both lean slightly toward each other over the table for a sense of engagement.",
+      "↑ Sit tall and angled slightly toward the camera rather than completely in profile.",
+      "Look at each other with warm smiles, or one looks at the camera while the other gazes adoringly."
+    ],
+    "svgAsset": "assets/poses/couple/coffee_date.svg",
+    "tips": [
+      "Window seats provide the best natural light and interesting backgrounds.",
+      "Matching drinks (same type, different size) add a cute visual element.",
+      "Keep the table styling minimal — too many items create clutter."
+    ],
+    "tags": [
+      "coffee",
+      "café",
+      "date",
+      "cozy",
+      "lifestyle"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_015",
+    "name": "Umbrella Share",
+    "category": "couple",
+    "difficulty": "medium",
+    "description": "A romantic pose sharing an umbrella. Whether rainy or sunny, it creates intimacy through shared space.",
+    "instructions": [
+      "One partner holds an open umbrella above both of you.",
+      "← Huddle closely together under the umbrella so you're both covered and connected.",
+      "The non-holding partner wraps an arm around the other's waist or holds their arm.",
+      "↑ Tilt the umbrella slightly toward the camera so it frames you without hiding your faces.",
+      "Look at each other, at the rain/sun, or at the camera — each tells a different story.",
+      "If it's raining, let some raindrops be visible in the frame for atmosphere."
+    ],
+    "svgAsset": "assets/poses/couple/umbrella_share.svg",
+    "tips": [
+      "A colorful or transparent umbrella is more photogenic than a plain black one.",
+      "Real rain creates the most magical atmosphere — embrace getting a little wet.",
+      "Reflections in puddles beneath the umbrella add a beautiful compositional element."
+    ],
+    "tags": [
+      "umbrella",
+      "rain",
+      "romantic",
+      "intimate",
+      "cozy"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_016",
+    "name": "The Chase",
+    "category": "couple",
+    "difficulty": "medium",
+    "description": "A dynamic, playful pose of one partner chasing the other. Captures energy, laughter, and childlike joy.",
+    "instructions": [
+      "One partner starts running slowly ahead while the leading partner reaches back with one hand.",
+      "→ The chasing partner reaches forward with their hand outstretched, almost catching the leader's hand.",
+      "Both should be laughing — this is playful, not a sprint.",
+      "↑ The leading partner glances back over their shoulder at the chaser with a big grin.",
+      "Take small, exaggerated running steps so the photographer can freeze the action.",
+      "Keep a close distance between you — 2-3 feet — so both are in the same focal plane."
+    ],
+    "svgAsset": "assets/poses/couple/the_chase.svg",
+    "tips": [
+      "Fields, beaches, and long corridors give the best sense of distance and motion.",
+      "Bare feet add a playful, carefree feel, especially on grass or sand.",
+      "Continuous burst mode at a fast shutter speed captures the best mid-run frames."
+    ],
+    "tags": [
+      "chase",
+      "playful",
+      "dynamic",
+      "running",
+      "joyful"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_017",
+    "name": "Side by Side",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A strong, symmetrical pose standing shoulder-to-shoulder facing the camera. Clean, modern, and confident.",
+    "instructions": [
+      "Stand side-by-side, shoulders touching, facing the camera directly.",
+      "Hold inside hands (interlock fingers) and let the outside hands hang naturally or rest on hips.",
+      "↑ Both stand tall with matching confident posture — you're a unit.",
+      "← Lean very slightly toward each other so your bodies form a subtle V-shape.",
+      "Match your expressions — both smiling, both serious, or both looking at each other simultaneously."
+    ],
+    "svgAsset": "assets/poses/couple/side_by_side.svg",
+    "tips": [
+      "Matching or coordinating outfits elevate this symmetrical pose dramatically.",
+      "Clean, geometric backgrounds (modern architecture, solid walls) complement the clean lines.",
+      "This pose works well for announcement photos — engagements, pregnancies, milestones."
+    ],
+    "tags": [
+      "symmetrical",
+      "modern",
+      "confident",
+      "together",
+      "clean"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_018",
+    "name": "Head on Shoulder",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A tender pose where one partner rests their head on the other's shoulder. Calm, loving, and peaceful.",
+    "instructions": [
+      "Stand or sit side-by-side with the shorter partner's head resting on the taller partner's shoulder.",
+      "→ The shoulder partner can rest their cheek gently on top of the other's head.",
+      "Both close your eyes or look in the same direction with peaceful expressions.",
+      "The shoulder partner wraps an arm around the other or holds their hand.",
+      "↓ Let your bodies relax into each other — this is a resting pose, not a rigid one."
+    ],
+    "svgAsset": "assets/poses/couple/head_on_shoulder.svg",
+    "tips": [
+      "This pose is beautiful during quiet moments — watching a sunset, on a park bench, on the couch.",
+      "The height difference between partners naturally determines who rests where.",
+      "Soft, warm light matches the tender, peaceful mood."
+    ],
+    "tags": [
+      "tender",
+      "peaceful",
+      "shoulder",
+      "resting",
+      "loving"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_019",
+    "name": "Whisper",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "An intimate, candid moment of one partner whispering into the other's ear. Captures a private, personal connection.",
+    "instructions": [
+      "Stand close together with one partner leaning in toward the other's ear.",
+      "← The whispering partner cups one hand gently near (not over) the listener's ear.",
+      "Actually whisper something real — a compliment, an inside joke, or a memory — for a genuine reaction.",
+      "The listener should react naturally — a smile, a laugh, a blush — don't plan the reaction.",
+      "↑ Both keep your posture upright; the lean should be in the neck and head, not the whole body.",
+      "The photographer should capture the listener's reaction, so shoot from the listener's side."
+    ],
+    "svgAsset": "assets/poses/couple/whisper.svg",
+    "tips": [
+      "Real whispers create real reactions — never mime it, actually say something.",
+      "This pose is perfect for capturing the sparkle in the listener's eyes.",
+      "Works in any setting — the intimacy is in the gesture, not the location."
+    ],
+    "tags": [
+      "whisper",
+      "intimate",
+      "candid",
+      "private",
+      "connection"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_020",
+    "name": "Mirror Pose",
+    "category": "couple",
+    "difficulty": "medium",
+    "description": "A synchronized pose where partners mirror each other's position. Visually striking and artistically compelling.",
+    "instructions": [
+      "Stand facing each other about two feet apart.",
+      "Choose a pose — hand on hip, hand raised, head tilt — and have both partners mirror it exactly.",
+      "→ Each partner's right side should match the other's left (true mirror), not the same side.",
+      "↑ Keep your posture identical — same spine angle, same chin height, same expression.",
+      "Look at each other or both turn to look at the camera simultaneously.",
+      "Fine-tune until the symmetry is as precise as possible — small adjustments make a big difference."
+    ],
+    "svgAsset": "assets/poses/couple/mirror_pose.svg",
+    "tips": [
+      "The photographer should shoot from directly between and slightly above for perfect symmetry.",
+      "Matching outfits amplify the mirror effect dramatically.",
+      "Try different poses to mirror: hands on hips, arms crossed, one knee bent."
+    ],
+    "tags": [
+      "mirror",
+      "symmetry",
+      "artistic",
+      "synchronized",
+      "striking"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "couple_021",
+    "name": "The Twirl",
+    "category": "couple",
+    "difficulty": "medium",
+    "description": "A romantic dance-inspired twirl where one partner spins the other by the hand. Captures motion, joy, and elegance.",
+    "instructions": [
+      "Hold one hand (right to right or right to left) at head height between you.",
+      "The spinning partner begins to turn slowly under the raised hands, arm extending above.",
+      "→ The non-spinning partner guides the turn gently and steps slightly back to give room.",
+      "↑ Both partners keep their free arms graceful — not pinned to their sides.",
+      "The spinning partner looks at the other and smiles as they come around to face them.",
+      "Time the photo for the moment of maximum dress/shirt spread and eye contact."
+    ],
+    "svgAsset": "assets/poses/couple/the_twirl.svg",
+    "tips": [
+      "Flowing outfits make the twirl visually stunning — skirts and dresses spread beautifully.",
+      "Practice the speed — too fast blurs; too slow doesn't spread the fabric.",
+      "Open spaces (dance floors, plazas, clearings) give room for the full spin."
+    ],
+    "tags": [
+      "twirl",
+      "dance",
+      "romantic",
+      "motion",
+      "elegant"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_022",
+    "name": "Bench Sit",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A relaxed, natural pose sitting together on a park bench. Casual, romantic, and perfect for everyday settings.",
+    "instructions": [
+      "Sit together on a bench with one partner slightly turned toward the other.",
+      "← The closer partner leans their knees toward the other and rests a hand on their thigh.",
+      "The other partner drapes an arm along the bench back behind their partner's shoulders.",
+      "↑ Both sit tall — the bench back provides support but don't slump into it.",
+      "Look at each other in conversation, or both face the camera as if someone is taking your photo."
+    ],
+    "svgAsset": "assets/poses/couple/bench_sit.svg",
+    "tips": [
+      "Park benches with trees or gardens behind them provide beautiful, natural framing.",
+      "Sunset light streaming through trees creates dappled patterns on both partners.",
+      "A shared blanket over your laps adds warmth and coziness to the scene."
+    ],
+    "tags": [
+      "bench",
+      "park",
+      "relaxed",
+      "casual",
+      "romantic"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_023",
+    "name": "Stacking Hands",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A symbolic close-up pose of hands stacked on top of each other. Simple, powerful, and deeply meaningful.",
+    "instructions": [
+      "Find a flat surface or hold your hands between you in mid-air.",
+      "One partner places their hand flat, palm down. The other places theirs on top.",
+      "↑ If stacking, alternate — partner A's hand, then B's, then A's, then B's — creating a tower.",
+      "Keep your fingers relaxed and slightly spread for a natural, elegant look.",
+      "The camera should focus tightly on the hands — this is a detail shot, not a full-body pose.",
+      "If wearing rings (engagement/wedding), angle the hands so the rings are visible."
+    ],
+    "svgAsset": "assets/poses/couple/stacking_hands.svg",
+    "tips": [
+      "Macro or close-up lens settings capture the texture and detail of the hands beautifully.",
+      "Soft, even lighting prevents harsh shadows across the stacked hands.",
+      "Adding a small prop under the hands (a love letter, a keepsake) tells a deeper story."
+    ],
+    "tags": [
+      "hands",
+      "symbolic",
+      "close-up",
+      "meaningful",
+      "rings"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_024",
+    "name": "The Walk Away",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A cinematic shot of the couple walking away from the camera together, hand-in-hand. Tells a story of journey and togetherness.",
+    "instructions": [
+      "Hold hands and walk slowly away from the camera together.",
+      "↑ Both walk tall with relaxed, natural strides — don't rush.",
+      "← Lean your heads slightly toward each other as you walk.",
+      "Let your free arms swing naturally, or one partner can rest their head on the other's shoulder while walking.",
+      "Walk toward something visual — a sunset, a bridge, a tree-lined path — to give the image a destination.",
+      "After a few steps, one partner can glance back over their shoulder toward the camera."
+    ],
+    "svgAsset": "assets/poses/couple/the_walk_away.svg",
+    "tips": [
+      "Paths with strong perspective (rows of trees, long bridges) create powerful leading lines.",
+      "Backlight from a sunset creates a warm, romantic halo around both silhouettes.",
+      "This is a beautiful closing shot for any couple session — save it for the end."
+    ],
+    "tags": [
+      "walking",
+      "journey",
+      "cinematic",
+      "together",
+      "sunset"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "couple_025",
+    "name": "Photo Booth",
+    "category": "couple",
+    "difficulty": "easy",
+    "description": "A fun, expressive pose inspired by photo booth strips — silly faces, big smiles, and playful energy.",
+    "instructions": [
+      "Sit or stand very close together, cheek-to-cheek, facing the camera.",
+      "Round 1: Both make silly faces — tongues out, cross-eyed, duck face — go wild.",
+      "Round 2: One partner kisses the other's cheek while they make a surprised face.",
+      "Round 3: Both look at each other with big, genuine smiles.",
+      "Round 4: A serious, model-like pose — pouty lips and intense eyes — then break into laughter.",
+      "The photographer shoots a rapid sequence to capture all the expressions."
+    ],
+    "svgAsset": "assets/poses/couple/photo_booth.svg",
+    "tips": [
+      "A plain or solid-color background mimics a real photo booth backdrop.",
+      "These images look amazing in a four-panel grid layout, like a real booth strip.",
+      "The sillier the faces, the more fun the photos — drop all self-consciousness."
+    ],
+    "tags": [
+      "fun",
+      "silly",
+      "photo booth",
+      "expressive",
+      "playful"
+    ],
+    "isPremium": true
+  },
+  {
+    "id": "aesthetic_001",
+    "name": "0.5x Distorted Selfie",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "The quintessential Gen-Z high-angle selfie. Camera held way above eye-level pointing down for dramatic, fun perspective distortion.",
+    "instructions": [
+      "Hold phone at arm's length high above your forehead pointing down at 60°.",
+      "Switch to 0.5x ultra-wide lens or step closer to lens.",
+      "↑ Tilt your face directly up toward the camera with chin relaxed.",
+      "Slight smirk or pout with oversized sunglasses perched low.",
+      "Allow your forehead and sunglasses to dominate the upper frame."
+    ],
+    "svgAsset": "assets/poses/aesthetic/zero_point_five_selfie.svg",
+    "tips": [
+      "Flash on outdoors or at night creates instant Y2K magazine cover vibe.",
+      "Keep camera angle steep to elongate your look."
+    ],
+    "tags": [
+      "0.5x",
+      "gen-z",
+      "selfie",
+      "top-down",
+      "y2k",
+      "trending"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_002",
+    "name": "Sneaker Fit Check",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "Showcase your streetwear fit and chunky sneakers with a loose, relaxed stance and hands in hoodie pouch.",
+    "instructions": [
+      "Stand with feet shoulder-width apart to show sneaker silhouettes.",
+      "Tuck both hands into hoodie pocket or let pants puddle over kicks.",
+      "↓ Tilt head down to gaze toward your shoes naturally.",
+      "Keep shoulders dropped and stance nonchalant."
+    ],
+    "svgAsset": "assets/poses/aesthetic/sneaker_fit_check.svg",
+    "tips": [
+      "Shooting from knee-height makes sneakers look 2x chunkier.",
+      "Works best with textured pavement, concrete, or skatepark backgrounds."
+    ],
+    "tags": [
+      "fit-check",
+      "ootd",
+      "sneakers",
+      "baggy",
+      "streetwear"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_003",
+    "name": "Sunglasses Down Peer",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "The playful side-eye pose. Lower your sunglasses halfway down your nose and peer directly over the frame into the lens.",
+    "instructions": [
+      "Slide your shades halfway down your nose bridge.",
+      "Look directly over the rim of the lenses into the camera.",
+      "Bring one index finger up to lightly touch the glasses hinge.",
+      "Give a subtle, knowing smirk."
+    ],
+    "svgAsset": "assets/poses/aesthetic/sunglasses_down.svg",
+    "tips": [
+      "Harsh flash at golden hour makes the glasses reflection pop.",
+      "Great for quick profile pictures and story dumps."
+    ],
+    "tags": [
+      "sunglasses",
+      "side-eye",
+      "playful",
+      "candid",
+      "aesthetic"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_004",
+    "name": "Flash Motion Walk",
+    "category": "aesthetic",
+    "difficulty": "medium",
+    "description": "The quintessential nightlife photo dump shot: walking away briskly on city sidewalk, turning head back just as flash fires.",
+    "instructions": [
+      "Turn body away from camera and begin walking forward at normal pace.",
+      "Suddenly glance back over your shoulder toward the lens.",
+      "Let your arms swing naturally with motion.",
+      "Turn flash ON in a dark or evening setting."
+    ],
+    "svgAsset": "assets/poses/aesthetic/blurry_flash_walk.svg",
+    "tips": [
+      "Pairs flawlessly with our Y2K Digicam color preset and Date Stamp.",
+      "Intentional camera motion creates the iconic Pinterest blur."
+    ],
+    "tags": [
+      "night-out",
+      "flash",
+      "blurry",
+      "candid",
+      "street"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_005",
+    "name": "Iced Matcha Coffee Run",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "The energetic 'busy running errands' aesthetic. Walking toward camera holding an iced tumbler with straw.",
+    "instructions": [
+      "Hold your iced coffee cup waist-high in front of you.",
+      "Walk briskly toward the camera, eyes looking slightly to the side.",
+      "Toss hair or let coat/jacket billow with stride.",
+      "Natural effortless urban morning energy."
+    ],
+    "svgAsset": "assets/poses/aesthetic/iced_coffee_run.svg",
+    "tips": [
+      "Crosswalks and café fronts give this shot peak aesthetic points.",
+      "Hold cup so the straw angles upward."
+    ],
+    "tags": [
+      "coffee",
+      "errands",
+      "lifestyle",
+      "walking",
+      "candid"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_006",
+    "name": "Hand to Lens Cover",
+    "category": "aesthetic",
+    "difficulty": "medium",
+    "description": "The 'no pictures please!' playful candid. Reach one hand right up to the camera lens while smiling behind it.",
+    "instructions": [
+      "Reach your dominant hand directly toward the camera lens.",
+      "Allow your fingers to blur out slightly in the extreme foreground.",
+      "Peep your eyes or cheeky smile just behind your palm.",
+      "Gives dynamic depth and playful intimacy."
+    ],
+    "svgAsset": "assets/poses/aesthetic/hand_to_lens.svg",
+    "tips": [
+      "Have the photographer focus on your eyes while hand is in soft blur.",
+      "Great for laughing candid frames."
+    ],
+    "tags": [
+      "playful",
+      "depth",
+      "candid",
+      "hands",
+      "closeup"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_007",
+    "name": "Mirror Flash No-Face",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "The ultimate aesthetic fit check. Hold your phone up so the camera flash burst covers your face while highlighting your entire outfit.",
+    "instructions": [
+      "Stand before a full-length mirror with room lights dimmed.",
+      "Hold phone at chin-height with rear flash enabled.",
+      "Position the phone so the flash glare covers your face.",
+      "Keep body posture sharp to let the silhouette of your fit shine."
+    ],
+    "svgAsset": "assets/poses/aesthetic/mirror_flash_selfie.svg",
+    "tips": [
+      "Clean your mirror first with microfiber for crisp reflection.",
+      "Pair with our 90s Kodak Gold preset for warm mood."
+    ],
+    "tags": [
+      "mirror",
+      "flash",
+      "ootd",
+      "no-face",
+      "aesthetic"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_008",
+    "name": "Passenger Seat Golden Chill",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "Golden hour road trip energy. Recline the passenger seat, rest one arm on the door frame, and let the sun hit your profile.",
+    "instructions": [
+      "Recline passenger seat slightly back into golden hour sunlight.",
+      "Rest your elbow comfortably along the window sill.",
+      "Gaze out the window or smile casually at the driver's camera.",
+      "Let side light highlight your jawline and hair."
+    ],
+    "svgAsset": "assets/poses/aesthetic/car_passenger_chill.svg",
+    "tips": [
+      "Roll down window for subtle hair movement.",
+      "Sunglasses with golden reflection elevate this 10x."
+    ],
+    "tags": [
+      "car",
+      "roadtrip",
+      "golden-hour",
+      "passenger",
+      "chill"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_009",
+    "name": "Soft Launch Drink Clink",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "The subtle relationship 'soft launch'. Two iced drinks close together on a chic cafe table with hands lightly brushing.",
+    "instructions": [
+      "Place both drinks touching slightly on the café table.",
+      "Rest your hand naturally beside the tumbler.",
+      "Have your partner's hand enter the frame from the opposite side.",
+      "Shoot from top-down 45° angle with warm café lighting."
+    ],
+    "svgAsset": "assets/poses/aesthetic/soft_launch_hands.svg",
+    "tips": [
+      "No faces needed! The intrigue is what makes this viral on Instagram.",
+      "Add Y2K Date Stamp for vintage couple memory feel."
+    ],
+    "tags": [
+      "couple",
+      "soft-launch",
+      "hands",
+      "cafe",
+      "aesthetic"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_010",
+    "name": "Pavement Shadow Lovers",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "Late afternoon sun casts long, romantic silhouettes of a couple holding hands onto clean asphalt or cobblestones.",
+    "instructions": [
+      "Stand with sun directly behind your backs in late afternoon.",
+      "Point your camera downward at your elongated shadows on the ground.",
+      "Hold hands or make a heart with your joined arms.",
+      "Frame so only the shadows and street texture appear in the photo."
+    ],
+    "svgAsset": "assets/poses/aesthetic/shadow_lovers.svg",
+    "tips": [
+      "Look for cobblestone, clean asphalt, or beach sand.",
+      "High contrast black and white preset turns this into art."
+    ],
+    "tags": [
+      "couple",
+      "shadow",
+      "aesthetic",
+      "creative",
+      "sunset"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_011",
+    "name": "Backseat Squad Huddle",
+    "category": "aesthetic",
+    "difficulty": "medium",
+    "description": "The quintessential late-night road trip group photo. Three friends squeezed into the backseat, smiling candidly in front-facing camera flash.",
+    "instructions": [
+      "Center friend leans slightly forward between the front two seats.",
+      "Left and right friends tilt heads inward toward center.",
+      "Camera holder shoots from front passenger seat pointing back.",
+      "Flash enabled for harsh, energetic night flash look."
+    ],
+    "svgAsset": "assets/poses/aesthetic/backseat_squad.svg",
+    "tips": [
+      "Unstaged messy smiles beat stiff poses every time.",
+      "Y2K date stamp in corner makes it look like an archival polaroid."
+    ],
+    "tags": [
+      "squad",
+      "friends",
+      "car",
+      "night-out",
+      "group"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_012",
+    "name": "Low-Angle Skater Kicks",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "Place phone on ground leaning against a curb or drink. Step one foot forward over the lens for towering anime-style perspective.",
+    "instructions": [
+      "Place phone on ground tilted slightly upward.",
+      "Step one sneaker forward closer to camera lens.",
+      "Look down at phone with relaxed, unbothered posture.",
+      "Creates towering high-fashion streetwear perspective."
+    ],
+    "svgAsset": "assets/poses/aesthetic/low_angle_kicks.svg",
+    "tips": [
+      "Use 3-second self timer so you don't have to awkwardly reach down.",
+      "Blue sky or concrete architecture makes the background pop."
+    ],
+    "tags": [
+      "low-angle",
+      "skater",
+      "sneakers",
+      "creative",
+      "perspective"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_013",
+    "name": "Elevator Mirror Chrome",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "The modern metal & glass elevator selfie. Clean chrome reflections, overhead spotlights, and sharp outfit framing.",
+    "instructions": [
+      "Stand centered in the elevator facing the reflective doors or mirror.",
+      "Hold phone at chest height angled slightly downward.",
+      "Keep legs straight, posture relaxed, head tilted subtly.",
+      "Snap quickly between floor stops!"
+    ],
+    "svgAsset": "assets/poses/aesthetic/elevator_mirror_fit.svg",
+    "tips": [
+      "The cool metallic lighting pairs naturally with our Digicam preset.",
+      "Great for showing off jewelry and phone case aesthetic."
+    ],
+    "tags": [
+      "elevator",
+      "mirror",
+      "chrome",
+      "minimal",
+      "ootd"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_014",
+    "name": "Car Window Breeze",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "Sun on your skin and wind in your hair. Eyes gently closed, soaking in the breeze out the passenger window.",
+    "instructions": [
+      "Roll down window and lean head gently toward the breeze.",
+      "Close eyes softly with a peaceful, contented smile.",
+      "Rest arm on the windowsill letting hair flow freely in the wind.",
+      "Capture as natural light washes over your profile."
+    ],
+    "svgAsset": "assets/poses/aesthetic/wind_in_convertible.svg",
+    "tips": [
+      "Shoot with high shutter speed to freeze hair strands in motion.",
+      "Golden hour makes flowing hair glow like gold."
+    ],
+    "tags": [
+      "breeze",
+      "wind",
+      "car",
+      "peaceful",
+      "golden-hour"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_015",
+    "name": "Sun Flare Brow Shield",
+    "category": "aesthetic",
+    "difficulty": "easy",
+    "description": "Facing the blazing golden hour sunset. Raise one hand to gently shield your eyes from the warm lens flare.",
+    "instructions": [
+      "Face directly toward the low golden hour sun.",
+      "Raise your palm horizontally above your brow to shield eyes.",
+      "Allow sun rays to flare around your fingers and illuminate your hair.",
+      "Relax your gaze into the camera lens under the shade of your hand."
+    ],
+    "svgAsset": "assets/poses/aesthetic/golden_hour_glare.svg",
+    "tips": [
+      "Aim for that magic 20 minutes right before sunset.",
+      "Combines impeccably with our Kodak Gold vintage preset."
+    ],
+    "tags": [
+      "sunset",
+      "golden-hour",
+      "sun-flare",
+      "warm",
+      "aesthetic"
+    ],
+    "isPremium": false
+  },
+  {
+    "id": "aesthetic_016",
+    "name": "Anime High-Angle Street",
+    "category": "aesthetic",
+    "difficulty": "medium",
+    "description": "High-angle perspective street shot inspired by modern manga. Camera positioned way above eye-level with hand reaching forward.",
+    "instructions": [
+      "Position the camera high above eye-level pointing down at ~60° (use 0.5x ultra-wide lens).",
+      "Look up directly into the camera through your bangs or glasses with an intense gaze.",
+      "Extend one hand forward toward the lens (holding a yo-yo, drink, or relaxed fingers).",
+      "Roll up your shirt sleeves and keep a tote bag strap across your chest.",
+      "Plant chunky sneakers wide apart to capture the dramatic tapered body perspective."
+    ],
+    "svgAsset": "assets/poses/aesthetic/anime_high_angle.svg",
+    "tips": [
+      "Shooting with 0.5x ultra-wide accentuates the high-angle perspective distortion.",
+      "Outdoor concrete, crosswalks, or asphalt provide the perfect graphic backdrop."
+    ],
+    "tags": [
+      "anime",
+      "high-angle",
+      "0.5x",
+      "streetwear",
+      "perspective",
+      "manga",
+      "gen-z"
+    ],
+    "isPremium": false
+  }
+]

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#FF6D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Low Angle Camera on Floor Looking Up -->
+    <!-- Feet right near camera -->
+    <path d="M 45,310 C 35,335 65,360 95,350 L 85,310 Z" stroke="#FF5722" stroke-width="2"/>
+    <path d="M 155,310 C 165,335 135,360 105,350 L 115,310 Z" stroke="#FF5722" stroke-width="2"/>
+    <!-- Legs towering into sky -->
+    <path d="M 65,310 L 80,160 M 135,310 L 120,160"/>
+    <!-- Torso and head small at high top -->
+    <path d="M 80,160 L 82,100 M 120,160 L 118,100"/>
+    <circle cx="100" cy="75" r="14"/>
+    <path d="M 90,75 L 110,75"/>
+
+  </g>
+</svg>

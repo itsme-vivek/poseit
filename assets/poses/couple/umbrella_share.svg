@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Umbrella arc above -->
+    <path d="M 80,60 Q 150,15 220,60 Z" stroke="#AB47BC" stroke-width="2"/>
+    <line x1="150" y1="60" x2="150" y2="160" stroke="#AB47BC" stroke-width="2"/>
+    <path d="M 115,85 C 110,72 135,70 140,80 C 146,92 142,108 135,118 C 128,126 118,126 115,116 Z"/>
+    <path d="M 165,90 C 160,78 185,76 190,86 C 196,98 192,114 185,124 C 178,132 168,132 165,122 Z"/>
+    <path d="M 105,135 L 100,255 M 180,135 L 175,255"/>
+    <path d="M 100,255 L 105,355 M 175,255 L 170,355"/>
+
+  </g>
+</svg>

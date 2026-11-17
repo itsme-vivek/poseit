@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Photo booth frame with funny poses -->
+    <rect x="35" y="25" width="230" height="340" rx="8" stroke="#78909C" stroke-width="2"/>
+    <path d="M 95,85 C 90,72 115,70 120,80 C 126,92 122,108 115,118 C 108,126 98,126 95,116 Z"/>
+    <path d="M 180,85 C 175,72 200,70 205,80 C 210,92 206,108 200,118 C 192,126 182,126 180,116 Z"/>
+    <!-- Peace signs -->
+    <path d="M 70,95 L 75,75 M 75,95 L 85,75" stroke="#FF5722" stroke-width="2"/>
+    <path d="M 215,95 L 210,75 M 220,95 L 225,75" stroke="#FF5722" stroke-width="2"/>
+    <path d="M 85,135 L 80,240 M 195,135 L 190,240"/>
+
+  </g>
+</svg>

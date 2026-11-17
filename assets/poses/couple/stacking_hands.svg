@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Hands stacked in center -->
+    <circle cx="150" cy="185" r="16" stroke="#FF5722" stroke-width="2"/>
+    <path d="M 90,85 C 85,72 110,70 115,80 C 122,92 118,108 110,118 C 102,126 92,126 90,116 Z"/>
+    <path d="M 190,85 C 185,72 210,70 216,80 C 222,92 218,108 210,118 C 202,126 192,126 190,116 Z"/>
+    <path d="M 105,135 L 140,185 M 195,135 L 160,185"/>
+    <path d="M 85,135 L 80,240 L 85,345 M 200,135 L 195,240 L 190,345"/>
+
+  </g>
+</svg>

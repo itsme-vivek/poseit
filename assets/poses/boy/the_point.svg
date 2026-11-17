@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Head looking confident -->
+    <path d="M 85,45 C 80,32 108,30 115,42 C 122,54 118,72 110,82 C 102,90 92,90 85,80 Z"/>
+    <!-- Pointing arm extended forward -->
+    <path d="M 118,105 L 158,100 L 155,108 L 120,118"/>
+    <line x1="150" y1="96" x2="168" y2="96" stroke="#FF5722" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <!-- Other hand on hip -->
+    <path d="M 76,105 C 55,130 58,165 72,185"/>
+    <!-- Torso & Legs -->
+    <path d="M 72,110 L 68,235 M 124,110 L 122,235"/>
+    <path d="M 68,235 L 74,345 L 88,345 L 95,250"/>
+    <path d="M 122,235 L 118,345 L 104,345 L 98,250"/>
+
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Coffee near window -->
+    <line x1="30" y1="40" x2="30" y2="360" stroke="#78909C" stroke-width="2"/>
+    <path d="M 86,52 C 80,40 108,38 115,48 C 122,58 118,75 110,85 C 102,94 92,94 86,84 Z"/>
+    <ellipse cx="80" cy="140" rx="8" ry="12" stroke="#FF5722" stroke-width="1.8"/>
+    <path d="M 75,108 L 70,230 M 122,108 L 120,230"/>
+    <path d="M 70,230 L 75,345 M 120,230 L 116,345"/>
+
+  </g>
+</svg>

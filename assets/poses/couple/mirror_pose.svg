@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Mirrored pose facing each other -->
+    <path d="M 95,65 C 90,52 115,50 120,60 C 126,72 122,88 115,98 C 108,106 98,106 95,96 Z"/>
+    <path d="M 180,65 C 175,52 200,50 205,60 C 210,72 206,88 200,98 C 192,106 182,106 180,96 Z"/>
+    <line x1="150" y1="30" x2="150" y2="360" stroke="#78909C" stroke-width="1.5" stroke-dasharray="5,5"/>
+    <path d="M 85,120 L 80,240 M 195,120 L 190,240"/>
+    <path d="M 80,240 L 85,350 M 190,240 L 185,350"/>
+
+  </g>
+</svg>

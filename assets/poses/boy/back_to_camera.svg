@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Back of head turned slightly to right -->
+    <path d="M 85,42 C 80,30 108,28 116,38 C 124,48 122,66 114,78 C 104,86 92,86 85,76 Z"/>
+    <!-- Hair back detail -->
+    <path d="M 86,55 C 95,65 106,65 114,55"/>
+    <!-- Neck from back -->
+    <path d="M 92,80 L 90,102 M 108,80 L 108,102"/>
+    <!-- Broad shoulders from back -->
+    <path d="M 90,102 C 72,108 55,120 48,140 L 60,146"/>
+    <path d="M 108,102 C 126,108 142,120 150,140 L 138,146"/>
+    <!-- Arms relaxed along sides -->
+    <path d="M 48,140 C 44,175 46,210 52,240"/>
+    <path d="M 150,140 C 152,175 148,210 142,240"/>
+    <!-- Spine line & shirt back -->
+    <path d="M 62,145 L 68,235 M 136,145 L 130,235"/>
+    <line x1="99" y1="105" x2="98" y2="225" stroke="#78909C" stroke-width="1.2"/>
+    <path d="M 68,235 Q 98,242 130,235"/>
+    <!-- Legs from back -->
+    <path d="M 68,235 L 72,345 L 88,345 L 96,250"/>
+    <path d="M 130,235 L 124,345 L 108,345 L 100,250"/>
+
+  </g>
+</svg>

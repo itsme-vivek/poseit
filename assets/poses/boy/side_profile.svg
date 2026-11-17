@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Side profile head with nose, jaw, neck -->
+    <path d="M 85,45 C 80,30 102,30 115,40 C 122,50 120,62 115,70 L 122,78 L 112,82 L 115,92 C 105,98 92,95 86,85 Z"/>
+    <path d="M 85,45 C 92,55 98,60 108,55"/>
+    <!-- Strong Jaw & Ear -->
+    <path d="M 96,65 C 98,62 102,64 100,72 C 98,76 95,74 96,65"/>
+    <!-- Neck & Shoulder in profile -->
+    <path d="M 88,90 L 80,120 M 106,94 L 125,125"/>
+    <!-- Chest profile -->
+    <path d="M 125,125 C 135,155 132,195 125,235 L 75,235 L 72,145 C 72,130 78,122 80,120"/>
+    <!-- Arm along side -->
+    <path d="M 98,125 C 95,160 92,195 90,230"/>
+    <!-- Lower body in profile -->
+    <path d="M 75,235 L 78,345 L 94,345 L 102,235"/>
+    <path d="M 75,345 L 100,352"/>
+
+  </g>
+</svg>

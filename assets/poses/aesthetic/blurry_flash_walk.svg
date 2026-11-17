@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#FF6D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Blurry Flash Night Walk -->
+    <!-- Motion streak lines -->
+    <path d="M 40,80 L 60,80 M 35,140 L 55,140 M 45,260 L 65,260" stroke="#FFD54F" stroke-width="1.5"/>
+    <!-- Figure caught mid-stride looking back -->
+    <path d="M 90,48 C 84,35 110,32 118,44 C 124,54 120,72 112,82 C 104,90 94,90 88,80 Z"/>
+    <!-- Leather jacket silhouette -->
+    <path d="M 80,105 L 68,185 L 85,225 M 120,105 L 132,185 L 118,225"/>
+    <!-- Walking stride -->
+    <path d="M 78,225 C 70,265 58,305 48,345 L 65,348"/>
+    <path d="M 120,225 C 126,265 138,305 150,345 L 135,348"/>
+
+  </g>
+</svg>

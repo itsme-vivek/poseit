@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Table between them -->
+    <line x1="80" y1="200" x2="220" y2="200" stroke="#78909C" stroke-width="2"/>
+    <path d="M 90,95 C 85,82 110,80 115,90 C 122,102 118,118 110,128 C 102,136 92,136 90,126 Z"/>
+    <path d="M 185,95 C 180,82 205,80 210,90 C 216,102 212,118 205,128 C 198,136 188,136 185,126 Z"/>
+    <!-- Hands touching on table -->
+    <path d="M 110,155 L 140,195 M 190,155 L 160,195"/>
+
+  </g>
+</svg>

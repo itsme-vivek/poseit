@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Man (left) & Woman (right) touching foreheads -->
+    <!-- Man -->
+    <path d="M 95,65 C 90,52 115,50 120,60 C 126,72 122,88 115,98 C 108,106 98,106 95,96 Z"/>
+    <path d="M 88,115 L 82,235 M 125,115 L 125,235"/>
+    <path d="M 82,235 L 85,345 M 125,235 L 122,345"/>
+    <!-- Woman -->
+    <path d="M 155,75 C 150,62 175,60 180,70 C 186,82 182,98 175,108 C 168,116 158,116 155,106 Z"/>
+    <path d="M 148,125 L 145,235 M 185,125 L 180,235"/>
+    <path d="M 145,235 L 148,345 M 180,235 L 176,345"/>
+    <!-- Hands holding at waist -->
+    <path d="M 125,145 C 138,155 142,155 155,145"/>
+
+  </g>
+</svg>

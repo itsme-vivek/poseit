@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Back turned, looking over shoulder -->
+    <path d="M 86,52 C 80,38 106,35 115,45 C 122,55 120,72 110,82 C 102,90 92,90 86,80 Z"/>
+    <path d="M 82,45 C 68,65 65,95 72,125"/>
+    <!-- Back profile & bare shoulder -->
+    <path d="M 90,85 L 85,108 M 105,85 L 112,108"/>
+    <path d="M 85,108 C 72,118 68,140 68,175 C 68,220 72,260 76,300"/>
+    <path d="M 112,108 C 125,120 132,145 130,180 C 126,225 122,265 120,300"/>
+    <path d="M 76,300 Q 98,310 120,300"/>
+    <!-- Legs -->
+    <path d="M 85,300 L 85,365 L 94,365 M 112,300 L 112,365 L 121,365"/>
+    <line x1="135" y1="70" x2="118" y2="70" stroke="#FF5722" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  </g>
+</svg>

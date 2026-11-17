@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Kiss on cheek -->
+    <path d="M 115,70 C 110,58 135,55 140,65 C 146,76 142,92 135,102 C 128,110 118,110 115,100 Z"/>
+    <path d="M 150,75 C 145,62 170,60 176,70 C 182,82 178,98 170,108 C 162,116 152,116 150,106 Z"/>
+    <path d="M 105,120 L 100,240 M 170,120 L 165,240"/>
+    <path d="M 100,240 L 105,350 M 165,240 L 160,350"/>
+
+  </g>
+</svg>

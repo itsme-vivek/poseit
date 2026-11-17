@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Head in low squat -->
+    <path d="M 86,85 C 80,72 108,70 115,80 C 122,92 118,108 110,118 C 102,126 92,126 86,116 Z"/>
+    <!-- Torso low -->
+    <path d="M 80,130 L 75,205 M 116,130 L 122,205"/>
+    <!-- Elbows on wide knees -->
+    <path d="M 75,135 C 55,160 40,195 48,225 L 68,228"/>
+    <path d="M 122,135 C 142,160 156,195 148,225 L 128,228"/>
+    <!-- Hands hanging between knees -->
+    <path d="M 68,228 C 88,235 96,245 98,255 C 100,245 108,235 128,228"/>
+    <!-- Deep bent legs -->
+    <path d="M 48,225 C 38,260 45,300 55,335 L 78,335 C 72,295 72,260 75,225"/>
+    <path d="M 148,225 C 158,260 152,300 142,335 L 118,335 C 124,295 124,260 122,225"/>
+
+  </g>
+</svg>

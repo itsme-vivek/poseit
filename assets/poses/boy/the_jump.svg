@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Dynamic jumping silhouette -->
+    <path d="M 86,40 C 80,28 108,26 115,38 C 122,48 118,66 110,76 C 102,84 92,84 86,74 Z"/>
+    <!-- Arms raised in air -->
+    <path d="M 78,100 C 55,75 42,50 48,35 C 58,35 72,55 82,75"/>
+    <path d="M 116,100 C 138,75 152,50 146,35 C 136,35 122,55 112,75"/>
+    <!-- Torso in midair -->
+    <path d="M 74,105 L 70,210 M 122,105 L 124,210"/>
+    <!-- Legs bent in mid-air -->
+    <path d="M 70,210 C 50,235 45,270 58,295 L 78,285 C 72,260 75,235 88,220"/>
+    <path d="M 124,210 C 145,235 150,270 138,295 L 118,285 C 122,260 120,235 106,220"/>
+    <!-- Jump motion arrows -->
+    <line x1="98" y1="340" x2="98" y2="310" stroke="#FF5722" stroke-width="2" marker-end="url(#arrow)"/>
+
+  </g>
+</svg>

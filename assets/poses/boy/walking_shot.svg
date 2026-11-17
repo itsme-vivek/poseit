@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Head turned slightly looking over shoulder -->
+    <path d="M 88,42 C 82,30 106,28 114,38 C 120,48 118,65 110,76 C 102,84 92,84 88,74 Z"/>
+    <path d="M 86,40 C 98,34 112,38 114,46"/>
+    <!-- Neck & Shirt -->
+    <path d="M 94,80 L 92,98 M 106,78 L 106,98"/>
+    <path d="M 82,100 L 98,114 L 116,100"/>
+    <!-- Shoulders & Arms in stride -->
+    <path d="M 82,100 C 70,110 60,125 54,145 L 65,150 C 70,175 75,200 80,225"/>
+    <path d="M 116,100 C 128,110 136,125 142,145 L 132,150 C 130,175 125,200 120,225"/>
+    <!-- Torso -->
+    <path d="M 68,145 L 72,230 M 128,145 L 122,230"/>
+    <path d="M 72,230 Q 98,235 122,230"/>
+    <!-- Walking stride legs -->
+    <path d="M 72,230 C 65,270 52,310 42,350 L 56,355 L 78,280 C 85,255 88,240 88,230"/>
+    <path d="M 122,230 C 128,265 138,300 152,335 L 140,345 C 125,305 112,265 106,235"/>
+    <path d="M 38,350 L 60,358 M 135,342 L 155,348"/>
+    <!-- Stride arrow -->
+    <line x1="90" y1="365" x2="110" y2="365" stroke="#FF5722" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  </g>
+</svg>

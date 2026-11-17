@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Sun glow indicator -->
+    <circle cx="160" cy="45" r="18" stroke="#FFA726" stroke-width="1.5"/>
+    <!-- Walking towards camera -->
+    <path d="M 88,45 C 82,32 108,30 116,42 C 122,52 120,68 112,78 C 104,86 94,86 88,76 Z"/>
+    <path d="M 80,102 C 68,125 65,160 68,195"/>
+    <path d="M 118,102 C 130,125 135,160 130,195"/>
+    <!-- Torso -->
+    <path d="M 75,108 L 72,230 M 122,108 L 120,230"/>
+    <!-- Stride legs -->
+    <path d="M 72,230 C 65,270 58,310 52,345 L 70,348 L 85,270"/>
+    <path d="M 120,230 C 125,270 135,310 145,340 L 130,346 L 110,270"/>
+
+  </g>
+</svg>

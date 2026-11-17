@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#FF6D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Backseat Car Squad Selfie -->
+    <!-- Person 1 (left) -->
+    <ellipse cx="65" cy="80" rx="16" ry="18"/>
+    <path d="M 52,100 L 48,220 L 80,220 L 75,100"/>
+    <!-- Person 2 (center, leaning forward between seats) -->
+    <ellipse cx="100" cy="65" rx="18" ry="20" stroke="#FF5722" stroke-width="2"/>
+    <path d="M 86,85 L 85,200 L 115,200 L 114,85"/>
+    <path d="M 92,60 Q 100,52 108,60"/>
+    <!-- Person 3 (right) -->
+    <ellipse cx="135" cy="82" rx="16" ry="18"/>
+    <path d="M 124,100 L 120,220 L 152,220 L 148,100"/>
+    <!-- Car seat headrests -->
+    <rect x="35" y="110" width="25" height="15" rx="4" stroke="#78909C" stroke-width="1.5"/>
+    <rect x="140" y="110" width="25" height="15" rx="4" stroke="#78909C" stroke-width="1.5"/>
+
+  </g>
+</svg>

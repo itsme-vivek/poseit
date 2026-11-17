@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450">
+  <g fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Baseball Cap & Visor (Looking slightly right profile) -->
+    <!-- Cap Dome -->
+    <path d="M 152,55 C 150,35 168,24 188,26 C 204,28 214,38 212,55"/>
+    <circle cx="184" cy="25" r="1.5" fill="#FFFFFF"/> <!-- Cap top button -->
+    <!-- Curved Visor / Brim -->
+    <path d="M 188,48 C 202,46 218,46 228,52 C 224,58 208,60 194,58 Z"/>
+    <!-- Head Contour under Cap -->
+    <path d="M 156,58 C 154,72 156,86 160,94 C 166,106 178,114 190,112 C 198,110 204,102 206,90"/>
+    <path d="M 155,70 C 152,72 152,78 155,80"/> <!-- Left ear -->
+    <!-- Confident Profile Eyes & Brow -->
+    <path d="M 178,68 C 184,66 192,67 196,70"/>
+    <circle cx="188" cy="74" r="2.2" fill="#FFFFFF"/>
+    <!-- Nose & Confident Smile -->
+    <path d="M 196,74 L 198,84 L 194,86"/>
+    <path d="M 186,96 C 192,99 198,98 202,95"/>
+
+    <!-- Neck & Crewneck T-Shirt -->
+    <path d="M 168,110 L 164,124"/>
+    <path d="M 198,108 L 202,122"/>
+    <path d="M 164,124 C 176,132 192,132 202,122"/> <!-- Crewneck collar -->
+
+    <!-- Shoulders & Chest with Pocket -->
+    <path d="M 164,124 C 142,128 120,138 106,152"/> <!-- Left shoulder -->
+    <path d="M 202,122 C 224,126 244,136 256,150"/> <!-- Right shoulder -->
+    <!-- Chest Pocket -->
+    <rect x="210" y="162" width="16" height="18" rx="2" stroke="#FFFFFF"/>
+
+    <!-- ARMS CROSSED OVER CHEST -->
+    <!-- Right Arm crossing over -->
+    <path d="M 106,152 C 96,174 98,204 112,224 C 124,238 144,242 168,242"/> <!-- Outer right arm -->
+    <path d="M 110,195 L 134,188"/> <!-- Short sleeve seam -->
+    <!-- Left Arm crossing over and tucking under -->
+    <path d="M 256,150 C 264,174 260,204 246,224 C 232,238 210,242 186,242"/> <!-- Outer left arm -->
+    <path d="M 250,195 L 226,188"/> <!-- Short sleeve seam -->
+    <!-- Crossed Forearms Interlock -->
+    <path d="M 144,205 C 160,212 195,212 210,205"/>
+    <path d="M 132,222 C 155,232 200,232 222,222"/>
+    <!-- Right hand tucked under bicep -->
+    <path d="M 215,202 C 224,206 226,215 222,222"/>
+    <!-- Left hand tucked under elbow -->
+    <path d="M 138,202 C 130,206 128,215 132,222"/>
+
+    <!-- Torso Below Arms & T-Shirt Hem -->
+    <path d="M 130,242 L 132,295"/> <!-- Left waist -->
+    <path d="M 226,242 L 224,295"/> <!-- Right waist -->
+    <path d="M 132,295 C 160,300 200,300 224,295"/> <!-- T-shirt hem -->
+
+    <!-- Confident Standing Stance (one leg straight, one leg relaxed) -->
+    <!-- Left leg (Viewer Left) -->
+    <path d="M 132,295 C 128,330 126,370 130,410 L 130,425"/>
+    <path d="M 168,300 C 166,335 168,375 166,410 L 166,425"/>
+    <!-- Right leg (Viewer Right - relaxed slightly back) -->
+    <path d="M 224,295 C 228,330 226,370 222,410 L 220,425"/>
+    <path d="M 184,300 C 186,335 188,375 190,410 L 192,425"/>
+    <path d="M 174,300 L 174,330 L 180,300"/> <!-- Fly seam -->
+
+    <!-- Footwear -->
+    <path d="M 128,425 C 124,432 125,438 132,442 C 142,444 158,442 164,436 C 166,430 162,425 158,425 Z"/>
+    <path d="M 190,425 C 188,430 186,436 190,440 C 196,444 214,444 220,438 C 222,432 220,425 216,425 Z"/>
+  </g>
+</svg>

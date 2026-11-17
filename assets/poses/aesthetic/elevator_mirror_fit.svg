@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#FF6D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Elevator Mirror Selfies -->
+    <rect x="25" y="20" width="150" height="350" rx="4" stroke="#78909C" stroke-width="2"/>
+    <line x1="25" y1="130" x2="175" y2="130" stroke="#78909C" stroke-width="1"/>
+    <!-- Figure with modern elevator chrome reflection -->
+    <circle cx="100" cy="75" r="16"/>
+    <!-- Phone held at chest level -->
+    <rect x="92" y="105" width="16" height="26" rx="3" stroke="#FF5722" stroke-width="1.8"/>
+    <!-- Arms -->
+    <path d="M 78,110 L 92,118 M 122,110 L 108,118"/>
+    <!-- Outfit -->
+    <path d="M 75,115 L 70,230 M 125,115 L 128,230"/>
+    <path d="M 70,230 L 75,345 M 128,230 L 122,345"/>
+
+  </g>
+</svg>

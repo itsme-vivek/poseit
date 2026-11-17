@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Sitting on stairs -->
+    <polyline points="25,340 70,340 70,280 115,280 115,220 160,220" stroke="#78909C" stroke-width="2"/>
+    <path d="M 98,85 C 92,72 118,70 125,80 C 130,92 126,108 118,118 C 110,126 100,126 98,116 Z"/>
+    <path d="M 95,125 L 90,220 L 110,220 L 112,280 L 125,280"/>
+
+  </g>
+</svg>

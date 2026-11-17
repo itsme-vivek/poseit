@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Mirror Frame -->
+    <rect x="25" y="20" width="150" height="350" rx="8" stroke="#78909C" stroke-width="1.5"/>
+    <!-- Figure taking mirror selfie -->
+    <path d="M 86,55 C 80,42 108,40 115,50 C 122,62 118,78 110,88 C 102,96 92,96 86,86 Z"/>
+    <!-- Phone covering partially -->
+    <rect x="100" y="75" width="20" height="36" rx="4" stroke="#FF5722" stroke-width="2"/>
+    <path d="M 118,110 C 128,125 125,145 110,140"/>
+    <!-- Other hand in pocket -->
+    <path d="M 76,110 C 65,135 62,175 70,225"/>
+    <!-- Torso & Legs -->
+    <path d="M 72,115 L 68,235 M 124,115 L 122,235"/>
+    <path d="M 68,235 L 74,345 L 88,345 L 95,250"/>
+    <path d="M 122,235 L 118,345 L 104,345 L 98,250"/>
+
+  </g>
+</svg>

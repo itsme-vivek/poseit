@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Twirling dress mid-motion -->
+    <path d="M 90,48 C 84,36 108,35 115,45 C 122,55 118,70 110,80 C 102,88 92,88 90,78 Z"/>
+    <!-- Graceful arms extended -->
+    <path d="M 85,100 C 60,95 45,85 35,80"/>
+    <path d="M 115,100 C 140,95 155,85 165,80"/>
+    <!-- Fitted waist -->
+    <path d="M 85,105 L 82,165 M 115,105 L 118,165"/>
+    <path d="M 82,165 Q 100,172 118,165"/>
+    <!-- Flowing bell-shaped twirling skirt -->
+    <path d="M 82,165 C 55,200 30,240 25,270 C 55,290 145,290 175,270 C 170,240 145,200 118,165 Z"/>
+    <!-- Legs in motion -->
+    <path d="M 88,285 L 85,355 L 95,355 M 112,285 L 118,355 L 128,355"/>
+    <!-- Twirl arrow -->
+    <path d="M 160,240 Q 180,260 155,275" stroke="#FF5722" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  </g>
+</svg>

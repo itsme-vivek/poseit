@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450">
+  <g fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Ground contact line -->
+    <line x1="50" y1="425" x2="260" y2="425" stroke="#78909C" stroke-width="1.8" stroke-dasharray="4,4"/>
+
+    <!-- Head & Wavy Bob Hair (looking at camera) -->
+    <path d="M 174,120 C 168,102 182,92 200,94 C 218,96 228,108 226,126"/>
+    <path d="M 174,120 C 180,112 195,110 205,116 C 214,112 222,116 226,126"/>
+    <path d="M 172,128 C 168,140 170,154 176,164"/> <!-- Left wavy hair fringe -->
+    <path d="M 226,126 C 232,138 230,155 224,166"/> <!-- Right hair fringe -->
+    <path d="M 186,115 C 190,128 188,142 184,152"/> <!-- Bangs -->
+
+    <!-- Face Contour -->
+    <path d="M 178,134 C 176,145 182,158 194,164 C 204,164 214,154 218,142"/>
+    <!-- Eyes & Eyebrows -->
+    <path d="M 184,136 C 188,135 192,136 194,138"/>
+    <circle cx="189" cy="141" r="2" fill="#FFFFFF"/>
+    <path d="M 204,138 C 208,136 212,136 216,137"/>
+    <circle cx="210" cy="141" r="2" fill="#FFFFFF"/>
+    <!-- Nose & Mouth -->
+    <path d="M 199,142 L 200,149 L 197,151"/>
+    <path d="M 194,157 C 198,159 204,159 207,157"/>
+
+    <!-- Left Hand Touching Chin (arm bent up from crouch) -->
+    <path d="M 186,162 C 182,168 180,178 180,188"/> <!-- Thumb & index supporting jaw -->
+    <path d="M 180,188 C 176,192 168,206 166,224"/> <!-- Forearm down -->
+    <path d="M 166,224 C 164,242 168,260 174,276"/> <!-- Upper arm from elbow -->
+
+    <!-- Oversized Baggy T-Shirt (Torso in deep crouch) -->
+    <path d="M 194,166 C 182,172 172,180 165,192"/> <!-- Left shoulder -->
+    <path d="M 218,166 C 230,172 242,182 248,198"/> <!-- Right shoulder -->
+    <path d="M 248,198 C 252,220 248,245 240,268"/> <!-- Right back/side -->
+    <path d="M 165,192 C 160,215 158,242 162,268"/> <!-- Front drape -->
+    <path d="M 162,268 C 185,274 215,274 240,268"/> <!-- T-shirt bottom hem -->
+    <path d="M 180,210 C 198,218 220,218 232,212"/> <!-- Fabric crease -->
+
+    <!-- Right Arm (pointing down to floor between knees) -->
+    <path d="M 165,192 C 150,212 140,238 135,268"/> <!-- Upper arm resting on right knee -->
+    <path d="M 135,268 C 130,296 122,328 116,358"/> <!-- Forearm down -->
+    <!-- Relaxed hand pointing toward ground -->
+    <path d="M 116,358 C 114,370 112,382 114,392"/> <!-- Wrist & hand -->
+    <path d="M 114,392 C 113,398 112,406 112,410"/> <!-- Index finger pointing to kicks -->
+    <path d="M 115,392 C 116,400 116,406 116,408"/> <!-- Middle finger -->
+
+    <!-- Deep Crouch Legs (Wide squat with baggy streetwear pants) -->
+    <!-- Right Knee (raised high on viewer left) -->
+    <path d="M 135,268 C 118,272 100,290 95,315 C 90,340 92,375 102,405"/> <!-- Outer knee to ankle -->
+    <path d="M 125,305 C 120,335 120,370 125,405"/> <!-- Inner leg crease -->
+    <path d="M 102,405 L 125,405"/> <!-- Right pant cuff -->
+    <path d="M 98,320 C 110,325 120,332 125,340"/> <!-- Cargo pocket/crease -->
+
+    <!-- Left Leg & Folded Thigh (viewer right) -->
+    <path d="M 240,268 C 255,285 264,310 260,335 C 254,360 238,382 216,400"/> <!-- Outer hip/thigh/knee -->
+    <path d="M 178,285 C 190,315 205,350 216,380"/> <!-- Inner thigh crease -->
+    <path d="M 216,400 L 235,395"/> <!-- Left pant cuff -->
+
+    <!-- Chunky Streetwear Sneaker (right foot on ground) -->
+    <path d="M 102,406 C 98,414 96,420 100,424 C 108,426 130,426 138,422 C 142,418 138,410 130,406 Z"/>
+    <path d="M 98,422 L 138,422"/> <!-- Chunky sole -->
+
+    <!-- Chunky Sneaker (left foot crouched behind) -->
+    <path d="M 216,398 C 212,408 214,416 224,422 C 235,424 252,420 256,412 C 258,406 250,400 240,396 Z"/>
+    <path d="M 216,418 L 254,416"/> <!-- Sole -->
+  </g>
+</svg>

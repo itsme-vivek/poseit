@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <g fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Voluminous Layered Wavy Hair Framing Face -->
+    <path d="M 108,120 C 95,85 125,50 162,48 C 198,46 230,75 224,120"/>
+    <path d="M 108,120 C 114,105 136,88 160,94 C 182,88 206,102 216,116"/>
+    <!-- Outer wavy locks -->
+    <path d="M 106,122 C 92,142 88,175 96,205 C 104,235 122,250 130,260"/>
+    <path d="M 224,120 C 238,142 242,175 234,205 C 226,235 210,250 200,260"/>
+    <!-- Bangs and inner curls -->
+    <path d="M 124,105 C 130,122 132,145 126,165"/>
+    <path d="M 144,98 C 150,115 148,135 142,150"/>
+    <path d="M 166,96 C 172,112 174,130 170,145"/>
+    <path d="M 188,102 C 196,118 198,138 194,155"/>
+
+    <!-- Prominent Big Hoop Earring on right ear (viewer left) -->
+    <ellipse cx="120" cy="190" rx="9" ry="14" stroke="#FFFFFF" stroke-width="2.5"/>
+
+    <!-- Head & Jawline (tilted up, looking down with confidence) -->
+    <path d="M 128,150 C 128,172 136,192 152,202 C 168,206 186,196 196,176 C 200,165 200,150 196,140"/>
+
+    <!-- Confident Eyes looking down at lens -->
+    <!-- Left Eye & Brow -->
+    <path d="M 136,140 C 142,136 148,137 154,142"/> <!-- Brow -->
+    <path d="M 138,146 C 144,144 150,146 154,149"/> <!-- Upper lid -->
+    <ellipse cx="146" cy="148" rx="2.5" ry="1.8" fill="#FFFFFF"/>
+    <!-- Right Eye & Brow -->
+    <path d="M 168,142 C 174,137 180,136 186,140"/> <!-- Brow -->
+    <path d="M 168,149 C 172,146 178,144 184,146"/> <!-- Upper lid -->
+    <ellipse cx="176" cy="148" rx="2.5" ry="1.8" fill="#FFFFFF"/>
+
+    <!-- Upturned Refined Nose -->
+    <path d="M 162,148 L 163,165 L 158,168"/>
+
+    <!-- Full Lips with Attitude -->
+    <path d="M 152,180 C 158,177 166,177 172,180"/>
+    <path d="M 154,182 C 160,186 164,186 170,182"/>
+
+    <!-- Neck with delicate shadow lines -->
+    <path d="M 146,204 L 140,240"/>
+    <path d="M 176,204 L 184,240"/>
+    <path d="M 152,225 C 160,230 166,230 172,225" stroke-dasharray="2,2"/> <!-- Collarbone shadow -->
+
+    <!-- Oversized Crewneck T-Shirt Collar & Drop Shoulders -->
+    <path d="M 136,240 C 148,252 174,252 186,240"/> <!-- Front collar scoop -->
+    <path d="M 133,238 C 148,256 174,256 189,238" stroke-dasharray="2,2"/> <!-- Ribbed neckline -->
+
+    <path d="M 136,240 C 112,246 88,260 70,285 L 60,360"/> <!-- Right dropped shoulder & sleeve -->
+    <path d="M 186,240 C 210,246 234,260 252,285 L 262,360"/> <!-- Left dropped shoulder & sleeve -->
+
+    <!-- Shirt folds across chest -->
+    <path d="M 115,295 C 140,312 182,312 208,295"/>
+    <path d="M 130,340 C 150,355 172,355 192,340"/>
+  </g>
+</svg>

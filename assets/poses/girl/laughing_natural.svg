@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Natural laugh, head tilted, hand near mouth -->
+    <path d="M 88,48 C 84,35 110,32 118,44 C 124,54 120,72 112,82 C 104,90 94,90 88,80 Z"/>
+    <!-- Hand near mouth -->
+    <path d="M 115,105 C 130,95 128,75 110,74 L 105,78"/>
+    <!-- Other arm relaxed -->
+    <path d="M 78,105 C 68,135 68,175 75,215"/>
+    <path d="M 74,110 L 70,225 M 120,110 L 122,225"/>
+    <path d="M 70,225 L 75,350 M 122,225 L 118,350"/>
+
+  </g>
+</svg>

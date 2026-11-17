@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Car Hood Shape -->
+    <path d="M 20,260 Q 80,240 180,250" stroke="#78909C" stroke-width="2"/>
+    <!-- Leaning figure -->
+    <path d="M 86,55 C 80,42 108,40 115,50 C 122,62 118,78 110,88 C 102,96 92,96 86,86 Z"/>
+    <path d="M 78,105 L 70,215 M 120,105 L 122,215"/>
+    <!-- Arms crossed on car -->
+    <path d="M 75,115 C 60,140 68,175 95,175 C 122,175 130,140 120,115"/>
+    <!-- Legs resting against car -->
+    <path d="M 70,215 L 74,340 L 88,340 L 95,235"/>
+    <path d="M 122,215 L 118,340 L 104,340 L 98,235"/>
+
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450">
+  <g fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Open Umbrella Behind Shoulder -->
+    <path d="M 160,20 L 220,55 L 268,110 L 245,170 L 185,175 L 140,120 Z" stroke-dasharray="4,4"/> <!-- Canopy edge -->
+    <!-- Umbrella Ribs -->
+    <line x1="205" y1="95" x2="160" y2="20"/>
+    <line x1="205" y1="95" x2="220" y2="55"/>
+    <line x1="205" y1="95" x2="268" y2="110"/>
+    <line x1="205" y1="95" x2="245" y2="170"/>
+    <line x1="205" y1="95" x2="185" y2="175"/>
+    <line x1="205" y1="95" x2="140" y2="120"/>
+    <!-- Umbrella Shaft angled over shoulder -->
+    <line x1="205" y1="95" x2="168" y2="190" stroke-width="2.5"/>
+
+    <!-- Head with Round Glasses Tilted Down -->
+    <path d="M 160,75 C 150,60 170,50 188,54 C 204,58 212,70 208,88"/>
+    <path d="M 156,85 C 158,98 164,115 174,124 C 186,128 196,120 200,105"/>
+    <!-- Glasses -->
+    <circle cx="180" cy="94" r="6" stroke="#FFFFFF"/>
+    <circle cx="196" cy="94" r="6" stroke="#FFFFFF"/>
+    <line x1="186" y1="94" x2="190" y2="94"/>
+    <!-- Hair bangs over brow -->
+    <path d="M 165,72 C 172,82 178,88 185,88"/>
+    <path d="M 188,88 C 195,84 202,86 206,78"/>
+
+    <!-- Turtleneck Collar & High Jacket -->
+    <path d="M 165,120 L 162,138"/>
+    <path d="M 195,120 L 198,138"/>
+    <path d="M 162,138 C 174,144 186,144 198,138"/>
+
+    <!-- Messenger / Tote Bag Slung Over Shoulder -->
+    <path d="M 158,138 C 145,175 138,215 136,255 L 152,258 C 154,215 160,175 172,138 Z"/> <!-- Strap -->
+    <!-- Bag body on hip -->
+    <path d="M 112,235 C 110,250 114,285 142,288 C 160,288 165,270 162,240 Z"/>
+    <path d="M 114,260 C 130,268 145,268 160,260"/> <!-- Bag flap line -->
+
+    <!-- Right Hand Gripping Umbrella Handle -->
+    <path d="M 198,138 C 215,145 228,160 234,185 C 236,205 228,228 212,240"/> <!-- Right arm -->
+    <path d="M 172,185 C 175,190 174,198 168,202"/> <!-- Fingers around shaft -->
+    <path d="M 166,202 C 162,206 156,204 154,198"/> <!-- Hook handle -->
+
+    <!-- Left Hand In Pocket -->
+    <path d="M 150,140 C 135,160 128,190 132,220 C 136,245 148,270 165,280"/>
+    <path d="M 185,270 L 190,290"/> <!-- Hand resting inside coat pocket -->
+
+    <!-- Trench Coat / Long Jacket Drape -->
+    <path d="M 148,285 C 168,295 204,295 220,285"/>
+    <path d="M 132,280 L 128,340 C 160,348 205,348 230,340 L 224,285"/>
+
+    <!-- Trousers & Walking Cadence -->
+    <path d="M 148,345 C 146,375 148,405 150,430"/>
+    <path d="M 172,345 C 170,375 172,405 172,430"/>
+    <path d="M 205,345 C 204,375 200,405 198,430"/>
+    <path d="M 185,345 C 186,375 186,405 186,430"/>
+
+    <!-- Classic Oxford Shoes -->
+    <path d="M 148,430 C 145,436 148,442 156,444 C 166,444 176,440 178,434 Z"/>
+    <path d="M 186,430 C 184,436 186,442 194,444 C 204,444 214,440 216,434 Z"/>
+  </g>
+</svg>

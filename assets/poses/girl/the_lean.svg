@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Leaning on wall, one foot up -->
+    <line x1="40" y1="40" x2="40" y2="380" stroke="#78909C" stroke-width="2"/>
+    <path d="M 85,55 C 80,42 106,40 114,50 C 120,62 116,78 108,88 C 100,96 90,96 85,86 Z"/>
+    <path d="M 80,105 L 68,220 M 116,105 L 114,220"/>
+    <!-- One leg straight, one foot up on wall -->
+    <path d="M 114,220 L 110,355 L 122,355"/>
+    <path d="M 68,220 C 55,245 45,260 42,275 L 42,285 L 65,280 C 70,260 70,240 68,220"/>
+
+  </g>
+</svg>

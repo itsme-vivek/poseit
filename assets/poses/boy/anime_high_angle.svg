@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450">
+  <g fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- TOP-DOWN HIGH-ANGLE PERSPECTIVE (Gen-Z Anime Street Shot) -->
+
+    <!-- Messy Curly Hair Volume at Top of Frame (Dominates Perspective) -->
+    <path d="M 112,65 C 98,35 132,15 168,18 C 204,20 236,38 228,72"/>
+    <!-- Curly hair curls and locks -->
+    <path d="M 110,65 C 118,52 134,48 146,55 C 158,45 175,48 184,58 C 196,48 212,54 220,68"/>
+    <path d="M 118,72 C 112,85 116,98 122,106"/> <!-- Left ear & lock -->
+    <path d="M 226,70 C 232,82 230,95 224,105"/> <!-- Right lock -->
+    <path d="M 132,58 C 136,75 132,95 128,108"/> <!-- Bangs -->
+    <path d="M 152,55 C 158,72 156,92 150,105"/>
+    <path d="M 174,56 C 182,72 184,92 178,106"/>
+    <path d="M 198,62 C 206,78 204,95 196,108"/>
+
+    <!-- Face Contour Looking Up toward Camera -->
+    <path d="M 126,95 C 124,112 135,132 152,142 C 170,146 190,136 200,118 C 204,108 202,96 198,88"/>
+
+    <!-- Stylish Round Wire Glasses (Tilted Up) -->
+    <circle cx="145" cy="102" r="10" stroke="#FFFFFF" stroke-width="2.5"/>
+    <circle cx="178" cy="102" r="10" stroke="#FFFFFF" stroke-width="2.5"/>
+    <line x1="155" y1="102" x2="168" y2="102" stroke-width="2"/>
+    <!-- Intense Eyes looking up into lens -->
+    <circle cx="145" cy="102" r="3" fill="#FFFFFF"/>
+    <circle cx="178" cy="102" r="3" fill="#FFFFFF"/>
+    <!-- Eyebrows -->
+    <path d="M 136,88 C 142,86 150,88 154,92"/>
+    <path d="M 168,92 C 172,88 180,86 186,88"/>
+    <!-- Nose & Mouth (Perspective Foreshortened) -->
+    <path d="M 162,104 L 163,115 L 158,118"/>
+    <path d="M 154,128 C 160,126 166,126 172,128"/>
+
+    <!-- Bag Strap Diagonally across chest -->
+    <path d="M 138,148 L 105,255 L 118,258 L 150,148 Z"/>
+    <!-- Tote / Messenger Bag hanging behind -->
+    <ellipse cx="92" cy="245" rx="22" ry="32" stroke="#FFFFFF"/>
+
+    <!-- Open Collar Button-Down Shirt (Tapering Downward) -->
+    <path d="M 148,142 L 138,162 L 155,160 L 162,175"/> <!-- Left collar -->
+    <path d="M 176,142 L 186,162 L 168,160 L 162,175"/> <!-- Right collar -->
+    <!-- Shoulders -->
+    <path d="M 138,150 C 116,160 96,182 82,210"/> <!-- Left shoulder -->
+    <path d="M 186,150 C 206,160 224,180 236,208"/> <!-- Right shoulder -->
+    <!-- Shirt Buttons Line -->
+    <line x1="162" y1="175" x2="158" y2="280" stroke-dasharray="2,3"/>
+    <!-- Chest Pocket -->
+    <rect x="175" y="195" width="20" height="24" rx="2" stroke="#FFFFFF"/>
+
+    <!-- Right Hand Reaching Forward / Playing Yo-Yo (Foreshortened) -->
+    <path d="M 82,210 C 65,235 55,268 45,300"/> <!-- Forearm coming down -->
+    <!-- Splayed Hand & Fingers -->
+    <path d="M 45,300 C 38,308 28,318 20,325"/> <!-- Pinky -->
+    <path d="M 44,305 C 38,318 30,332 25,342"/> <!-- Ring finger -->
+    <path d="M 46,310 C 44,328 40,345 38,355"/> <!-- Middle finger -->
+    <path d="M 52,312 C 55,325 58,338 62,345"/> <!-- Index finger -->
+    <!-- Yo-Yo String and Yo-Yo Spool at bottom -->
+    <line x1="48" y1="340" x2="72" y2="395" stroke-width="1.2" stroke-dasharray="2,2"/>
+    <ellipse cx="74" cy="402" rx="10" ry="14" stroke="#FFFFFF" stroke-width="2.5"/>
+
+    <!-- Left Arm Rolled Sleeve & Fist -->
+    <path d="M 236,208 C 242,230 240,260 232,290"/>
+    <path d="M 218,245 C 228,248 238,248 244,242"/> <!-- Rolled sleeve cuff -->
+    <ellipse cx="225" cy="312" rx="10" ry="12" stroke="#FFFFFF"/> <!-- Clenched fist -->
+
+    <!-- Foreshortened Trousers (Narrow perspective looking down) -->
+    <path d="M 132,285 L 140,380 L 150,380 L 152,285"/> <!-- Left leg tapering -->
+    <path d="M 172,285 L 180,380 L 190,380 L 184,285"/> <!-- Right leg tapering -->
+
+    <!-- Chunky Street Sneakers at Bottom (Top-Down View of Kicks) -->
+    <!-- Left shoe angled forward -->
+    <ellipse cx="144" cy="395" rx="12" ry="18" stroke="#FFFFFF" stroke-width="2.5"/>
+    <path d="M 136,395 C 140,400 148,400 152,395"/> <!-- Laces -->
+    <!-- Right shoe angled forward directly under camera -->
+    <ellipse cx="188" cy="415" rx="14" ry="22" stroke="#FFFFFF" stroke-width="2.5"/>
+    <path d="M 178,415 C 184,422 192,422 198,415"/> <!-- Laces -->
+    <path d="M 174,428 C 182,438 196,438 202,428"/> <!-- Toe cap -->
+  </g>
+</svg>

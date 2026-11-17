@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Hair blowing dramatically in wind -->
+    <path d="M 85,55 C 80,42 106,40 114,50 C 120,62 116,78 108,88 C 100,96 90,96 85,86 Z"/>
+    <path d="M 78,50 C 50,45 35,60 25,85 C 40,80 60,75 75,70"/>
+    <path d="M 80,45 C 55,30 38,40 22,55 C 40,55 58,58 76,60"/>
+    <!-- Dress flowing in wind -->
+    <path d="M 82,110 L 72,210 C 50,245 35,275 25,305 L 135,305 C 130,265 125,225 120,110"/>
+    <path d="M 85,305 L 85,365 M 115,305 L 115,365"/>
+
+  </g>
+</svg>

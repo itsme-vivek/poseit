@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Sunset circle background -->
+    <circle cx="150" cy="120" r="45" stroke="#FFA726" stroke-width="1.8"/>
+    <path d="M 115,75 C 110,62 135,60 140,70 C 146,82 142,98 135,108 C 128,116 118,116 115,106 Z"/>
+    <path d="M 160,80 C 155,68 180,66 186,76 C 192,88 188,104 180,114 C 172,122 162,122 160,112 Z"/>
+    <path d="M 105,130 L 100,250 M 175,130 L 170,250"/>
+    <path d="M 100,250 L 105,355 M 170,250 L 165,355"/>
+
+  </g>
+</svg>

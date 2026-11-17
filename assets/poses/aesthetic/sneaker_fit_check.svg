@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#FF6D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Sneaker & Baggy Fit Check -->
+    <!-- Head looking down at kicks -->
+    <circle cx="100" cy="55" r="18"/>
+    <!-- Baggy oversized hoodie torso -->
+    <path d="M 72,82 C 55,95 48,125 45,170 C 60,185 85,188 100,185 C 115,188 140,185 155,170 C 152,125 145,95 128,82 Z"/>
+    <!-- Hands tucked in hoodie kangaroo pouch -->
+    <path d="M 80,140 Q 100,165 120,140"/>
+    <!-- Baggy cargo / puddle pants falling over sneakers -->
+    <path d="M 62,185 C 55,230 48,280 42,330 L 76,335 L 88,230"/>
+    <path d="M 138,185 C 145,230 152,280 158,330 L 124,335 L 112,230"/>
+    <!-- Chunky sneakers highlighted -->
+    <path d="M 36,330 C 30,345 55,360 80,355 L 76,335 Z" stroke="#FF5722" stroke-width="2"/>
+    <path d="M 164,330 C 170,345 145,360 120,355 L 124,335 Z" stroke="#FF5722" stroke-width="2"/>
+
+  </g>
+</svg>

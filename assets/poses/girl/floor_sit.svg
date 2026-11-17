@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Sitting gracefully on floor -->
+    <path d="M 88,90 C 82,78 108,75 116,85 C 122,95 118,112 110,122 C 102,130 92,130 88,120 Z"/>
+    <path d="M 80,135 L 75,225 M 120,135 L 122,225"/>
+    <!-- Flowing skirt on floor -->
+    <path d="M 75,225 C 45,260 30,290 25,320 L 175,320 C 170,290 155,260 122,225 Z"/>
+
+  </g>
+</svg>

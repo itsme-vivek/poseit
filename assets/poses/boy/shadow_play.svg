@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Side-lit dramatic silhouette -->
+    <path d="M 85,45 C 80,30 108,30 115,40 C 122,50 120,65 112,78 C 104,86 92,86 85,76 Z"/>
+    <!-- One hand adjusting collar -->
+    <path d="M 115,105 C 128,118 122,135 106,128 L 102,118"/>
+    <!-- Other arm down -->
+    <path d="M 78,105 C 68,135 65,185 70,230"/>
+    <!-- Torso -->
+    <path d="M 75,110 L 70,235 M 122,110 L 124,235"/>
+    <path d="M 70,235 Q 98,242 124,235"/>
+    <!-- Legs -->
+    <path d="M 70,235 L 76,345 L 90,345 L 96,250"/>
+    <path d="M 124,235 L 118,345 L 104,345 L 98,250"/>
+
+  </g>
+</svg>

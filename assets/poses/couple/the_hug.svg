@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Close embrace hug -->
+    <path d="M 115,65 C 110,52 135,50 140,60 C 146,72 142,88 135,98 C 128,106 118,106 115,96 Z"/>
+    <path d="M 145,70 C 140,58 165,56 170,66 C 176,78 172,94 165,104 C 158,112 148,112 145,102 Z"/>
+    <path d="M 95,120 C 130,125 160,135 185,120"/>
+    <path d="M 105,125 L 100,245 M 175,125 L 170,245"/>
+    <path d="M 100,245 L 105,350 M 170,245 L 165,350"/>
+
+  </g>
+</svg>

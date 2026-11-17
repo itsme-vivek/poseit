@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Holding book gracefully -->
+    <path d="M 86,52 C 80,40 108,38 115,48 C 122,58 118,75 110,85 C 102,94 92,94 86,84 Z"/>
+    <path d="M 80,155 Q 98,165 116,155 L 118,175 Q 98,185 78,175 Z" stroke="#FF5722" stroke-width="1.8"/>
+    <path d="M 75,108 L 68,310 L 132,310 L 122,108"/>
+    <path d="M 80,310 L 80,360 M 118,310 L 118,360"/>
+
+  </g>
+</svg>

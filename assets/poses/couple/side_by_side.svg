@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Standing side by side leaning -->
+    <path d="M 105,55 C 100,42 125,40 130,50 C 136,62 132,78 125,88 C 118,96 108,96 105,86 Z"/>
+    <path d="M 165,60 C 160,48 185,46 190,56 C 196,68 192,84 185,94 C 178,102 168,102 165,92 Z"/>
+    <path d="M 95,110 L 90,235 M 180,110 L 175,235"/>
+    <path d="M 90,235 L 95,350 M 175,235 L 170,350"/>
+
+  </g>
+</svg>

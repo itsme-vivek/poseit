@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450">
+  <g fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head & Hair (Tilted down looking at smartphone) -->
+    <path d="M 152,48 C 142,32 165,22 186,26 C 206,30 216,44 210,62"/>
+    <path d="M 152,48 C 158,40 174,38 184,45 C 194,40 204,44 210,62"/>
+    <path d="M 148,58 C 145,68 148,78 152,82"/> <!-- Sideburn -->
+    <path d="M 160,48 C 164,62 166,76 162,88"/> <!-- Bangs falling forward -->
+
+    <!-- Face Profile Tilted Down -->
+    <path d="M 154,74 C 152,86 156,98 164,106 C 172,112 182,110 188,102"/>
+    <!-- Closed/Looking down eyes -->
+    <path d="M 166,72 C 172,74 178,74 182,72"/>
+    <!-- Nose looking down -->
+    <path d="M 174,74 L 175,85 L 170,87"/>
+
+    <!-- Left Hand Touching Chin / Thoughtful -->
+    <path d="M 164,106 C 160,112 156,120 156,128"/> <!-- Thumb under jaw -->
+    <path d="M 166,102 C 164,108 166,116 170,118"/> <!-- Index finger curled near mouth -->
+    <path d="M 156,128 C 150,144 146,166 148,188"/> <!-- Forearm down -->
+
+    <!-- Open Jacket with Hood Collar -->
+    <path d="M 152,95 C 134,102 118,118 108,136"/> <!-- Left shoulder -->
+    <path d="M 194,95 C 212,102 226,118 234,136"/> <!-- Right shoulder -->
+    <path d="M 136,112 C 125,122 120,136 122,150"/> <!-- Left lapel/hood -->
+    <path d="M 198,112 C 208,122 212,136 210,150"/> <!-- Right lapel/hood -->
+    <!-- Jacket outer seams -->
+    <path d="M 108,136 L 98,245 L 108,275"/>
+    <path d="M 234,136 L 240,245 L 232,275"/>
+    <path d="M 108,275 C 145,282 195,282 232,275"/> <!-- Jacket hem -->
+    <!-- Jacket Pocket -->
+    <rect x="110" y="215" width="22" height="18" rx="2" stroke="#FFFFFF"/>
+
+    <!-- Right Arm Holding Phone in front -->
+    <path d="M 234,136 C 242,165 244,198 238,224 C 232,246 215,260 195,264"/> <!-- Outer right arm -->
+    <path d="M 210,155 C 214,185 212,212 198,235"/> <!-- Inner right arm -->
+    <!-- Smartphone held horizontally/angled -->
+    <rect x="168" y="235" width="26" height="14" rx="2" stroke="#FFFFFF" transform="rotate(-15 168 235)"/>
+    <!-- Right fingers holding phone -->
+    <path d="M 195,250 C 196,256 194,262 188,264"/>
+    <path d="M 190,252 C 188,258 184,262 180,262"/>
+
+    <!-- Left Arm & Sleeve -->
+    <path d="M 108,136 C 98,162 96,195 106,220 C 114,242 128,255 142,260"/> <!-- Outer left arm -->
+    <path d="M 126,155 C 122,185 125,212 142,235"/> <!-- Inner left arm -->
+
+    <!-- Inner T-shirt -->
+    <path d="M 148,150 C 158,155 182,155 192,150"/>
+    <line x1="170" y1="155" x2="170" y2="250" stroke-dasharray="2,2"/>
+
+    <!-- Trousers & Standing Posture -->
+    <path d="M 116,275 C 114,310 110,350 112,390 L 112,425"/> <!-- Left leg outer -->
+    <path d="M 148,275 C 146,310 148,350 146,390 L 144,425"/> <!-- Left leg inner -->
+    <path d="M 224,275 C 226,310 228,350 224,390 L 222,425"/> <!-- Right leg outer -->
+    <path d="M 192,275 C 194,310 192,350 194,390 L 196,425"/> <!-- Right leg inner -->
+
+    <!-- Shoes -->
+    <path d="M 110,425 C 106,432 108,438 116,442 C 126,444 142,442 146,436 C 148,430 144,425 142,425 Z"/>
+    <path d="M 194,425 C 192,430 190,436 194,440 C 200,444 218,444 224,438 C 226,432 224,425 220,425 Z"/>
+  </g>
+</svg>

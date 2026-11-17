@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#FF6D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Fast walking holding iced coffee tumbler -->
+    <path d="M 88,48 C 82,35 108,32 116,42 C 122,52 120,68 112,78 C 104,86 94,86 88,76 Z"/>
+    <!-- Arm holding iced coffee tumbler with straw -->
+    <path d="M 118,105 C 135,125 140,150 128,170"/>
+    <path d="M 124,165 L 138,165 L 135,190 L 126,190 Z" stroke="#FF5722" stroke-width="2"/>
+    <line x1="131" y1="150" x2="131" y2="170" stroke="#FF5722" stroke-width="2"/>
+    <!-- Other arm swinging sunglasses in hand -->
+    <path d="M 78,105 C 65,135 60,165 68,195"/>
+    <path d="M 72,110 L 70,230 M 120,110 L 122,230"/>
+    <path d="M 70,230 L 62,345 M 122,230 L 130,345"/>
+
+  </g>
+</svg>

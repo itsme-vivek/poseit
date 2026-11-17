@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Head looking down at book -->
+    <path d="M 85,50 C 80,38 106,36 114,46 C 120,56 116,72 108,82 C 100,90 90,90 85,80 Z"/>
+    <!-- Arms holding book open -->
+    <path d="M 76,105 C 65,135 72,170 86,175"/>
+    <path d="M 118,105 C 128,135 122,170 108,175"/>
+    <!-- Open Book -->
+    <path d="M 80,170 Q 98,178 115,170 L 118,188 Q 98,195 78,188 Z" stroke="#FF5722" stroke-width="1.8"/>
+    <!-- Torso & Legs -->
+    <path d="M 72,110 L 68,235 M 124,110 L 122,235"/>
+    <path d="M 68,235 L 74,345 L 88,345 L 95,250"/>
+    <path d="M 122,235 L 118,345 L 104,345 L 98,250"/>
+
+  </g>
+</svg>

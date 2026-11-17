@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Facing golden hour light -->
+    <circle cx="35" cy="45" r="18" stroke="#FFA726" stroke-width="1.5"/>
+    <path d="M 88,48 C 82,35 108,32 116,42 C 122,52 120,68 112,78 C 104,86 94,86 88,76 Z"/>
+    <path d="M 78,105 L 72,230 M 120,105 L 122,230"/>
+    <path d="M 72,230 L 76,345 M 122,230 L 118,345"/>
+
+  </g>
+</svg>

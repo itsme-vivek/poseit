@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#FF6D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Sunglasses Peer Over / Side Eye -->
+    <path d="M 85,50 C 78,35 106,32 115,44 C 122,55 118,74 110,85 C 100,94 90,94 85,84 Z"/>
+    <!-- Sunglasses slid down bridge of nose -->
+    <rect x="80" y="65" width="40" height="14" rx="3" stroke="#FF5722" stroke-width="2"/>
+    <!-- Eyes peering over top of glasses -->
+    <circle cx="90" cy="58" r="3" fill="#FF5722"/>
+    <circle cx="110" cy="58" r="3" fill="#FF5722"/>
+    <!-- Hand gently touching glasses frame -->
+    <path d="M 120,105 C 135,90 138,75 125,70"/>
+    <path d="M 80,105 L 75,235 M 120,105 L 122,235"/>
+    <path d="M 75,235 L 78,350 M 122,235 L 118,350"/>
+
+  </g>
+</svg>

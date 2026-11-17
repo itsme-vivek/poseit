@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#FF6D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Couple Shadow on Asphalt Pavement -->
+    <!-- Textured ground reference -->
+    <line x1="20" y1="360" x2="180" y2="360" stroke="#78909C" stroke-width="1.5"/>
+    <!-- Two shadow figures holding hands on pavement -->
+    <ellipse cx="78" cy="95" rx="16" ry="14"/>
+    <ellipse cx="122" cy="105" rx="14" ry="12"/>
+    <path d="M 72,110 L 65,220 M 86,110 L 86,220"/>
+    <path d="M 115,118 L 115,225 M 130,118 L 132,225"/>
+    <!-- Connecting shadow hands -->
+    <path d="M 86,150 C 98,175 105,175 115,150" stroke="#FF5722" stroke-width="2"/>
+    <!-- Long legs stretched in shadow -->
+    <path d="M 65,220 L 55,340 M 86,220 L 78,340"/>
+    <path d="M 115,225 L 118,340 M 132,225 L 140,340"/>
+
+  </g>
+</svg>

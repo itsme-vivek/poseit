@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Head looking away -->
+    <path d="M 88,42 C 82,30 108,28 116,38 C 124,48 120,66 112,76 C 104,84 94,84 88,74 Z"/>
+    <!-- One arm holding coffee cup -->
+    <path d="M 118,105 C 132,130 135,155 118,168 L 108,165"/>
+    <path d="M 104,158 L 114,158 L 112,174 L 106,174 Z" stroke="#FF5722" stroke-width="1.8"/>
+    <!-- Other hand in pocket -->
+    <path d="M 76,105 C 62,125 58,165 68,225"/>
+    <!-- Torso & Legs -->
+    <path d="M 72,110 L 68,235 M 124,110 L 122,235"/>
+    <path d="M 68,235 Q 96,242 122,235"/>
+    <path d="M 68,235 L 74,345 L 88,345 L 95,250"/>
+    <path d="M 122,235 L 118,345 L 104,345 L 98,250"/>
+
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#FF6D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Soft Launch Couple Hands / Drinks -->
+    <!-- Two iced drink cups side by side -->
+    <path d="M 65,150 L 95,150 L 90,210 L 70,210 Z" stroke="#FF5722" stroke-width="2"/>
+    <path d="M 105,150 L 135,150 L 130,210 L 110,210 Z" stroke="#FF5722" stroke-width="2"/>
+    <!-- Intertwined hands touching cups on cafe marble table -->
+    <path d="M 45,180 C 60,185 75,190 85,195"/>
+    <path d="M 155,180 C 140,185 125,190 115,195"/>
+    <!-- Cafe table border -->
+    <circle cx="100" cy="200" r="85" stroke="#78909C" stroke-width="1.5"/>
+
+  </g>
+</svg>

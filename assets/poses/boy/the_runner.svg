@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Athletic running pose -->
+    <path d="M 96,40 C 90,28 116,28 124,38 C 130,48 126,66 118,76 C 110,84 100,84 96,74 Z"/>
+    <!-- Dynamic forward torso -->
+    <path d="M 90,95 L 75,190 M 128,95 L 115,190"/>
+    <!-- Pump arms -->
+    <path d="M 85,100 C 65,115 50,140 60,165 L 75,155"/>
+    <path d="M 128,100 C 145,120 155,145 142,165 L 128,155"/>
+    <!-- High knee stride -->
+    <path d="M 75,190 C 50,215 40,250 55,275 L 75,260 C 68,235 75,210 92,195"/>
+    <path d="M 115,190 C 125,230 135,280 148,330 L 132,335 C 120,290 112,240 105,195"/>
+
+  </g>
+</svg>

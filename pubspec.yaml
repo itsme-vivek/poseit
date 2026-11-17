@@ -1,0 +1,36 @@
+name: poseit
+description: PoseIt - Photo Pose Guide App. Click photos with perfect poses.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  camera: ^0.11.0+2
+  provider: ^6.1.2
+  shared_preferences: ^2.3.3
+  share_plus: ^10.1.3
+  flutter_svg: ^2.0.16
+  permission_handler: ^11.3.1
+  image_gallery_saver_plus: ^5.1.1
+  path_provider: ^2.1.5
+  cupertino_icons: ^1.0.8
+  image: ^4.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/
+    - assets/icon/
+    - assets/poses/boy/
+    - assets/poses/girl/
+    - assets/poses/couple/
+    - assets/poses/aesthetic/

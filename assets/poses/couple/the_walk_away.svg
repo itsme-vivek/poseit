@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Walking away hand in hand -->
+    <path d="M 105,55 C 100,42 125,40 130,50 C 136,62 132,78 125,88 C 118,96 108,96 105,86 Z"/>
+    <path d="M 175,60 C 170,48 195,46 200,56 C 206,68 202,84 195,94 C 188,102 178,102 175,92 Z"/>
+    <path d="M 130,135 C 145,170 160,170 175,135"/>
+    <path d="M 95,110 L 90,235 L 95,345 M 190,110 L 185,235 L 180,345"/>
+
+  </g>
+</svg>

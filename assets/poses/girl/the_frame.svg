@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#EC407A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Hands framing face -->
+    <path d="M 88,52 C 82,40 108,38 116,48 C 122,58 118,74 110,84 C 102,92 92,92 88,82 Z"/>
+    <!-- L shape hands near cheeks -->
+    <path d="M 70,65 L 70,85 L 85,85" stroke="#FF5722" stroke-width="2"/>
+    <path d="M 130,85 L 130,65 L 115,65" stroke="#FF5722" stroke-width="2"/>
+    <path d="M 78,115 C 65,145 68,225 72,345 M 120,115 C 132,145 130,225 124,345"/>
+
+  </g>
+</svg>

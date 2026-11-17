@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#42A5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Head -->
+    <path d="M 85,45 C 80,30 108,28 115,40 C 122,50 118,70 110,80 C 102,88 90,88 85,78 Z"/>
+    <path d="M 84,42 C 98,34 112,38 114,46"/>
+    <!-- Hand on chin / jaw -->
+    <path d="M 104,78 C 110,76 116,80 115,88 L 108,92"/>
+    <!-- Arm bent up to chin -->
+    <path d="M 108,92 C 120,115 130,140 135,160 C 120,165 95,165 80,160"/>
+    <!-- Other arm supporting elbow -->
+    <path d="M 60,115 C 52,140 50,165 65,185 C 85,188 110,185 130,165"/>
+    <!-- Torso -->
+    <path d="M 72,110 L 68,230 M 125,115 L 122,230"/>
+    <path d="M 68,230 Q 95,236 122,230"/>
+    <!-- Legs standing confident -->
+    <path d="M 68,230 L 72,345 L 86,345 L 92,245"/>
+    <path d="M 122,230 L 118,345 L 104,345 L 98,245"/>
+    <path d="M 68,345 L 88,352 M 102,352 L 122,345"/>
+
+  </g>
+</svg>

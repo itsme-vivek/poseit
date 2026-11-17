@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#AB47BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4">
+    <!-- Lifting partner in air -->
+    <!-- Partner lifted high -->
+    <path d="M 135,45 C 130,32 155,30 160,40 C 166,52 162,68 155,78 C 148,86 138,86 135,76 Z"/>
+    <path d="M 125,95 L 115,165 M 170,95 L 180,165"/>
+    <!-- Man lifting at waist -->
+    <path d="M 130,115 C 125,102 150,100 156,110 C 162,122 158,138 150,148 C 142,156 132,156 130,146 Z"/>
+    <path d="M 115,165 L 110,270 M 170,165 L 175,270"/>
+    <path d="M 110,270 L 115,360 M 175,270 L 170,360"/>
+
+  </g>
+</svg>
