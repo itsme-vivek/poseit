@@ -30,7 +30,12 @@ flutter:
   assets:
     - assets/data/
     - assets/icon/
+    - assets/poses/
     - assets/poses/boy/
     - assets/poses/girl/
     - assets/poses/couple/
     - assets/poses/aesthetic/
+    - assets/poses/previews/boy/
+    - assets/poses/previews/girl/
+    - assets/poses/previews/couple/
+    - assets/poses/previews/aesthetic/

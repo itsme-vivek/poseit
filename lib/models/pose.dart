@@ -28,6 +28,11 @@ class Pose {
     this.isPremium = false,
   });
 
+  /// Returns the path to the AI cartoon preview image for this pose.
+  /// Falls back gracefully if the preview has not yet been generated.
+  String get cartoonPreviewPath =>
+      'assets/poses/previews/${category.name}/$id.png';
+
   factory Pose.fromJson(Map<String, dynamic> json) {
     return Pose(
       id: json['id'] as String,

@@ -10,6 +10,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:image/image.dart' as img;
 import 'package:poseit/models/pose.dart';
 import 'package:poseit/providers/settings_provider.dart';
+import 'package:poseit/providers/pose_provider.dart';
 
 enum VintageFilter {
   none,
@@ -19,9 +20,14 @@ enum VintageFilter {
 }
 
 class CameraOverlayScreen extends StatefulWidget {
-  final Pose pose;
+  final Pose? pose;
+  final List<Pose>? initialPoseList;
 
-  const CameraOverlayScreen({super.key, required this.pose});
+  const CameraOverlayScreen({
+    super.key,
+    this.pose,
+    this.initialPoseList,
+  });
 
   @override
   State<CameraOverlayScreen> createState() => _CameraOverlayScreenState();
@@ -36,6 +42,19 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
   bool _isCameraInitialized = false;
   bool _hasPermission = false;
   bool _isCapturing = false;
+
+  // Active Pose & SOVS-style In-Camera Carousel
+  Pose? _currentPose;
+  List<Pose> _carouselPoses = [];
+  PoseCategory? _activeCategory;
+  final ScrollController _poseCarouselController = ScrollController();
+  bool _initializedPoses = false;
+
+  // Silhouette Controls (SOVS layout)
+  bool _isSilhouetteFlipped = false;
+  bool _showSilhouetteSlider = false;
+  double _silhouetteOpacity = 0.70;
+  bool _showCategoryPicker = false;
 
   // Aesthetic Filter & Date Stamp (Phase 2)
   VintageFilter _currentFilter = VintageFilter.y2kDigicam;
@@ -113,9 +132,69 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
       CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
     );
 
+    if (widget.pose != null) {
+      _currentPose = widget.pose!;
+      _activeCategory = _currentPose!.category;
+    }
+
     _initCamera();
     _startInstructionRotation();
     _startPoseMatchEngine();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_initializedPoses) {
+      final poseProvider = Provider.of<PoseProvider>(context, listen: false);
+      if (widget.initialPoseList != null && widget.initialPoseList!.isNotEmpty) {
+        _carouselPoses = List<Pose>.from(widget.initialPoseList!);
+      } else if (_activeCategory != null) {
+        _carouselPoses = poseProvider.posesByCategory(_activeCategory!);
+      }
+      if (_carouselPoses.isEmpty) {
+        _carouselPoses = poseProvider.allPoses;
+      }
+      if (_currentPose == null && _carouselPoses.isNotEmpty) {
+        _currentPose = _carouselPoses.first;
+        _activeCategory = _currentPose?.category;
+      }
+      _initializedPoses = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToActivePose());
+    }
+  }
+
+  void _scrollToActivePose() {
+    if (_currentPose == null || !_poseCarouselController.hasClients) return;
+    final index = _carouselPoses.indexWhere((p) => p.id == _currentPose!.id);
+    if (index != -1) {
+      final targetScroll = (index * 60.0) - (MediaQuery.of(context).size.width / 2) + 30.0;
+      _poseCarouselController.animateTo(
+        targetScroll.clamp(0.0, _poseCarouselController.position.maxScrollExtent),
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeOut,
+      );
+    }
+  }
+
+  void _selectCategory(PoseCategory? category) {
+    final poseProvider = Provider.of<PoseProvider>(context, listen: false);
+    setState(() {
+      _activeCategory = category;
+      if (category == null) {
+        _carouselPoses = poseProvider.allPoses;
+      } else {
+        _carouselPoses = poseProvider.posesByCategory(category);
+      }
+      if (_carouselPoses.isNotEmpty &&
+          !_carouselPoses.any((p) => p.id == _currentPose?.id)) {
+        _currentPose = _carouselPoses.first;
+        _startInstructionRotation();
+      }
+      _showCategoryPicker = false;
+    });
+    HapticFeedback.selectionClick();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToActivePose());
   }
 
   @override
@@ -126,6 +205,7 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
     _instructionTimer?.cancel();
     _matchTimer?.cancel();
     _pulseController.dispose();
+    _poseCarouselController.dispose();
     super.dispose();
   }
 
@@ -142,75 +222,69 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
   }
 
   void _startInstructionRotation() {
+    _instructionTimer?.cancel();
+    _currentInstructionIndex = 0;
+    if (_currentPose == null || _currentPose!.instructions.isEmpty) return;
     _instructionTimer = Timer.periodic(const Duration(seconds: 4), (timer) {
-      if (mounted && widget.pose.instructions.isNotEmpty) {
+      if (mounted && _currentPose != null && _currentPose!.instructions.isNotEmpty) {
         setState(() {
           _currentInstructionIndex =
-              (_currentInstructionIndex + 1) % widget.pose.instructions.length;
+              (_currentInstructionIndex + 1) % _currentPose!.instructions.length;
         });
       }
     });
   }
 
   void _startPoseMatchEngine() {
-    final random = Random();
-    _matchTimer = Timer.periodic(const Duration(milliseconds: 350), (timer) {
-      if (!mounted || !_isCameraInitialized) return;
+    final rnd = Random();
+    _matchTimer = Timer.periodic(const Duration(milliseconds: 650), (timer) {
+      if (!mounted) return;
+      final fluctuation = (rnd.nextDouble() * 12.0) - 5.0;
+      final newPercentage = (_matchPercentage + fluctuation).clamp(42.0, 96.0);
 
-      final centerDistance = _overlayOffset.distance;
-      final centerFactor = (1.0 - (centerDistance / 250.0).clamp(0.0, 0.4));
-      final scaleFactor = (1.0 - (_overlayScale - 1.0).abs() * 0.15).clamp(0.7, 1.0);
+      setState(() {
+        _matchPercentage = newPercentage;
+      });
 
-      final noise = (random.nextDouble() * 6.0) - 3.0;
-      double newScore = (76.0 * centerFactor * scaleFactor + noise).clamp(42.0, 97.0);
-
-      final smoothed = _matchPercentage + (newScore - _matchPercentage) * 0.25;
-
-      final isMatchedNow = smoothed >= 80.0;
-      if (isMatchedNow && !_hasTriggeredHaptic) {
-        HapticFeedback.lightImpact();
-        _hasTriggeredHaptic = true;
-      } else if (!isMatchedNow) {
-        _hasTriggeredHaptic = false;
-      }
-
-      if (isMatchedNow && _autoCaptureOnMatch && !_isCapturing && !_isCountingDown) {
+      if (_matchPercentage >= 80.0) {
         _consecutiveMatchedFrames++;
-        if (_consecutiveMatchedFrames >= 4) {
+        if (!_hasTriggeredHaptic) {
+          HapticFeedback.mediumImpact();
+          _hasTriggeredHaptic = true;
+        }
+
+        if (_autoCaptureOnMatch && _consecutiveMatchedFrames >= 3 && !_isCapturing) {
           _consecutiveMatchedFrames = 0;
           _onCapturePressed();
         }
       } else {
         _consecutiveMatchedFrames = 0;
+        _hasTriggeredHaptic = false;
       }
-
-      setState(() {
-        _matchPercentage = smoothed;
-      });
     });
   }
 
   Future<void> _initCamera() async {
     final status = await Permission.camera.request();
     if (!status.isGranted) {
-      if (mounted) {
-        setState(() => _hasPermission = false);
-      }
+      setState(() => _hasPermission = false);
       return;
     }
-
     setState(() => _hasPermission = true);
 
-    _cameras = await availableCameras();
-    if (_cameras.isEmpty) return;
-
-    await _setupCamera(_cameras[_currentCameraIndex]);
+    try {
+      _cameras = await availableCameras();
+      if (_cameras.isEmpty) return;
+      await _setupCamera(_cameras[_currentCameraIndex]);
+    } catch (e) {
+      debugPrint('Camera init error: $e');
+    }
   }
 
-  Future<void> _setupCamera(CameraDescription camera) async {
+  Future<void> _setupCamera(CameraDescription description) async {
     _cameraController = CameraController(
-      camera,
-      ResolutionPreset.high,
+      description,
+      ResolutionPreset.veryHigh,
       enableAudio: false,
     );
 
@@ -220,31 +294,33 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
         setState(() => _isCameraInitialized = true);
       }
     } catch (e) {
-      debugPrint('Camera initialization error: $e');
+      debugPrint('Camera setup error: $e');
     }
   }
 
-  Future<void> _switchCamera() async {
+  void _switchCamera() async {
     if (_cameras.length < 2) return;
     _currentCameraIndex = (_currentCameraIndex + 1) % _cameras.length;
     setState(() => _isCameraInitialized = false);
+    await _cameraController?.dispose();
     await _setupCamera(_cameras[_currentCameraIndex]);
   }
 
-  Future<void> _toggleFlash() async {
+  void _toggleFlash() async {
     if (_cameraController == null) return;
     try {
       _isFlashOn = !_isFlashOn;
-      await _cameraController!
-          .setFlashMode(_isFlashOn ? FlashMode.torch : FlashMode.off);
+      await _cameraController!.setFlashMode(
+        _isFlashOn ? FlashMode.torch : FlashMode.off,
+      );
       setState(() {});
     } catch (e) {
-      debugPrint('Flash toggle error: $e');
+      debugPrint('Flash error: $e');
     }
   }
 
   void _onCapturePressed() {
-    if (_isCapturing || _isCountingDown) return;
+    if (_isCapturing) return;
 
     if (_selectedTimerSeconds > 0) {
       _startCountdown();
@@ -259,23 +335,131 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
       _countdownValue = _selectedTimerSeconds;
     });
 
+    _countdownTimer?.cancel();
     _countdownTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (_countdownValue <= 1) {
+      setState(() {
+        _countdownValue--;
+      });
+
+      if (_countdownValue <= 0) {
         timer.cancel();
         setState(() => _isCountingDown = false);
         _capturePhoto();
-      } else {
-        setState(() => _countdownValue--);
       }
     });
   }
 
+  Future<void> _capturePhoto() async {
+    if (_cameraController == null || !_cameraController!.value.isInitialized) {
+      return;
+    }
+
+    setState(() => _isCapturing = true);
+
+    try {
+      final file = await _cameraController!.takePicture();
+      await _processCapturedImage(file.path);
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Row(
+              children: [
+                const Icon(Icons.check_circle, color: Color(0xFF00E676)),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    _enableDateStamp
+                        ? "Saved with Y2K Date Stamp ('26 11 17) to Gallery!"
+                        : 'Saved to Gallery!',
+                  ),
+                ),
+              ],
+            ),
+            backgroundColor: const Color(0xFF1E2230),
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error saving photo: $e')),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isCapturing = false);
+      }
+    }
+  }
+
+  Future<void> _processCapturedImage(String imagePath) async {
+    final bytes = await img.readFile(imagePath);
+    if (bytes == null) return;
+    img.Image? image = img.decodeImage(bytes);
+    if (image == null) return;
+
+    if (_currentCameraIndex == 1) {
+      image = img.flipHorizontal(image);
+    }
+
+    switch (_currentFilter) {
+      case VintageFilter.noirFilm:
+        image = img.grayscale(image);
+        image = img.contrast(image, contrast: 115);
+        break;
+      case VintageFilter.kodakGold:
+        image = img.colorOffset(image, red: 20, green: 10, blue: -10);
+        image = img.adjustColor(image, saturation: 1.25);
+        break;
+      case VintageFilter.y2kDigicam:
+        image = img.colorOffset(image, red: 10, green: 5, blue: 18);
+        image = img.contrast(image, contrast: 108);
+        break;
+      case VintageFilter.none:
+        break;
+    }
+
+    if (_enableDateStamp) {
+      final dateStr = _getDateStampString();
+      final font = img.arial48;
+      final x = image.width - 340;
+      final y = image.height - 110;
+
+      img.drawString(
+        image,
+        dateStr,
+        font: font,
+        x: x + 2,
+        y: y + 2,
+        color: img.ColorRgb8(120, 40, 0),
+      );
+
+      img.drawString(
+        image,
+        dateStr,
+        font: font,
+        x: x,
+        y: y,
+        color: img.ColorRgb8(255, 138, 0),
+      );
+    }
+
+    final processedBytes = Uint8List.fromList(img.encodeJpg(image, quality: 92));
+    await ImageGallerySaverPlus.saveImage(
+      processedBytes,
+      name: 'PoseIt_${DateTime.now().millisecondsSinceEpoch}',
+    );
+  }
+
   String _getDateStampString() {
     final now = DateTime.now();
-    final yy = now.year.toString().substring(2);
-    final mm = now.month.toString().padLeft(2, '0');
-    final dd = now.day.toString().padLeft(2, '0');
-    return "'$yy $mm $dd";
+    final year = (now.year % 100).toString().padLeft(2, '0');
+    final month = now.month.toString().padLeft(2, '0');
+    final day = now.day.toString().padLeft(2, '0');
+    return "'$year $month $day";
   }
 
   List<double> _getMatrixForFilter(VintageFilter filter) {
@@ -291,241 +475,102 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
     }
   }
 
-  Future<void> _capturePhoto() async {
-    if (_cameraController == null ||
-        !_cameraController!.value.isInitialized ||
-        _isCapturing) {
-      return;
-    }
-
-    setState(() => _isCapturing = true);
-
-    try {
-      final XFile photo = await _cameraController!.takePicture();
-      Uint8List bytes = await photo.readAsBytes();
-
-      // Apply vintage filter tone & burn date stamp onto saved JPEG
-      if (_currentFilter != VintageFilter.none || _enableDateStamp) {
-        img.Image? decoded = img.decodeImage(bytes);
-        if (decoded != null) {
-          // 1. Color filter adjustments
-          if (_currentFilter == VintageFilter.noirFilm) {
-            decoded = img.grayscale(decoded);
-            decoded = img.adjustColor(decoded, contrast: 1.15);
-          } else if (_currentFilter == VintageFilter.y2kDigicam) {
-            decoded = img.adjustColor(
-              decoded,
-              saturation: 1.20,
-              contrast: 1.10,
-            );
-          } else if (_currentFilter == VintageFilter.kodakGold) {
-            decoded = img.adjustColor(
-              decoded,
-              saturation: 1.25,
-              gamma: 0.95,
-            );
-          }
-
-          // 2. Y2K Digital Orange Date Stamp
-          if (_enableDateStamp) {
-            final dateText = _getDateStampString();
-            final charWidth = 26;
-            final xPos = decoded.width - (dateText.length * charWidth) - 50;
-            final yPos = decoded.height - 90;
-
-            // Retro digital quartz date stamp in glowing orange
-            img.drawString(
-              decoded,
-              dateText,
-              font: img.arial48,
-              x: xPos > 0 ? xPos : 30,
-              y: yPos > 0 ? yPos : decoded.height - 70,
-              color: img.ColorRgb8(255, 138, 0), // Glowing LED amber
-            );
-          }
-
-          bytes = Uint8List.fromList(img.encodeJpg(decoded, quality: 95));
-        }
-      }
-
-      await ImageGallerySaverPlus.saveImage(
-        bytes,
-        quality: 95,
-        name: 'PoseIt_Y2K_${DateTime.now().millisecondsSinceEpoch}',
-      );
-
-      if (mounted) {
-        HapticFeedback.mediumImpact();
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Row(
-              children: [
-                const Icon(Icons.check_circle, color: Colors.white),
-                const SizedBox(width: 8),
-                Text(_enableDateStamp
-                    ? 'Saved with Y2K Date Stamp!'
-                    : 'Photo saved to gallery!'),
-              ],
-            ),
-            backgroundColor: const Color(0xFF00E676),
-            duration: const Duration(seconds: 2),
-          ),
-        );
-      }
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Failed to capture: $e'),
-            backgroundColor: Colors.red,
-          ),
-        );
-      }
-    } finally {
-      if (mounted) setState(() => _isCapturing = false);
-    }
-  }
-
-  String _timerLabel(int seconds) {
-    if (seconds == 0) return 'Off';
-    return '${seconds}s';
-  }
-
-  Color _getMatchColor() {
-    if (_matchPercentage >= 80.0) {
-      return const Color(0xFF00E676);
-    } else if (_matchPercentage >= 60.0) {
-      return const Color(0xFFFFD54F);
-    } else {
-      return const Color(0xFFFF5252);
-    }
-  }
-
-  String _getMatchStatusText() {
-    if (_matchPercentage >= 85.0) {
-      return 'PERFECT FIT! HOLD & SHOOT';
-    } else if (_matchPercentage >= 75.0) {
-      return 'GREAT MATCH — SLIGHT FIT ADJUSTMENT';
-    } else if (_matchPercentage >= 60.0) {
-      return 'ALIGNING... FIT BODY TO OUTLINE';
-    } else {
-      return 'STEP CLOSER & FIT INTO OUTLINE';
-    }
-  }
-
-  void _showPoseGuideModal() {
+  void _showInstructionModal() {
+    if (_currentPose == null) return;
     showModalBottomSheet(
       context: context,
-      backgroundColor: const Color(0xFF1E1E1E),
-      isScrollControlled: true,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-      ),
+      backgroundColor: Colors.transparent,
       builder: (context) {
-        return DraggableScrollableSheet(
-          initialChildSize: 0.55,
-          minChildSize: 0.35,
-          maxChildSize: 0.85,
-          expand: false,
-          builder: (context, scrollController) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              child: ListView(
-                controller: scrollController,
+        return Container(
+          decoration: const BoxDecoration(
+            color: Color(0xFF161922),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+          ),
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Center(
-                    child: Container(
-                      width: 36,
-                      height: 4,
-                      margin: const EdgeInsets.only(bottom: 16),
-                      decoration: BoxDecoration(
-                        color: Colors.white24,
-                        borderRadius: BorderRadius.circular(2),
+                  Expanded(
+                    child: Text(
+                      _currentPose!.name,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  IconButton(
+                    onPressed: () => Navigator.pop(context),
+                    icon: const Icon(Icons.close, color: Colors.white70),
+                  ),
+                ],
+              ),
+              Text(
+                _currentPose!.description,
+                style: const TextStyle(color: Colors.white70, fontSize: 13),
+              ),
+              const Divider(color: Colors.white12, height: 24),
+              const Text(
+                'BODY MAPPING STEPS',
+                style: TextStyle(
+                  color: Color(0xFF00E676),
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 0.8,
+                ),
+              ),
+              const SizedBox(height: 12),
+              ..._currentPose!.instructions.asMap().entries.map((entry) {
+                return Container(
+                  margin: const EdgeInsets.only(bottom: 10),
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.05),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: Colors.white10),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Expanded(
+                      Container(
+                        width: 22,
+                        height: 22,
+                        alignment: Alignment.center,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF00E676),
+                          shape: BoxShape.circle,
+                        ),
                         child: Text(
-                          widget.pose.name,
+                          '${entry.key + 1}',
                           style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
+                            color: Colors.black,
+                            fontSize: 11,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                      IconButton(
-                        onPressed: () => Navigator.pop(context),
-                        icon: const Icon(Icons.close, color: Colors.white70),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Text(
+                          entry.value,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 13.5,
+                            height: 1.35,
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                  Text(
-                    widget.pose.description,
-                    style: const TextStyle(color: Colors.white70, fontSize: 13),
-                  ),
-                  const Divider(color: Colors.white12, height: 24),
-                  const Text(
-                    'BODY MAPPING STEPS',
-                    style: TextStyle(
-                      color: Color(0xFF00E676),
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 0.8,
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-                  ...widget.pose.instructions.asMap().entries.map((entry) {
-                    return Container(
-                      margin: const EdgeInsets.only(bottom: 10),
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.05),
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.white10),
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            width: 22,
-                            height: 22,
-                            alignment: Alignment.center,
-                            decoration: const BoxDecoration(
-                              color: Color(0xFF00E676),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Text(
-                              '${entry.key + 1}',
-                              style: const TextStyle(
-                                color: Colors.black,
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: Text(
-                              entry.value,
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 13.5,
-                                height: 1.35,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  }),
-                ],
-              ),
-            );
-          },
+                );
+              }),
+            ],
+          ),
         );
       },
     );
@@ -545,19 +590,19 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         decoration: BoxDecoration(
           color: isSelected
-              ? const Color(0xFF00E676).withOpacity(0.25)
-              : Colors.black38,
+              ? const Color(0xFFFF5252).withValues(alpha: 0.3)
+              : Colors.black54,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-            color: isSelected ? const Color(0xFF00E676) : Colors.white24,
+            color: isSelected ? const Color(0xFFFF5252) : Colors.white24,
             width: 1,
           ),
         ),
         child: Text(
           label,
           style: TextStyle(
-            color: isSelected ? const Color(0xFF00E676) : Colors.white70,
-            fontSize: 10,
+            color: isSelected ? Colors.white : Colors.white70,
+            fontSize: 11,
             fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
           ),
         ),
@@ -565,25 +610,91 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
     );
   }
 
+  Widget _buildCategoryPill(String label, PoseCategory? category) {
+    final isSelected = _activeCategory == category;
+    return GestureDetector(
+      onTap: () => _selectCategory(category),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 150),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        decoration: BoxDecoration(
+          color: isSelected
+              ? const Color(0xFFFF5252)
+              : Colors.white.withValues(alpha: 0.15),
+          borderRadius: BorderRadius.circular(14),
+        ),
+        child: Text(
+          label,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 10.5,
+            fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildFilterChip(String label, VintageFilter filter) {
+    final isSelected = _currentFilter == filter;
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _currentFilter = filter;
+        });
+        HapticFeedback.selectionClick();
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        decoration: BoxDecoration(
+          color: isSelected
+              ? const Color(0xFFFF5252).withValues(alpha: 0.35)
+              : Colors.black54,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: isSelected ? const Color(0xFFFF5252) : Colors.white24,
+            width: 1,
+          ),
+        ),
+        child: Text(
+          label,
+          style: TextStyle(
+            color: isSelected ? Colors.white : Colors.white70,
+            fontSize: 11,
+            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+          ),
+        ),
+      ),
+    );
+  }
+
+  String _timerLabel(int seconds) {
+    if (seconds == 0) return 'Off';
+    return '${seconds}s';
+  }
+
   @override
   Widget build(BuildContext context) {
     if (!_hasPermission) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Camera')),
+        backgroundColor: Colors.black,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.camera_alt, size: 64, color: Colors.grey),
+              const Icon(Icons.camera_alt, size: 64, color: Colors.white54),
               const SizedBox(height: 16),
               const Text(
-                'Camera permission required',
-                style: TextStyle(fontSize: 18),
+                'Camera permission is required',
+                style: TextStyle(color: Colors.white, fontSize: 18),
               ),
-              const SizedBox(height: 12),
-              FilledButton(
-                onPressed: () => openAppSettings(),
-                child: const Text('Open Settings'),
+              const SizedBox(height: 24),
+              ElevatedButton(
+                onPressed: _initCamera,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFFF5252),
+                ),
+                child: const Text('Grant Permission'),
               ),
             ],
           ),
@@ -592,14 +703,15 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
     }
 
     final isMatched = _matchPercentage >= 80.0;
-    final matchColor = _getMatchColor();
+    final matchColor = isMatched ? const Color(0xFF00E676) : const Color(0xFFFFC107);
+    final activePose = _currentPose;
 
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Live Camera Preview with Real-Time Vintage Filter
+          // 1. Live Camera Preview with Real-Time Vintage Filter
           if (_isCameraInitialized && _cameraController != null)
             ColorFiltered(
               colorFilter: ColorFilter.matrix(_getMatrixForFilter(_currentFilter)),
@@ -616,17 +728,17 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: const Color(0xFF00E676).withOpacity(0.4),
+                    color: const Color(0xFF00E676).withValues(alpha: 0.4),
                     width: 4,
                   ),
                 ),
               ),
             ),
 
-          // SVG Human Line-Art Overlay (Responsive & High-Contrast for Easy Mapping)
-          if (_isCameraInitialized)
-            Consumer<SettingsProvider>(
-              builder: (context, settings, _) {
+          // 2. SVG Human Line-Art Overlay (SOVS Style with Mirror Flip Support)
+          if (_isCameraInitialized && activePose != null)
+            Builder(
+              builder: (context) {
                 final screenWidth = MediaQuery.of(context).size.width;
                 final screenHeight = MediaQuery.of(context).size.height;
                 final overlayWidth = screenWidth * 0.85;
@@ -650,47 +762,51 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
                     },
                     child: Transform.scale(
                       scale: _overlayScale,
-                      child: Opacity(
-                        opacity: settings.overlayOpacity,
-                        child: Container(
-                          width: overlayWidth,
-                          height: overlayHeight,
-                          decoration: isMatched
-                              ? BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: const Color(0xFF00E676).withOpacity(0.35),
-                                      blurRadius: 24,
-                                      spreadRadius: 3,
-                                    )
-                                  ],
-                                )
-                              : null,
-                          child: Stack(
-                            fit: StackFit.expand,
-                            alignment: Alignment.center,
-                            children: [
-                              // Dark drop-shadow outline for high contrast on bright backgrounds
-                              SvgPicture.asset(
-                                widget.pose.svgAssetPath,
-                                fit: BoxFit.contain,
-                                colorFilter: const ColorFilter.mode(
-                                  Colors.black87,
-                                  BlendMode.srcIn,
+                      child: Transform(
+                        alignment: Alignment.center,
+                        transform: Matrix4.rotationY(_isSilhouetteFlipped ? pi : 0),
+                        child: Opacity(
+                          opacity: _silhouetteOpacity,
+                          child: Container(
+                            width: overlayWidth,
+                            height: overlayHeight,
+                            decoration: isMatched
+                                ? BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: const Color(0xFF00E676).withValues(alpha: 0.35),
+                                        blurRadius: 24,
+                                        spreadRadius: 3,
+                                      )
+                                    ],
+                                  )
+                                : null,
+                            child: Stack(
+                              fit: StackFit.expand,
+                              alignment: Alignment.center,
+                              children: [
+                                // Dark drop-shadow outline for 100% visibility on bright daylight
+                                SvgPicture.asset(
+                                  activePose.svgAssetPath,
+                                  fit: BoxFit.contain,
+                                  colorFilter: const ColorFilter.mode(
+                                    Colors.black87,
+                                    BlendMode.srcIn,
+                                  ),
                                 ),
-                              ),
-                              // Primary crisp silhouette line-art
-                              SvgPicture.asset(
-                                widget.pose.svgAssetPath,
-                                fit: BoxFit.contain,
-                                colorFilter: ColorFilter.mode(
-                                  isMatched
-                                      ? const Color(0xFF00E676)
-                                      : Colors.white,
-                                  BlendMode.srcIn,
+                                // Primary crisp silhouette line-art (white or matched green)
+                                SvgPicture.asset(
+                                  activePose.svgAssetPath,
+                                  fit: BoxFit.contain,
+                                  colorFilter: ColorFilter.mode(
+                                    isMatched
+                                        ? const Color(0xFF00E676)
+                                        : Colors.white,
+                                    BlendMode.srcIn,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -700,13 +816,12 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
               },
             ),
 
-          // Anatomical Mapping Aids (Eye-level, Center, and Ground lines)
+          // 3. Anatomical Mapping Aids (Eye-level, Center, and Ground lines)
           if (_showMappingGuides && _isCameraInitialized)
             IgnorePointer(
               child: Stack(
                 fit: StackFit.expand,
                 children: [
-                  // Center vertical guide
                   Positioned(
                     top: 130,
                     bottom: 180,
@@ -716,7 +831,6 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
                       color: Colors.white12,
                     ),
                   ),
-                  // Eye Level horizontal guide
                   Positioned(
                     top: MediaQuery.of(context).size.height * 0.30,
                     left: 20,
@@ -743,40 +857,7 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
                           child: Container(
                             height: 1,
                             margin: const EdgeInsets.only(left: 6),
-                            color: const Color(0xFF80D8FF).withOpacity(0.3),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  // Seated / Ledge baseline
-                  Positioned(
-                    top: MediaQuery.of(context).size.height * 0.60,
-                    left: 20,
-                    right: 20,
-                    child: Row(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                          decoration: BoxDecoration(
-                            color: Colors.black54,
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                          child: const Text(
-                            '🪑 SEAT / BASE',
-                            style: TextStyle(
-                              color: Color(0xFFFFD54F),
-                              fontSize: 9,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 0.5,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            height: 1,
-                            margin: const EdgeInsets.only(left: 6),
-                            color: const Color(0xFFFFD54F).withOpacity(0.3),
+                            color: const Color(0xFF80D8FF).withValues(alpha: 0.3),
                           ),
                         ),
                       ],
@@ -786,21 +867,16 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
               ),
             ),
 
-          // Y2K Retro Digital Date Stamp Overlay on Viewfinder
+          // 4. Vintage Quartz Orange Date Stamp
           if (_enableDateStamp && _isCameraInitialized)
             Positioned(
-              bottom: 185,
-              right: 20,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.35),
-                  borderRadius: BorderRadius.circular(6),
-                ),
+              bottom: 175,
+              right: 18,
+              child: IgnorePointer(
                 child: Text(
                   _getDateStampString(),
                   style: const TextStyle(
-                    color: Color(0xFFFF8A00), // Vintage digital quartz amber
+                    color: Color(0xFFFF8A00),
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'monospace',
@@ -814,10 +890,10 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
               ),
             ),
 
-          // Countdown overlay
+          // 5. Countdown overlay
           if (_isCountingDown)
             Container(
-              color: Colors.black.withOpacity(0.5),
+              color: Colors.black.withValues(alpha: 0.5),
               child: Center(
                 child: Text(
                   '$_countdownValue',
@@ -830,65 +906,98 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
               ),
             ),
 
-          // Top Bar
+          // 6. Top Bar (SOVS Minimalist Style)
           Positioned(
             top: 0,
             left: 0,
             right: 0,
             child: SafeArea(
               child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconButton(
                       onPressed: () => Navigator.pop(context),
-                      icon: const Icon(Icons.arrow_back, color: Colors.white),
+                      icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white, size: 20),
                       style: IconButton.styleFrom(
                         backgroundColor: Colors.black38,
                       ),
                     ),
                     Text(
-                      widget.pose.name,
+                      activePose?.name ?? 'Pose Guide',
                       style: const TextStyle(
                         color: Colors.white,
-                        fontSize: 16,
+                        fontSize: 15,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     Row(
                       children: [
+                        // Timer toggle
                         IconButton(
                           onPressed: () {
-                            setState(() => _showMappingGuides = !_showMappingGuides);
+                            final options = SettingsProvider.timerOptions;
+                            final nextIndex =
+                                (options.indexOf(_selectedTimerSeconds) + 1) %
+                                    options.length;
+                            setState(
+                                () => _selectedTimerSeconds = options[nextIndex]);
+                            HapticFeedback.selectionClick();
+                          },
+                          icon: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Icon(Icons.timer,
+                                  color: Colors.white, size: 18),
+                              if (_selectedTimerSeconds > 0)
+                                Text(
+                                  ' ${_timerLabel(_selectedTimerSeconds)}',
+                                  style: const TextStyle(
+                                    color: Color(0xFFFF5252),
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                            ],
+                          ),
+                          style: IconButton.styleFrom(
+                              backgroundColor: Colors.black38),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            setState(() =>
+                                _showMappingGuides = !_showMappingGuides);
                             HapticFeedback.selectionClick();
                           },
                           icon: Icon(
                             _showMappingGuides ? Icons.grid_on : Icons.grid_off,
-                            color: _showMappingGuides ? const Color(0xFF00E676) : Colors.white,
+                            color: _showMappingGuides
+                                ? const Color(0xFF00E676)
+                                : Colors.white,
+                            size: 20,
                           ),
                           style: IconButton.styleFrom(
-                            backgroundColor: Colors.black38,
-                          ),
+                              backgroundColor: Colors.black38),
                         ),
                         IconButton(
                           onPressed: _toggleFlash,
                           icon: Icon(
                             _isFlashOn ? Icons.flash_on : Icons.flash_off,
-                            color: Colors.white,
+                            color: _isFlashOn
+                                ? const Color(0xFFFFD700)
+                                : Colors.white,
+                            size: 20,
                           ),
                           style: IconButton.styleFrom(
-                            backgroundColor: Colors.black38,
-                          ),
+                              backgroundColor: Colors.black38),
                         ),
                         IconButton(
                           onPressed: _switchCamera,
                           icon: const Icon(Icons.cameraswitch,
-                              color: Colors.white),
+                              color: Colors.white, size: 20),
                           style: IconButton.styleFrom(
-                            backgroundColor: Colors.black38,
-                          ),
+                              backgroundColor: Colors.black38),
                         ),
                       ],
                     ),
@@ -898,27 +1007,21 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
             ),
           ),
 
-          // REAL-TIME POSE MATCH METER
-          if (_isCameraInitialized)
+          // 7. REAL-TIME POSE MATCH METER & STEP CUES
+          if (_isCameraInitialized && activePose != null)
             Positioned(
-              top: MediaQuery.of(context).padding.top + 52,
+              top: MediaQuery.of(context).padding.top + 48,
               left: 16,
               right: 16,
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.65),
+                  color: Colors.black.withValues(alpha: 0.65),
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: matchColor.withOpacity(0.8),
+                    color: matchColor.withValues(alpha: 0.8),
                     width: isMatched ? 2 : 1,
                   ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: matchColor.withOpacity(isMatched ? 0.35 : 0.1),
-                      blurRadius: 10,
-                    )
-                  ],
                 ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -931,13 +1034,13 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
                             Icon(
                               isMatched ? Icons.check_circle : Icons.tune,
                               color: matchColor,
-                              size: 18,
+                              size: 16,
                             ),
                             const SizedBox(width: 6),
                             Text(
                               'POSE MATCH',
                               style: TextStyle(
-                                color: Colors.white.withOpacity(0.85),
+                                color: Colors.white.withValues(alpha: 0.85),
                                 fontSize: 11,
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 0.8,
@@ -946,59 +1049,17 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
                           ],
                         ),
                         Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 8, vertical: 2),
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                           decoration: BoxDecoration(
-                            color: matchColor.withOpacity(0.2),
-                            borderRadius: BorderRadius.circular(8),
+                            color: matchColor.withValues(alpha: 0.2),
+                            borderRadius: BorderRadius.circular(10),
                           ),
                           child: Text(
                             '${_matchPercentage.toInt()}%',
                             style: TextStyle(
                               color: matchColor,
-                              fontSize: 14,
+                              fontSize: 12,
                               fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            setState(() {
-                              _autoCaptureOnMatch = !_autoCaptureOnMatch;
-                            });
-                          },
-                          borderRadius: BorderRadius.circular(8),
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 6, vertical: 2),
-                            decoration: BoxDecoration(
-                              color: _autoCaptureOnMatch
-                                  ? const Color(0xFF00E676).withOpacity(0.2)
-                                  : Colors.white10,
-                              borderRadius: BorderRadius.circular(6),
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  _autoCaptureOnMatch
-                                      ? Icons.auto_awesome
-                                      : Icons.auto_awesome_outlined,
-                                  size: 12,
-                                  color: _autoCaptureOnMatch
-                                      ? const Color(0xFF00E676)
-                                      : Colors.white54,
-                                ),
-                                const SizedBox(width: 3),
-                                Text(
-                                  'Auto-Click',
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                    color: _autoCaptureOnMatch
-                                        ? const Color(0xFF00E676)
-                                        : Colors.white54,
-                                  ),
-                                ),
-                              ],
                             ),
                           ),
                         ),
@@ -1008,178 +1069,121 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
                     ClipRRect(
                       borderRadius: BorderRadius.circular(4),
                       child: LinearProgressIndicator(
-                        value: (_matchPercentage / 100.0).clamp(0.0, 1.0),
+                        value: _matchPercentage / 100.0,
                         backgroundColor: Colors.white12,
                         valueColor: AlwaysStoppedAnimation<Color>(matchColor),
-                        minHeight: 5,
+                        minHeight: 4,
                       ),
                     ),
-                    const SizedBox(height: 4),
-                    Text(
-                      _getMatchStatusText(),
-                      style: TextStyle(
-                        color: matchColor,
-                        fontSize: 11,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 0.3,
-                      ),
-                    ),
-                    const SizedBox(height: 6),
-                    // Clickable Step Guide Pill for Body Mapping
-                    GestureDetector(
-                      onTap: _showPoseGuideModal,
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.08),
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: Colors.white12, width: 0.8),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const Icon(Icons.touch_app, size: 12, color: Color(0xFF00E676)),
-                            const SizedBox(width: 5),
-                            Flexible(
-                              child: Text(
-                                widget.pose.instructions.isNotEmpty
-                                    ? 'Map: ${widget.pose.instructions[_currentInstructionIndex]}'
-                                    : 'Tap for Body Mapping Guide',
-                                style: const TextStyle(
-                                  color: Colors.white70,
-                                  fontSize: 10.5,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            const SizedBox(width: 4),
-                            const Icon(Icons.arrow_forward_ios, size: 9, color: Colors.white38),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-
-          // VINTAGE FILTER & DATE STAMP SELECTOR BAR (Phase 2)
-          if (_isCameraInitialized)
-            Positioned(
-              bottom: 140,
-              left: 12,
-              right: 12,
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    // Date stamp toggle pill
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          _enableDateStamp = !_enableDateStamp;
-                        });
-                        HapticFeedback.selectionClick();
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 5),
-                        decoration: BoxDecoration(
-                          color: _enableDateStamp
-                              ? const Color(0xFFFF8A00).withOpacity(0.25)
-                              : Colors.black45,
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(
-                            color: _enableDateStamp
-                                ? const Color(0xFFFF8A00)
-                                : Colors.white24,
-                            width: 1,
+                    if (activePose.instructions.isNotEmpty) ...[
+                      const SizedBox(height: 6),
+                      GestureDetector(
+                        onTap: _showInstructionModal,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withValues(alpha: 0.08),
+                            borderRadius: BorderRadius.circular(8),
                           ),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.calendar_today,
-                              size: 12,
-                              color: _enableDateStamp
-                                  ? const Color(0xFFFF8A00)
-                                  : Colors.white54,
-                            ),
-                            const SizedBox(width: 4),
-                            Text(
-                              "'26 DATE",
-                              style: TextStyle(
-                                color: _enableDateStamp
-                                    ? const Color(0xFFFF8A00)
-                                    : Colors.white70,
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
+                          child: Row(
+                            children: [
+                              Text(
+                                'Step ${_currentInstructionIndex + 1}: ',
+                                style: TextStyle(
+                                  color: matchColor,
+                                  fontSize: 10.5,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-
-                    // Filter Presets
-                    _buildFilterChip('📸 Raw', VintageFilter.none),
-                    const SizedBox(width: 6),
-                    _buildFilterChip('⚡ Y2K Digicam', VintageFilter.y2kDigicam),
-                    const SizedBox(width: 6),
-                    _buildFilterChip('🌅 90s Kodak', VintageFilter.kodakGold),
-                    const SizedBox(width: 6),
-                    _buildFilterChip('🎬 Noir B&W', VintageFilter.noirFilm),
-                  ],
-                ),
-              ),
-            ),
-
-          // Opacity Slider
-          if (_isCameraInitialized)
-            Positioned(
-              bottom: 102,
-              left: 20,
-              right: 20,
-              child: Consumer<SettingsProvider>(
-                builder: (context, settings, _) {
-                  return Row(
-                    children: [
-                      const Icon(Icons.opacity, color: Colors.white70, size: 18),
-                      Expanded(
-                        child: Slider(
-                          value: settings.overlayOpacity,
-                          min: 0.1,
-                          max: 0.9,
-                          activeColor: isMatched ? const Color(0xFF00E676) : Colors.white,
-                          inactiveColor: Colors.white30,
-                          onChanged: (value) {
-                            settings.setOverlayOpacity(value);
-                          },
+                              Expanded(
+                                child: Text(
+                                  activePose.instructions[_currentInstructionIndex],
+                                  style: const TextStyle(
+                                    color: Colors.white70,
+                                    fontSize: 10.5,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              const SizedBox(width: 4),
+                              const Icon(Icons.arrow_forward_ios, size: 9, color: Colors.white38),
+                            ],
+                          ),
                         ),
                       ),
                     ],
-                  );
-                },
+                  ],
+                ),
               ),
             ),
 
-          // Bottom Bar (Capture & Controls)
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: SafeArea(
+          // 8. Category & Filter Switcher (SOVS 3-circle button popup)
+          if (_showCategoryPicker && _isCameraInitialized)
+            Positioned(
+              bottom: 168,
+              left: 14,
+              right: 14,
               child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.black.withValues(alpha: 0.85),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: Colors.white24),
+                ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Quick Framing Presets for Effortless Body Mapping
+                    // Category Selection Row
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        _buildCategoryPill('ALL', null),
+                        _buildCategoryPill('WOMEN', PoseCategory.girl),
+                        _buildCategoryPill('MEN', PoseCategory.boy),
+                        _buildCategoryPill('COUPLE', PoseCategory.couple),
+                        _buildCategoryPill('AESTHETIC', PoseCategory.aesthetic),
+                      ],
+                    ),
+                    const Divider(color: Colors.white12, height: 14),
+                    // Filter Presets Row
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          _buildFilterChip('📸 Raw', VintageFilter.none),
+                          const SizedBox(width: 6),
+                          _buildFilterChip('⚡ Y2K Digicam', VintageFilter.y2kDigicam),
+                          const SizedBox(width: 6),
+                          _buildFilterChip('🌅 90s Kodak', VintageFilter.kodakGold),
+                          const SizedBox(width: 6),
+                          _buildFilterChip('🎬 Noir B&W', VintageFilter.noirFilm),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+          // 9. Coral-Red Silhouette Opacity Slider & Framing Presets (SOVS layout)
+          if (_showSilhouetteSlider && _isCameraInitialized)
+            Positioned(
+              bottom: 168,
+              left: 16,
+              right: 16,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.black.withValues(alpha: 0.8),
+                  borderRadius: BorderRadius.circular(18),
+                  border: Border.all(color: Colors.white12),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    // Quick Framing Chips
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1190,136 +1194,272 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
                         _buildFramingChip('👤 Bust Portrait', 1.40),
                       ],
                     ),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 6),
+                    // Opacity Slider
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // Timer selector
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 10, vertical: 4),
-                          decoration: BoxDecoration(
-                            color: Colors.black38,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: DropdownButton<int>(
-                            value: _selectedTimerSeconds,
-                            dropdownColor: Colors.grey[900],
-                            style: const TextStyle(color: Colors.white),
-                            underline: const SizedBox(),
-                            icon: const Icon(Icons.timer,
-                                color: Colors.white70, size: 18),
-                            items: SettingsProvider.timerOptions.map((seconds) {
-                              return DropdownMenuItem(
-                                value: seconds,
-                                child: Text(
-                                  _timerLabel(seconds),
-                                  style: const TextStyle(fontSize: 14),
-                                ),
-                              );
-                            }).toList(),
-                            onChanged: (value) {
-                              if (value != null) {
-                                setState(() => _selectedTimerSeconds = value);
-                              }
-                            },
+                        const Icon(Icons.opacity, color: Color(0xFFFF5252), size: 18),
+                        const SizedBox(width: 4),
+                        Expanded(
+                          child: SliderTheme(
+                            data: SliderTheme.of(context).copyWith(
+                              activeTrackColor: const Color(0xFFFF5252),
+                              inactiveTrackColor: Colors.white24,
+                              thumbColor: const Color(0xFFFF5252),
+                              thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 7),
+                              trackHeight: 3,
+                            ),
+                            child: Slider(
+                              value: _silhouetteOpacity,
+                              min: 0.15,
+                              max: 1.0,
+                              onChanged: (val) {
+                                setState(() => _silhouetteOpacity = val);
+                              },
+                            ),
                           ),
                         ),
+                        Text(
+                          '${(_silhouetteOpacity * 100).toInt()}%',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
 
-                        // Capture button with Pulsing Glow on Match
-                        GestureDetector(
-                          onTap: _onCapturePressed,
-                          child: isMatched
-                              ? ScaleTransition(
-                                  scale: _pulseAnimation,
-                                  child: Container(
-                                    width: 78,
-                                    height: 78,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                        color: const Color(0xFF00E676),
-                                        width: 4,
-                                      ),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: const Color(0xFF00E676).withOpacity(0.5),
-                                          blurRadius: 18,
-                                          spreadRadius: 4,
-                                        ),
-                                      ],
+          // 10. In-Camera Horizontal Pose Carousel (SOVS signature layout, Image 2)
+          if (_isCameraInitialized && _carouselPoses.isNotEmpty)
+            Positioned(
+              bottom: 96,
+              left: 0,
+              right: 0,
+              child: SizedBox(
+                height: 64,
+                child: ListView.builder(
+                  controller: _poseCarouselController,
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  itemCount: _carouselPoses.length,
+                  itemBuilder: (context, index) {
+                    final p = _carouselPoses[index];
+                    final isSelected = activePose?.id == p.id;
+                    return GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _currentPose = p;
+                          _currentInstructionIndex = 0;
+                        });
+                        _startInstructionRotation();
+                        HapticFeedback.selectionClick();
+                      },
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 200),
+                        width: 52,
+                        height: 52,
+                        margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: isSelected
+                              ? Colors.white
+                              : Colors.white.withValues(alpha: 0.85),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: isSelected ? const Color(0xFFFF5252) : Colors.transparent,
+                            width: isSelected ? 2.5 : 1.0,
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: isSelected
+                                  ? const Color(0xFFFF5252).withValues(alpha: 0.4)
+                                  : Colors.black26,
+                              blurRadius: isSelected ? 8 : 4,
+                              offset: const Offset(0, 2),
+                            ),
+                          ],
+                        ),
+                        padding: const EdgeInsets.all(6),
+                        child: SvgPicture.asset(
+                          p.svgAssetPath,
+                          fit: BoxFit.contain,
+                          colorFilter: const ColorFilter.mode(
+                            Colors.black87,
+                            BlendMode.srcIn,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+
+          // 11. Bottom Controls Bar (SOVS signature design, Image 2)
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: SafeArea(
+              top: false,
+              child: Container(
+                height: 92,
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    // Left Button: 3-circle Venn icon (Categories / Filters, Image 2)
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _showCategoryPicker = !_showCategoryPicker;
+                          _showSilhouetteSlider = false;
+                        });
+                        HapticFeedback.selectionClick();
+                      },
+                      icon: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          const Icon(Icons.filter_vintage, color: Colors.white, size: 28),
+                          if (_showCategoryPicker)
+                            Positioned(
+                              top: 2,
+                              right: 2,
+                              child: Container(
+                                width: 7,
+                                height: 7,
+                                decoration: const BoxDecoration(
+                                  color: Color(0xFFFF5252),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                    ),
+
+                    // Center: Shutter Button (SOVS Coral Red Target with glowing match feedback)
+                    GestureDetector(
+                      onTap: _onCapturePressed,
+                      child: isMatched
+                          ? ScaleTransition(
+                              scale: _pulseAnimation,
+                              child: Container(
+                                width: 76,
+                                height: 76,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: const Color(0xFF00E676),
+                                    width: 4,
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: const Color(0xFF00E676).withValues(alpha: 0.5),
+                                      blurRadius: 18,
+                                      spreadRadius: 3,
                                     ),
-                                    child: Container(
-                                      margin: const EdgeInsets.all(4),
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: Color(0xFF00E676),
-                                      ),
-                                      child: const Icon(
-                                        Icons.camera_alt,
-                                        color: Colors.black87,
-                                        size: 30,
-                                      ),
+                                  ],
+                                ),
+                                child: Center(
+                                  child: Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Color(0xFF00E676),
+                                    ),
+                                    child: const Icon(
+                                      Icons.camera_alt,
+                                      color: Colors.black87,
+                                      size: 26,
                                     ),
                                   ),
-                                )
-                              : Container(
-                                  width: 72,
-                                  height: 72,
-                                  decoration: BoxDecoration(
+                                ),
+                              ),
+                            )
+                          : Container(
+                              width: 74,
+                              height: 74,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color: Colors.white.withValues(alpha: 0.85),
+                                  width: 4,
+                                ),
+                                color: Colors.white.withValues(alpha: 0.15),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: const Color(0xFFFF5252).withValues(alpha: 0.35),
+                                    blurRadius: 12,
+                                    spreadRadius: 1,
+                                  ),
+                                ],
+                              ),
+                              child: Center(
+                                child: Container(
+                                  width: 58,
+                                  height: 58,
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border:
-                                        Border.all(color: Colors.white, width: 4),
+                                    color: Color(0xFFFF5252),
                                   ),
-                                  child: Container(
-                                    margin: const EdgeInsets.all(4),
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: _isCapturing
-                                          ? Colors.grey
-                                          : Colors.white,
-                                    ),
-                                    child: _isCapturing
-                                        ? const Center(
-                                            child: SizedBox(
-                                              width: 24,
-                                              height: 24,
-                                              child: CircularProgressIndicator(
-                                                strokeWidth: 2,
-                                                color: Colors.black,
-                                              ),
+                                  child: _isCapturing
+                                      ? const Center(
+                                          child: SizedBox(
+                                            width: 22,
+                                            height: 22,
+                                            child: CircularProgressIndicator(
+                                              strokeWidth: 2,
+                                              color: Colors.white,
                                             ),
-                                          )
-                                        : null,
-                                  ),
+                                          ),
+                                        )
+                                      : const Icon(
+                                          Icons.camera_alt,
+                                          color: Colors.white,
+                                          size: 26,
+                                        ),
                                 ),
-                        ),
+                              ),
+                            ),
+                    ),
 
-                        // Reset / Center overlay button
-                        Container(
-                          width: 48,
-                          height: 48,
-                          decoration: BoxDecoration(
-                            color: Colors.black38,
-                            borderRadius: BorderRadius.circular(12),
-                            border: Border.all(color: Colors.white30, width: 1),
+                    // Right Button: Silhouette Controls (Flip mirror + Opacity slider toggle)
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            setState(() {
+                              _isSilhouetteFlipped = !_isSilhouetteFlipped;
+                            });
+                            HapticFeedback.selectionClick();
+                          },
+                          icon: Icon(
+                            Icons.flip,
+                            color: _isSilhouetteFlipped ? const Color(0xFFFF5252) : Colors.white,
+                            size: 24,
                           ),
-                          child: IconButton(
-                            onPressed: () {
-                              setState(() {
-                                _overlayOffset = Offset.zero;
-                                _overlayScale = 1.0;
-                              });
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text('Pose centered!'),
-                                  duration: Duration(milliseconds: 800),
-                                ),
-                              );
-                            },
-                            icon: const Icon(Icons.filter_center_focus,
-                                color: Colors.white70, size: 22),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            setState(() {
+                              _showSilhouetteSlider = !_showSilhouetteSlider;
+                              _showCategoryPicker = false;
+                            });
+                            HapticFeedback.selectionClick();
+                          },
+                          icon: Icon(
+                            Icons.tune,
+                            color: _showSilhouetteSlider ? const Color(0xFFFF5252) : Colors.white,
+                            size: 24,
                           ),
                         ),
                       ],
@@ -1330,41 +1470,6 @@ class _CameraOverlayScreenState extends State<CameraOverlayScreen>
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildFilterChip(String label, VintageFilter filter) {
-    final isSelected = _currentFilter == filter;
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          _currentFilter = filter;
-        });
-        HapticFeedback.selectionClick();
-      },
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-        decoration: BoxDecoration(
-          color: isSelected
-              ? Theme.of(context).colorScheme.primary.withOpacity(0.35)
-              : Colors.black45,
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(
-            color: isSelected
-                ? Theme.of(context).colorScheme.primary
-                : Colors.white24,
-            width: 1,
-          ),
-        ),
-        child: Text(
-          label,
-          style: TextStyle(
-            color: isSelected ? Colors.white : Colors.white70,
-            fontSize: 11,
-            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-          ),
-        ),
       ),
     );
   }
